@@ -7,11 +7,6 @@ public class BuildManagerScript : MonoBehaviour {
 
     public GameObject standardTurretPrefabs;
 
-    public GameObject FastTurretPrefab;
-
-    public GameObject MultiTurretPrefab;
-
-
     public static BuildManagerScript instance;
 
     private TurretBluePrintScript turretToBuild;
@@ -26,8 +21,7 @@ public class BuildManagerScript : MonoBehaviour {
 	{
 		if (!mouseOverNode && Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
 		{
-			print("close");
-			nodeUI.Hide();
+			BuildManagerScript.instance.DeselectNode();
 		}
 	}
 

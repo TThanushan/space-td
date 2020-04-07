@@ -9,9 +9,12 @@ public class NodeUI : MonoBehaviour {
 
     public GameObject uI;
 
-    public GameObject rangeSprite;
+	public GameObject rangeSprite;
+	public Transform rangeSpriteMask;
 
-    public static NodeUI instance;
+	public GameObject upgradeRangeSprite;
+
+	public static NodeUI instance;
 
     public GameObject upgradeEffect;
     public GameObject SellingEffect;
@@ -24,8 +27,10 @@ public class NodeUI : MonoBehaviour {
 
 	void Start()
     {
-        rangeSprite = transform.Find("Canvas/Range Sprite").gameObject;
-        uI = transform.Find("Canvas/Buttons").gameObject;
+		rangeSprite = transform.Find("Canvas/UpgradesPanel/RangeSprite").gameObject;
+		upgradeRangeSprite = transform.Find("Canvas/UpgradesPanel/UpgradeRangeSprite").gameObject;
+		rangeSpriteMask = transform.Find("Canvas/UpgradesPanel/Mask").gameObject.transform;
+		uI = transform.Find("Canvas/UpgradesPanel/Buttons").gameObject;
         if (target == null)
             Hide();
     }
@@ -43,14 +48,28 @@ public class NodeUI : MonoBehaviour {
         }
     }
 
-    public void SetTarget(Node _node)
+	public void ShowRangeUpgrade(bool show)
+	{
+		if (show)
+		{
+			TowerScript towerScript = target.turretBlueprint.upgradePrefab.GetComponent<TowerScript>();
+			float towerRange = towerScript.attackRange / 1.3f;
+			upgradeRangeSprite.transform.localScale = new Vector3(towerRange, towerRange, 0);
+			upgradeRangeSprite.transform.position = target.transform.position;
+			upgradeRangeSprite.SetActive(true);
+		}
+		else
+			upgradeRangeSprite.SetActive(false);
+	}
+
+	public void SetTarget(Node _node)
     {
         target = _node;
 
-        Text upgradeText = transform.Find("Canvas/Buttons/UpgradeButton/Text").GetComponent<Text>();
+        Text upgradeText = transform.Find("Canvas/UpgradesPanel/Buttons/UpgradeButton/Text").GetComponent<Text>();
 
 
-        Text sellText = transform.Find("Canvas/Buttons/SellButton/Text").GetComponent<Text>();
+        Text sellText = transform.Find("Canvas/UpgradesPanel/Buttons/SellButton/Text").GetComponent<Text>();
 //        sellText.text = BuildManagerScript.instance.GetTurretToBuild().GetSellAmount(_node.isUpgraded).ToString() + "$";
         sellText.text = _node.turretBlueprint.GetSellAmount(_node.isUpgraded) + "$";
         if(!target.isUpgraded)
@@ -76,7 +95,7 @@ public class NodeUI : MonoBehaviour {
     public void Upgrade()
     {
         target.UpgradeTurret();
-        Text sellText = transform.Find("Canvas/Buttons/SellButton/Text").GetComponent<Text>();
+        Text sellText = transform.Find("Canvas/UpgradesPanel/Buttons/SellButton/Text").GetComponent<Text>();
         sellText.text = BuildManagerScript.instance.GetTurretToBuild().GetSellAmount(target.isUpgraded).ToString() + "$";
 
     }
@@ -84,24 +103,22 @@ public class NodeUI : MonoBehaviour {
     public void Sell()
     {
         target.SellTurret();
-
     }
-
-
-
 
 	public void DisplayTurretRange(Node _node, bool state)
     {
         //If the _node is null or the rangeSprite is disable.
         if (_node == null || rangeSprite.activeSelf == false || _node.turret == null)
             return;
-//        1.65f
+		//        1.65f
 
-        rangeSprite.transform.position = _node.turret.transform.position;
+		rangeSprite.transform.position = _node.turret.transform.position;
+		rangeSpriteMask.position = _node.turret.transform.position;
+
 		if (state == true)
 		{
-			rangeSprite.transform.localScale = new Vector3(_node.turret.GetComponent<TowerScript>().attackRange * 200,
-				_node.turret.GetComponent<TowerScript>().attackRange * 200, 0);
+			float towerRange = _node.turret.GetComponent<TowerScript>().attackRange / 1.3f;
+			rangeSprite.transform.localScale = new Vector3(towerRange, towerRange, 0);
 		}
 		else
 			rangeSprite.transform.localScale = Vector3.zero;

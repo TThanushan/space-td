@@ -6,213 +6,242 @@ using UnityEngine.UI;
 
 public class TowerScript : MonoBehaviour {
 
-    public enum TowerTargetMod {singleTarget, multipleTarget, special}
-    public enum TowerEffect {noEffect, slowTarget, BurnTarget, Electric, LaserBeam}
+	public enum TowerTargetMod { singleTarget, multipleTarget, special }
+	public enum TowerEffect { noEffect, slowTarget, BurnTarget, Electric, LaserBeam }
 
-    [Header("Main Data")]
-    public float attackDamage = 1;
+	[Header("Main Data")]
+	public float attackDamage = 1;
 
-    public float attackSpeed;
+	public float attackSpeed;
 
-    public float attackRange;
+	public float attackRange;
 
-    [Space]
-    [Header("Others")]
-    public float bulletSpeed = 1;
+	[Space]
+	[Header("Others")]
+	public float bulletSpeed = 1;
 
-    [Range(0, 100)]
-    public float slowAmount = 1;
+	[Range(0, 100)]
+	public float slowAmount = 1;
 
-    public float rotateSpeed;
-
-
-    public GameObject shootPos;
-
-    public GameObject bulletG;
-
-    public List<GameObject> enemiesToAttack;
-
-    public TowerTargetMod towerTargetMod = TowerTargetMod.singleTarget;
-
-    public TowerEffect towerEffect = TowerEffect.noEffect;
-
-    Transform partToRotate;
-    
-    GameObject target;
-    
-    GameObject[] enemies;
-
-    PoolObjectScript poolScript;
-
-    float nextAttackTime;
-
-    GameObject[] newEnemie;
-
-    [Header("Use Laser")]
-    [HideInInspector]
-    public LineRenderer lineRenderer;
-    //Particle System
-
-    public GameObject burnTurretEffectG;
-
-    ParticleSystem particleSystem;
+	public float rotateSpeed;
 
 
-    void Awake() {
-        poolScript = GameObject.FindGameObjectWithTag("Data").GetComponent<PoolObjectScript>();
-    }
+	public GameObject shootPos;
 
-    void Start()
-    {
-        //For burnTurret.
-        if (burnTurretEffectG != null)
-            particleSystem = burnTurretEffectG.GetComponent<ParticleSystem>();
-        if (towerEffect == TowerEffect.Electric || towerEffect == TowerEffect.LaserBeam)
-            lineRenderer = GetComponent<LineRenderer>();
+	public GameObject bulletG;
 
-        partToRotate = transform.Find("Sprite").transform;
+	public List<GameObject> enemiesToAttack;
 
-        InvokeRepeating("LookAtEnemy", 0f, 1 * Time.deltaTime);
+	public TowerTargetMod towerTargetMod = TowerTargetMod.singleTarget;
 
-    }
+	public TowerEffect towerEffect = TowerEffect.noEffect;
 
+	public bool isDisable = false;
 
-    void Update () {
+	Transform partToRotate;
 
-        TowerManager();
-    }
+	GameObject target;
 
+	GameObject[] enemies;
 
-    void TowerManager()
-    {
-        if (towerEffect == TowerEffect.slowTarget)
-        {
-            SlowEnemy();
-        }
-        
-        if (towerEffect == TowerEffect.BurnTarget)
-        {
-            BurnEnemy();
-        }
+	PoolObjectScript poolScript;
 
-        if (towerEffect == TowerEffect.Electric)
-        {
-            ThrowLightning();
+	float nextAttackTime;
 
-        }
-
-        if (towerEffect == TowerEffect.LaserBeam)
-        {
-            LaserBeam();
-
-        }
-
-        if (towerTargetMod == TowerTargetMod.singleTarget)
-        {
-            FindEnemies();
-            LookAtEnemy();
-            AttackEnemy();
-            
-            IsTheEnemyStillAlive();
-        }
-        else if(towerTargetMod == TowerTargetMod.multipleTarget)
-        {
-            AttackAllNearEnemy();
-        }
-        
-    }
-
-    List<GameObject> FindAllNearEnemy()
-    {
-        enemies = poolScript.enemies;
-
-        List<GameObject> enemiesToReturn = new List<GameObject>();
-
-        if (Time.time > nextAttackTime)
-        {
-            nextAttackTime = Time.time + attackSpeed;
-
-            foreach (GameObject enemy in enemies)
-            {
-                float distance = Vector2.Distance(enemy.transform.position, transform.position);
-
-                if (enemy.activeSelf == true)
-                {
-
-                    if (distance <= attackRange)
-                        enemiesToReturn.Add(enemy);
-                    else
-                        enemiesToReturn.Remove(enemy);
-                }
-            }
-        }
-        else
-            enemiesToReturn = null;
-        
-        return enemiesToReturn;
+	GameObject[] newEnemie;
 
 
-    }
+	[Header("Use Laser")]
+	[HideInInspector]
+	public LineRenderer lineRenderer;
+	//Particle System
 
-    void AttackAllNearEnemy()
-    {
-        List<GameObject> enemies = FindAllNearEnemy();
+	public GameObject burnTurretEffectG;
 
-        if (enemies == null)
-            return;
+	ParticleSystem particleSystem;
 
-        foreach (GameObject enemy in enemies)
-        {
-            
-            GameObject newBullet = poolScript.GetPoolObject(bulletG);
-            BulletScript newBulletScript = newBullet.GetComponent<BulletScript>();
-            
-            newBulletScript.target = enemy;
-            newBulletScript.attackDamage = attackDamage;
-            newBulletScript.moveSpeed = bulletSpeed;
-            
-            newBullet.transform.position = shootPos.transform.position;
-            AudioManager.instance.Play("Tower Shoot", true);
-            
-        }
+	LineRenderer targetLineRenderer;
 
-    }
-        
-    
 
-    void FindEnemies()
-    {
-        enemies = poolScript.enemies;
+	void Awake() {
+		poolScript = GameObject.FindGameObjectWithTag("Data").GetComponent<PoolObjectScript>();
+	}
 
-        GameObject closestEnemy = null;
+	void Start()
+	{
+		if (isDisable)
+			return;
+		//For burnTurret.
 
-        float lowestDistance = Mathf.Infinity;
+		if (burnTurretEffectG != null)
+			particleSystem = burnTurretEffectG.GetComponent<ParticleSystem>();
+		if (towerEffect == TowerEffect.Electric || towerEffect == TowerEffect.LaserBeam)
+			lineRenderer = GetComponent<LineRenderer>();
 
-        foreach (GameObject enemy in enemies)
-        {
+		targetLineRenderer = GetComponent<LineRenderer>();
+		partToRotate = transform.Find("Sprite").transform;
 
-            float Distance = Vector2.Distance(transform.position, enemy.transform.position);
-            if (Distance < lowestDistance)
-            {
-                lowestDistance = Distance;
-                closestEnemy = enemy;
-            }
+		InvokeRepeating("LookAtEnemy", 0f, 1 * Time.deltaTime);
 
-            if (lowestDistance < attackRange && closestEnemy != null && closestEnemy.activeSelf)
-            {
-                target = closestEnemy;
-            }
-            else
-            {
-                target = null;
-            }
-        }
+	}
 
-       
 
-    }
-        
-    void LookAtEnemy()
+	void Update() {
+		if (isDisable)
+			return;
+		DrawLineToTarget();
+		TowerManager();
+	}
+
+
+	void TowerManager()
+	{
+		if (towerEffect == TowerEffect.slowTarget)
+		{
+			SlowEnemy();
+		}
+
+		if (towerEffect == TowerEffect.BurnTarget)
+		{
+			BurnEnemy();
+		}
+
+		if (towerEffect == TowerEffect.Electric)
+		{
+			ThrowLightning();
+
+		}
+
+		if (towerEffect == TowerEffect.LaserBeam)
+		{
+			LaserBeam();
+
+		}
+
+		if (towerTargetMod == TowerTargetMod.singleTarget)
+		{
+			FindEnemies();
+			LookAtEnemy();
+			AttackEnemy();
+
+			IsTheEnemyStillAlive();
+		}
+		else if (towerTargetMod == TowerTargetMod.multipleTarget)
+		{
+			AttackAllNearEnemy();
+		}
+
+	}
+
+	List<GameObject> FindAllNearEnemy()
+	{
+		enemies = poolScript.enemies;
+
+		List<GameObject> enemiesToReturn = new List<GameObject>();
+
+		if (Time.time > nextAttackTime)
+		{
+			nextAttackTime = Time.time + attackSpeed;
+
+			foreach (GameObject enemy in enemies)
+			{
+				float distance = Vector2.Distance(enemy.transform.position, transform.position);
+
+				if (enemy.activeSelf == true)
+				{
+
+					if (distance <= attackRange)
+						enemiesToReturn.Add(enemy);
+					else
+						enemiesToReturn.Remove(enemy);
+				}
+			}
+		}
+		else
+			enemiesToReturn = null;
+
+		return enemiesToReturn;
+
+
+	}
+
+	void AttackAllNearEnemy()
+	{
+		List<GameObject> enemies = FindAllNearEnemy();
+
+		if (enemies == null)
+			return;
+
+		foreach (GameObject enemy in enemies)
+		{
+
+			GameObject newBullet = poolScript.GetPoolObject(bulletG);
+			BulletScript newBulletScript = newBullet.GetComponent<BulletScript>();
+
+			newBulletScript.target = enemy;
+			newBulletScript.attackDamage = attackDamage;
+			newBulletScript.moveSpeed = bulletSpeed;
+
+			newBullet.transform.position = shootPos.transform.position;
+			AudioManager.instance.Play("Tower Shoot", true);
+
+		}
+
+	}
+
+
+
+	void FindEnemies()
+	{
+		enemies = poolScript.enemies;
+
+		GameObject closestEnemy = null;
+
+		float lowestDistance = Mathf.Infinity;
+
+		foreach (GameObject enemy in enemies)
+		{
+
+			float Distance = Vector2.Distance(transform.position, enemy.transform.position);
+			if (Distance < lowestDistance)
+			{
+				lowestDistance = Distance;
+				closestEnemy = enemy;
+			}
+
+			if (lowestDistance < attackRange && closestEnemy != null && closestEnemy.activeSelf)
+			{
+				target = closestEnemy;
+			}
+			else
+			{
+				target = null;
+			}
+		}
+
+
+
+	}
+
+	void DrawLineToTarget()
+	{
+		if (!targetLineRenderer)
+			return;
+		if (target)
+		{
+			
+			Vector3 startPos = new Vector3(transform.position.x, transform.position.y, -1);
+			Vector3 endPos = new Vector3(target.transform.position.x, target.transform.position.y, -1);
+			targetLineRenderer.SetPosition(0, startPos);
+			targetLineRenderer.SetPosition(1, endPos);
+			targetLineRenderer.enabled = true;
+		}
+		else
+			targetLineRenderer.enabled = false;
+
+	}
+
+	void LookAtEnemy()
     {
         if (target != null)
         {
@@ -447,7 +476,6 @@ public class TowerScript : MonoBehaviour {
             AudioManager.instance.Play("Tower Shoot", true);
         }
     }
-
 
     void OnDrawGizmosSelected()
     {

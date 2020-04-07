@@ -21,4 +21,12 @@ public class TurretBluePrintScript{
         else
             return (int)((cost + upgradeCost) * 0.8f);
     }
+
+	public TowerScript GetTowerScript
+	{
+		get
+		{
+			return prefab.GetComponent<TowerScript>();
+		}
+	}
 }

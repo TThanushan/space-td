@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ec975b64b581d42bab08687ac41c62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 5
   damage: 1
   pathArray:
   - {fileID: 0}
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  maxHealth: 2
+  maxHealth: 4
   currentHealth: 0
   Healthbar: {fileID: 1688982343416576}
   healthText: {fileID: 3247225597455075007}

@@ -57,8 +57,6 @@ public class PoolObjectScript : MonoBehaviour {
             }
         }
 
-
-
         GameObject newUnit = (GameObject)Instantiate(unitP, transform.position, transform.rotation, binTransform);
 
         newUnit.name = unitP.name;
@@ -71,7 +69,15 @@ public class PoolObjectScript : MonoBehaviour {
         return newUnit;
     }
 
-    void Awake()
+	public Transform GetBinTransform
+	{
+		get
+		{
+			return binTransform;
+		}
+	}
+
+	void Awake()
     {
         if (instance != null)
             return;

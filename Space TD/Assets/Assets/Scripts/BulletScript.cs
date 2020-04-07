@@ -12,7 +12,7 @@ public class BulletScript : MonoBehaviour {
 
     public GameObject target;
 
-
+	public GameObject effect;
 
 	void Start () {
 		
@@ -49,7 +49,9 @@ public class BulletScript : MonoBehaviour {
                 return;
             }
             target.GetComponent<ProgressBarScript>().currentHealth -= attackDamage;
-            gameObject.SetActive(false);
+			if (effect)
+				PoolObjectScript.instance.GetPoolObject(effect).transform.position = transform.position;
+			gameObject.SetActive(false);
 //            UIScript.instance.DisplayImpactEffect(UIScript.instance.impactEffect).transform.position = transform.position;
 //            AudioManager.instance.Play("HitSFX2", true);
         }

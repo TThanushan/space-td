@@ -25,8 +25,11 @@ public class Node : MonoBehaviour {
 
     SpriteRenderer sprite;
 
-    //First color of the sprite.
-    Color startColor;
+	GameObject turretPreview;
+	GameObject turretPreviewRange;
+
+	//First color of the sprite.
+	Color startColor;
 
     bool lerpActivated = false;
 
@@ -62,7 +65,9 @@ public class Node : MonoBehaviour {
     {
         if (PlayerStatsScript.instance.money >= bluePrint.cost && bluePrint.prefab != null)
         {
-            UIScript.instance.DisplayText("-" + bluePrint.cost.ToString() + " $", Camera.main.ScreenToWorldPoint(Input.mousePosition), 6, UIScript.instance.orangeColor);
+			Vector2 spawnPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y + 25);
+            UIScript.instance.DisplayText("-" + bluePrint.cost.ToString() + " $",
+				Camera.main.ScreenToWorldPoint(spawnPos), 10, UIScript.instance.orangeColor, "Slow");
             PlayerStatsScript.instance.money -= bluePrint.cost;
             GameObject newTurret = PoolObjectScript.instance.GetPoolObject(bluePrint.prefab);
 
@@ -74,7 +79,6 @@ public class Node : MonoBehaviour {
 
             DisplayEffect(NodeUI.instance.upgradeEffect);
             AudioManager.instance.Play("Cash Register", true);
-            ShakeCamera.instance.Shake(0.1f, 0.05f);
         }
         else
         {
@@ -119,7 +123,7 @@ public class Node : MonoBehaviour {
             DisplayEffect(NodeUI.instance.upgradeEffect);
 
             AudioManager.instance.Play("Upgrade", true);
-            ShakeCamera.instance.Shake(0.1f, 0.05f);
+            //ShakeCamera.instance.Shake(0.1f, 0.05f);
 
             
         }
@@ -169,7 +173,6 @@ public class Node : MonoBehaviour {
     
         DisplayEffect(NodeUI.instance.SellingEffect);
         AudioManager.instance.Play("Balloon Popping", true);
-        ShakeCamera.instance.Shake(0.1f, 0.2f);
 
 
     }
@@ -195,8 +198,42 @@ public class Node : MonoBehaviour {
 
     }
 
-    //When the mouse cursor is on the object.
-    void OnMouseEnter ()
+
+
+	void ShowPreview()
+	{
+		GameObject prefab = buildManager.GetTurretToBuild().prefab;
+		turretPreview = (GameObject)Resources.Load("TurretPreviews/Preview" + prefab.name);
+		if (!turretPreviewRange)
+		{
+			turretPreviewRange = (GameObject)Resources.Load("TurretPreviews/RangeSprite");
+			turretPreviewRange = PoolObjectScript.instance.GetPoolObject(turretPreviewRange);
+		}
+		else
+			turretPreviewRange.SetActive(true);
+
+		turretPreviewRange.transform.position = transform.position;
+		float towerRange = prefab.GetComponent<TowerScript>().attackRange / 1.3f;
+		turretPreviewRange.transform.localScale = new Vector3(towerRange, towerRange, 0);
+
+		turretPreview = PoolObjectScript.instance.GetPoolObject(turretPreview);
+		turretPreview.transform.position = transform.position;
+		print("show");
+	}
+
+	void DestroyPreview()
+	{
+		if (turretPreview)
+		{
+			turretPreview.SetActive(false);
+			turretPreview = null;
+			turretPreviewRange.SetActive(false);
+			print("destroyPreview");
+		}
+	}
+
+	//When the mouse cursor is on the object.
+	void OnMouseEnter ()
     {
 		buildManager.mouseOverNode = true;
 		if (!buildManager.GetSelectedNode)
@@ -204,7 +241,11 @@ public class Node : MonoBehaviour {
 
 		lerpActivated = true;
         startTime = Time.time;
-        if (!Input.GetKey(KeyCode.Mouse0))
+
+		//Show turret sprite preview.
+		if (!turret)
+			ShowPreview();
+		if (!Input.GetKey(KeyCode.Mouse0))
             return;
         if (EventSystem.current.IsPointerOverGameObject())
             return;
@@ -219,7 +260,9 @@ public class Node : MonoBehaviour {
 			return;
         }
 
-        buildManager.nodeUI.Hide();
+		DestroyPreview();
+
+		buildManager.nodeUI.Hide();
 
         BuildTurret(buildManager.GetTurretToBuild());
 
@@ -250,6 +293,7 @@ public class Node : MonoBehaviour {
 
     void OnMouseExit ()
 	{
+		DestroyPreview();
 		buildManager.mouseOverNode = false;
 		if (!buildManager.GetSelectedNode)
 			buildManager.nodeUI.DisplayTurretRange(this, false);

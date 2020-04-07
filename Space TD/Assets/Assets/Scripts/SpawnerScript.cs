@@ -127,7 +127,7 @@ public class SpawnerScript : MonoBehaviour {
     {
         if (currentWaveNumber == numberOfWaves - 1)
         {
-            UIScript.instance.DisplayText("Last Wave !!!", new Vector2(0, 0), 15, Color.red, true);
+            UIScript.instance.DisplayText("Last Wave !!!", new Vector2(0, 0), 15, Color.red, "Special");
             nextWaveTime = 0;
         }
     }
@@ -213,7 +213,7 @@ public class SpawnerScript : MonoBehaviour {
 
             if (_currentBossType.bossIsDead == false && enemiesRemainingAlive <= 0 && enemiesRemainingToSpawn <= 0 && currentWaveNumber >= _currentBossType.waveStart - 1 && GameObject.FindGameObjectWithTag("SpecialText") == null)
             {
-                UIScript.instance.DisplayText("Warning Boss Incoming !", new Vector2(0, -8), 10, Color.red, true);
+                UIScript.instance.DisplayText("Warning Boss Incoming !", new Vector2(0, -8), 10, Color.red, "Special");
                 AudioManager.instance.Play("SMS2", false);
             }
         }

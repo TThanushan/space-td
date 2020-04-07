@@ -89,7 +89,7 @@ TrailRenderer:
   m_SortingLayerID: -1305667233
   m_SortingLayer: -1
   m_SortingOrder: -2
-  m_Time: 1
+  m_Time: 2
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.45
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bac902a089ee964283588d805086af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeedX: 4
+  moveSpeedX: 2
   moveSpeedY: 0
   wayX: 1
   wayY: 1
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc390d7577adaf46991d1b34381631c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 9
+  destroyTime: 16
 --- !u!114 &114535364413513756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +311,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
+      scalar: 1
       minScalar: 0.1
       maxCurve:
         serializedVersion: 2
@@ -364,7 +364,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 15.49
+      scalar: 12
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -417,8 +417,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 1, b: 1, a: 0.603}
-      maxColor: {r: 1, g: 0.41844097, b: 0, a: 0.622}
+      minColor: {r: 1, g: 0.9811906, b: 0.3726415, a: 0.603}
+      maxColor: {r: 1, g: 0.56423336, b: 0, a: 0.622}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4905,7 +4905,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a91a40dd6068c8643ae5d277e42c9ade, type: 2}
   - {fileID: 2100000, guid: a1d43f15598c9224986463819b67fc77, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

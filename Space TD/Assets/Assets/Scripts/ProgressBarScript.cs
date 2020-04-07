@@ -62,7 +62,8 @@ public class ProgressBarScript : MonoBehaviour {
                 //Given money When i die.
                 if (moneyGiven > 0)
                 {
-                    UIScript.instance.DisplayText("+" + moneyGiven + " $", transform.position, 6, Color.green);
+					float randomXPos = transform.position.x + Random.Range(-0.4f, 0.4f);
+                    UIScript.instance.DisplayText("+" + moneyGiven + " $", new Vector2(randomXPos, transform.position.y), 8, Color.green);
                     PlayerStatsScript.instance.money += moneyGiven;
                 }
                 

@@ -64,20 +64,30 @@ public class UIScript : MonoBehaviour {
     public Image electricTurretImage;
     public Image superMultiTurretImage;
     public Image laserTurretImage;
-    Text lifeText;
-    Text moneyText;
-    Text waveNumberText;
-    Text waveTimeText;
+    [HideInInspector]
+	public Text lifeText;
+    [HideInInspector]
+    public Text moneyText;
+	Text waveNumberText;
+	//Text waveTimeText;
+	public Transform waveTimeBar;
+	public GameObject waveTime;
 
-    float cameraSizeSave;
+	float cameraSizeSave;
     bool gameComplete = false;
+	Dictionary<string, string> animationsDict;
 
 	void Awake() {
+		animationsDict = new Dictionary<string, string>();
+		animationsDict.Add("Normal", "PrintedTextCanvas");
+		animationsDict.Add("Fast", "Fast PrintedTextCanvas");
+		animationsDict.Add("Slow", "Slow PrintedTextCanvas");
+		animationsDict.Add("Special", "PrintedTextCanvas Special");
 
-        lifeText = gameObject.transform.Find("lifeText").GetComponent<Text>();
+		lifeText = gameObject.transform.Find("lifeText").GetComponent<Text>();
         moneyText = gameObject.transform.Find("moneyText").GetComponent<Text>();
         waveNumberText = gameObject.transform.Find("waveNumber").GetComponent<Text>();
-        waveTimeText = gameObject.transform.Find("waveTime").GetComponent<Text>();
+        //waveTimeText = gameObject.transform.Find("waveTime").GetComponent<Text>();
         endNode = GameObject.FindGameObjectWithTag("End").gameObject;
         if (gameOverPanel == null)
             gameoverPanel = GameObject.Find("GameOver Panel").gameObject;
@@ -104,16 +114,20 @@ public class UIScript : MonoBehaviour {
 
         if (SpawnerScript.instance.nextWaveTime > 0 && SpawnerScript.instance.enemiesRemainingAlive <= 0 && SpawnerScript.instance.enemiesRemainingToSpawn <= 0)
         {
-            skipButton.SetActive(true);
-            waveTimeText.text = "Next Wave : " + SpawnerScript.instance.nextWaveTime.ToString("0");
-        }
-        else
+            //skipButton.SetActive(true);
+			waveTime.SetActive(true);
+			//waveTimeText.text = "Next Wave : " + SpawnerScript.instance.nextWaveTime.ToString("0");
+			UpdateWaveTimerBar();
+		}
+		else
         {
-            skipButton.SetActive(false);
-            waveTimeText.text = "";
-        }
-        
-        MainGameOverFunc();
+            //skipButton.SetActive(false);
+			waveTime.SetActive(false);
+			//waveTimeText.text = "";
+
+		}
+
+		MainGameOverFunc();
 
         PlayerInputs();
 
@@ -131,7 +145,16 @@ public class UIScript : MonoBehaviour {
             StartCoroutine(GameComplete());
     }
 
-    void PlayerInputs()
+	void UpdateWaveTimerBar()
+	{
+		
+		float barLenght = SpawnerScript.instance.nextWaveTime / 10;
+
+		waveTimeBar.localScale = new Vector3(barLenght, waveTimeBar.localScale.y, waveTimeBar.localScale.z);
+
+	}
+
+	void PlayerInputs()
     {
         if (Input.GetKeyDown(KeyCode.F))
             showFPS = !showFPS;
@@ -254,7 +277,7 @@ public class UIScript : MonoBehaviour {
         StartCoroutine(Option());
         AudioManager.instance.Play("Jump", true);
     }
-
+	
     IEnumerator Option()
     {
         if (Time.timeScale != 0)
@@ -316,19 +339,16 @@ public class UIScript : MonoBehaviour {
     }
 
 
+	
+	
 
-    public void DisplayText(string text, Vector2 textPosition, int textSize, Color textColor, bool special = false) 
+	//PrintedTextCanvas, PrintedTextCanvas Special, Slow PrintedTextCanvas, Fast PrintedTextCanvas
+	public void DisplayText(string text, Vector2 textPosition, int textSize, Color textColor, string type="Normal") 
     {
-        if(special == false)
-            printedText = Resources.Load("PrintedTextCanvas") as GameObject;
-        else
-            printedText = Resources.Load("PrintedTextCanvas Special") as GameObject;
-        
-
+		printedText = Resources.Load(animationsDict[type]) as GameObject;
         GameObject newCanvasTextG = PoolObjectScript.instance.GetPoolObject(printedText);
         GameObject newTextG = newCanvasTextG.transform.Find("Text").gameObject;
-
-        newTextG.GetComponent<Text>().text = text;
+		newTextG.GetComponent<Text>().text = text;
         newTextG.GetComponent<Text>().color = textColor;
         newCanvasTextG.transform.position = textPosition;
         newTextG.transform.localScale = new Vector2(textSize, textSize);
