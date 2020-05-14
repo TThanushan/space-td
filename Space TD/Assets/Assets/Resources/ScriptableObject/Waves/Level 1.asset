@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abff08f66ca36a64c8d1bc6ae0cec5c8, type: 3}
+  m_Name: Level 1
+  m_EditorClassIdentifier: 
+  wavesArray:
+  - enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      Health: 1
+      MoveSpeed: 2
+      MoneyRewardPerUnit: 10
+      TimeBetweenSpawn: 1
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 21.040535
+  - enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      Health: 2
+      MoveSpeed: 2
+      MoneyRewardPerUnit: 10
+      TimeBetweenSpawn: 1
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 24.96303
+  - enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      Health: 3
+      MoveSpeed: 2
+      MoneyRewardPerUnit: 10
+      TimeBetweenSpawn: 1
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 36.62343
+  - enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      Health: 4
+      MoveSpeed: 2
+      MoneyRewardPerUnit: 10
+      TimeBetweenSpawn: 1
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 68.919106
+  - enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      Health: 5
+      MoveSpeed: 2
+      MoneyRewardPerUnit: 10
+      TimeBetweenSpawn: 1
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 107.80756
+  - enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      Health: 6
+      MoveSpeed: 2
+      MoneyRewardPerUnit: 10
+      TimeBetweenSpawn: 1
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 127.8588
+  - enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      Health: 7
+      MoveSpeed: 2
+      MoneyRewardPerUnit: 10
+      TimeBetweenSpawn: 1
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 127.8588
+  - enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      Health: 8
+      MoveSpeed: 2
+      MoneyRewardPerUnit: 10
+      TimeBetweenSpawn: 1
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 127.8588
+  - enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      Health: 9
+      MoveSpeed: 2
+      MoneyRewardPerUnit: 10
+      TimeBetweenSpawn: 1
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 127.8588
+  - enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      Health: 10
+      MoveSpeed: 2
+      MoneyRewardPerUnit: 10
+      TimeBetweenSpawn: 1
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 127.8588
