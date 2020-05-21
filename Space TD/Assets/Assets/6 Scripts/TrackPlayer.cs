@@ -29,7 +29,7 @@ public class TrackPlayer : MonoBehaviour
 
     void Update()
     {
-        if (!myAudio.isPlaying || Input.GetKeyDown(KeyCode.A))
+        if (!myAudio.isPlaying)
             PlayRandomMusic();
     }
 

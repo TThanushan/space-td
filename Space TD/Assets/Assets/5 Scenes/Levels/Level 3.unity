@@ -4875,7 +4875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies: []
-  pathArray: []
+  endNode: {fileID: 0}
   enemyTag: Enemy
   poolSize: 0
   unitPool: []
@@ -7974,6 +7974,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1625389075}
     m_Modifications:
+    - target: {fileID: 3099583328885734089, guid: dc216aa3ff6862d4498c757cd46fb53f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2089417
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099583328885734089, guid: dc216aa3ff6862d4498c757cd46fb53f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099583328885734089, guid: dc216aa3ff6862d4498c757cd46fb53f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.014
+      objectReference: {fileID: 0}
     - target: {fileID: 3099583329903244112, guid: dc216aa3ff6862d4498c757cd46fb53f,
         type: 3}
       propertyPath: m_Name
@@ -7987,7 +8002,7 @@ PrefabInstance:
     - target: {fileID: 3099583329903244119, guid: dc216aa3ff6862d4498c757cd46fb53f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.43
+      value: -5.833
       objectReference: {fileID: 0}
     - target: {fileID: 3099583329903244119, guid: dc216aa3ff6862d4498c757cd46fb53f,
         type: 3}

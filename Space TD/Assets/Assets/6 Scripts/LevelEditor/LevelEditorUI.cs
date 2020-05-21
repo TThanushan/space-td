@@ -2,9 +2,9 @@
 using System.Collections;
 using TMPro;
 
-public class MapEditorUI : MonoBehaviour
+public class LevelEditorUI : MonoBehaviour
 {
-    public static MapEditorUI instance;
+    public static LevelEditorUI instance;
     public GameObject erasingGraphicPrefab;
     public GameObject deleteEffect;
     public GameObject PlacingEffect;
@@ -19,7 +19,7 @@ public class MapEditorUI : MonoBehaviour
             instance = this;
         else
         {
-            Debug.Log("There is already a MapEditorUI script");
+            Debug.Log("There is already a LevelEditorUI script");
             Destroy(gameObject);
         }
     }
@@ -28,16 +28,16 @@ public class MapEditorUI : MonoBehaviour
     {
         if (KeyPressManager.instance.mouse1KeyReady)
         {
-            MapEditor.instance.ShowPrefabPreview(false);
+            LevelEditor.instance.ShowPrefabPreview(false);
             if (!erasingGraphic)
                 erasingGraphic = PoolObject.instance.GetPoolObject(erasingGraphicPrefab);
             if (!erasingGraphic.activeSelf)
                 ShowErasingGraphic(true);
-            erasingGraphic.transform.position = MapEditor.instance.cursor.transform.position;
+            erasingGraphic.transform.position = LevelEditor.instance.cursor.transform.position;
         }
         else if (erasingGraphic)
         {
-            MapEditor.instance.ShowPrefabPreview(true);
+            LevelEditor.instance.ShowPrefabPreview(true);
             ShowErasingGraphic(false);
         }
     }

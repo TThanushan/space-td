@@ -16,13 +16,12 @@ public class Map
 
     public void SaveAllObject()
     {
-        Name = MapEditor.instance.levelName;
+        Name = LevelEditor.instance.levelName;
         SaveObjectIntoList(ref BuildingBlocks, "Building Block");
         SaveObjectIntoList(ref PathPoints, "Path Point");
         SaveObjectIntoList(ref PathGrounds, "Path Ground");
         SpawnPoint = SaveObjectPosition("Spawn Point");
         Base = SaveObjectPosition("Base");
-        
     }
 
     public void LoadAllObjectFromSaveData()
@@ -39,9 +38,9 @@ public class Map
         GameObject newObj = PoolObject.instance.GetPoolObject(GetCorrespondingPrefab(name));
         newObj.transform.position = _position;
         newObj.SetActive(true);
-        MapEditorNode mapEditorNode = MapEditor.instance.GetCorrespondingNode(_position);
-        if (mapEditorNode)
-            mapEditorNode.SetCurrentPrefab(newObj);
+        LevelEditorNode levelEditorNode = LevelEditor.instance.GetCorrespondingNode(_position);
+        if (levelEditorNode)
+            levelEditorNode.SetCurrentPrefab(newObj);
 
     }
 
@@ -53,23 +52,25 @@ public class Map
         {
              newObj = PoolObject.instance.GetPoolObject(GetCorrespondingPrefab(name));
             newObj.transform.position = _pos;
-            MapEditor.instance.GetCorrespondingNode(_pos).SetCurrentPrefab(newObj);
+            LevelEditor.instance.GetCorrespondingNode(_pos).SetCurrentPrefab(newObj);
         }
     }
 
     private GameObject GetCorrespondingPrefab(string name)
     {
-        foreach (GameObject obj in MapEditor.instance.prefabs)
+        foreach (GameObject obj in LevelEditor.instance.prefabs)
         {
             if (obj.name == name)
                 return obj;
         }
+        Debug.Log("Cant load, prefab not found");
         return null;
     }
 
     private Vector2 SaveObjectPosition(string _tag)
     {
         GameObject obj = GameObject.FindGameObjectWithTag(_tag);
+        Debug.Log(_tag + " position saved !");
         return obj.transform.position;
     }
 
@@ -83,6 +84,6 @@ public class Map
         {
             _list.Add(block.transform.position);
         }
+        Debug.Log("All "+ _list.Count + " " + _tag + "saved ! ");
     }
-
 }

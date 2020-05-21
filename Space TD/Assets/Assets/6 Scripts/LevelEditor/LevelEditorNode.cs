@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MapEditorNode : MonoBehaviour
+public class LevelEditorNode : MonoBehaviour
 {
     private GameObject currentPrefab;
     private bool firstTimeReplacing = true;
@@ -37,17 +37,17 @@ public class MapEditorNode : MonoBehaviour
 
     private void UpdateCursorPosition()
     {
-        MapEditor.instance.cursor.transform.position = transform.position;
+        LevelEditor.instance.cursor.transform.position = transform.position;
     }
 
     private void EnableCursor()
     {
-        MapEditor.instance.cursor.SetActive(true);
+        LevelEditor.instance.cursor.SetActive(true);
     }
 
     private void DisableCursor()
     {
-        MapEditor.instance.cursor.SetActive(false);
+        LevelEditor.instance.cursor.SetActive(false);
     }
 
     private void CheckIfPrefabIsChanged()
@@ -75,12 +75,12 @@ public class MapEditorNode : MonoBehaviour
  
     private bool IsPrefabSelected()
     {
-        return MapEditor.instance.selectedPrefab != null;
+        return LevelEditor.instance.selectedPrefab != null;
     }
 
     private void InstantiatePrefab()
     {
-        GameObject selectedPrefab = MapEditor.instance.selectedPrefab;
+        GameObject selectedPrefab = LevelEditor.instance.selectedPrefab;
         currentPrefab = PoolObject.instance.GetPoolObject(selectedPrefab);
         currentPrefab.transform.position = transform.position;
         selectedPrefab.SetActive(true);
@@ -94,7 +94,7 @@ public class MapEditorNode : MonoBehaviour
 
     private bool PrefabAlreadyCreatedOnCurrentNode()
     {
-        return currentPrefab && currentPrefab.name == MapEditor.instance.selectedPrefab.name;
+        return currentPrefab && currentPrefab.name == LevelEditor.instance.selectedPrefab.name;
     }
     private void CreatePrefab()
     {
@@ -102,7 +102,7 @@ public class MapEditorNode : MonoBehaviour
             return;
         Debug.Log("Prefab created");
         InstantiatePrefab();
-        MapEditorUI.instance.CreatePlacingEffect(transform.position);
+        LevelEditorUI.instance.CreatePlacingEffect(transform.position);
         AudioManager.instance.PlaySfx("Click");
     }
 
@@ -122,7 +122,7 @@ public class MapEditorNode : MonoBehaviour
             return;
         Debug.Log("Prefab destroyed");
         RemoveCurrentPrefab();
-        MapEditorUI.instance.CreateDeleteEffect(transform.position);
+        LevelEditorUI.instance.CreateDeleteEffect(transform.position);
         AudioManager.instance.PlaySfx("Erase");
     }
 

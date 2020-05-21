@@ -4,9 +4,9 @@ using UnityEngine;
 using TMPro;
 using System.IO;
 using UnityEngine.EventSystems;
-public class MapEditor : MonoBehaviour
+public class LevelEditor : MonoBehaviour
 {
-    public static MapEditor instance;
+    public static LevelEditor instance;
     public GameObject selectedPrefab;
     public GameObject cursor;
     public GameObject prefabPreview;
@@ -95,7 +95,7 @@ public class MapEditor : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            MapEditorNode _node = GetCorrespondingNode(cursor.transform.position);
+            LevelEditorNode _node = GetCorrespondingNode(cursor.transform.position);
             if (_node)
             {
                 if (_node.GetCurrentPrefab())
@@ -104,17 +104,21 @@ public class MapEditor : MonoBehaviour
         }
     }
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        UpdateLevelSelectionDropdown();
+    }
+
     public void UpdateLevelSelectionDropdown()
     {
         levelSelectionDropdown.ClearOptions();
-        levelSelectionDropdown.AddOptions(GetAllSavedFileNameWithEditTime());
-    }
+        levelSelectionDropdown.AddOptions(GetAllSavedFileNames());
 
+    }
     public void HideShowLevelSelectDropdown()
     {
         StartCoroutine(RefreshLevelSelectDropdown(0.25f));
     }
-
     IEnumerator RefreshLevelSelectDropdown(float seconds=1f)
     {
         levelSelectionDropdown.Hide();
@@ -125,57 +129,31 @@ public class MapEditor : MonoBehaviour
 
     private List<string> GetAllSavedFilesPath()
     {
-        string savePath = SaveData.current.GetMapSavePath();
+        string savePath = Application.dataPath + "/Assets/7 Others/Maps/";
         string[] allFiles = Directory.GetFiles(savePath);
         List<string> filesList = new List<string>(allFiles);
         return filesList.FindAll(EndsWithSave);
     }
 
-    private List<string> GetAllSavedFileNameWithEditTime()
-    {
-        return AddFilesLastWriteTime(GetAllSavedFileNames());
-    }
-
     private List<string> GetAllSavedFileNames()
     {
+        string savePath = Application.dataPath + "/Assets/7 Others/Maps/";
         List<string> _list = GetAllSavedFilesPath();
         for (int i = 0; i < _list.Count; i++)
         {
-            _list[i] = GetOnlyFileName(_list[i]);
+            _list[i] = _list[i].Substring(savePath.Length);
+            _list[i] = _list[i].Substring(0, _list[i].LastIndexOf(".save"));
         }
         return _list;
     }
 
-    private List<string> AddFilesLastWriteTime(List<string> _list)
-    {
-        for (int i = 0; i < _list.Count; i++)
-        {
-            _list[i] += " (" + GetLastWriteTime(_list[i]) + ")";
-        }
-        return _list;
-    }
-
-    private string GetOnlyFileName(string filePath)
-    {
-        filePath = filePath.Substring(SaveData.current.GetMapSavePath().Length);
-        filePath = filePath.Substring(0, filePath.LastIndexOf(".save"));
-        return filePath;
-    }
-
-    private string GetLastWriteTime(string fileName)
-    {
-        string filePath = SaveData.current.GetMapSavePath();
-        filePath += fileName + ".save";
-        return File.GetLastWriteTime(filePath).ToString("MM/dd/yyyy HH:mm:ss");
-    }
-
-    public MapEditorNode GetCorrespondingNode(Vector2 _position)
+    public LevelEditorNode GetCorrespondingNode(Vector2 _position)
     {
         GameObject[] buildingNodes = GameObject.FindGameObjectsWithTag("Node");
         foreach (GameObject node in buildingNodes)
         {
             if (node.transform.position.Equals(_position))
-                return node.GetComponent<MapEditorNode>();
+                return node.GetComponent<LevelEditorNode>();
         }
         return null;
     }
@@ -192,38 +170,20 @@ public class MapEditor : MonoBehaviour
 
     public void Save()
     {
-        SaveData.current.SaveMap();
+        SaveData.current.Save();
     }
 
     public void LoadMap()
     {
-        string _name = GetLevelToLoadName();
-        if (_name == null || _name == "")
+        string _name = levelSelectionDropdown.captionText.text.ToString();
+        Debug.Log(_name);
+        if (_name == "")
             return;
-
-        SaveData.current.LoadMap();
+        SaveData.current.Load(_name);
         SaveData.current.map.LoadAllObjectFromSaveData();
         levelName = SaveData.current.map.Name;
         SetNameFieldText(levelName);
-        Debug.Log(_name + " loaded !");
     }
-
-    public string GetLevelToLoadName()
-    {
-        string name = levelSelectionDropdown.captionText.text.ToString();
-        if (name == null || name == "")
-            return null;
-        return RemoveEditTime(name);
-    }
-
-    private string RemoveEditTime(string name)
-    {
-        if (name.Length <= 19)
-            return name;
-        int editTimeLength = (System.DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss")).Length + 3;
-        return name.Substring(0, name.Length - editTimeLength);
-    }
-
 
     private void SetNameFieldText(string _text)
     {
@@ -255,14 +215,14 @@ public class MapEditor : MonoBehaviour
     public void ResetMap()
     {
         GameObject[] nodes = GameObject.FindGameObjectsWithTag("Node");
-        MapEditorNode mapEditorNode;
+        LevelEditorNode levelEditorNode;
         foreach (GameObject currentNode in nodes)
         {
-            mapEditorNode = currentNode.GetComponent<MapEditorNode>();
-            if (mapEditorNode.GetCurrentPrefab())
+            levelEditorNode = currentNode.GetComponent<LevelEditorNode>();
+            if (levelEditorNode.GetCurrentPrefab())
             {
-                mapEditorNode.ClearCurrentPrefab();
-                MapEditorUI.instance.CreateDeleteEffect(mapEditorNode.transform.position);
+                levelEditorNode.ClearCurrentPrefab();
+                LevelEditorUI.instance.CreateDeleteEffect(levelEditorNode.transform.position);
             }
         }
         Debug.Log("Map reset !");
@@ -270,7 +230,7 @@ public class MapEditor : MonoBehaviour
 
     public void DeleteSaveFile(string _name)
     {
-        string savePath = SaveData.current.GetMapSavePath();
+        string savePath = Application.dataPath + "/Assets/7 Others/Maps/";
 
         if (!File.Exists(savePath + _name + ".save"))
             Debug.Log("File '" + _name + "' not found");
@@ -284,8 +244,8 @@ public class MapEditor : MonoBehaviour
     public void DeleteFromDropdownItem(TextMeshProUGUI _textMeshPro)
     {
         string fileName = _textMeshPro.text;
-        DeleteSaveFile(RemoveEditTime(fileName));
-        MapEditorUI.instance.ShowInfoText("'" + fileName + "' deleted !", Color.yellow);
+        DeleteSaveFile(fileName);
+        LevelEditorUI.instance.ShowInfoText("'" + fileName + "' deleted !", Color.yellow);
     }
 
     public void SetName()

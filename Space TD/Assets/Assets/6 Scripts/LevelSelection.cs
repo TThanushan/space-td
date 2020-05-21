@@ -20,7 +20,7 @@ public class LevelSelection : MonoBehaviour
     {
         foreach (Levels.Level level in levels.levelArray)
         {
-            //level.waves = (Waves)SaveData.current.GetMapSavePath() + level.Name;
+            level.waves = (Waves)Resources.Load("ScriptableObject/Waves/" + level.Name);
         }
     }
 
