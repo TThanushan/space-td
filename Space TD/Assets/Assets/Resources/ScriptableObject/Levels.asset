@@ -17,7 +17,7 @@ MonoBehaviour:
     SceneIndex: 1
     Screenshot: {fileID: 21300000, guid: 5718d3549f341db478528845351805dc, type: 3}
     IsLocked: 0
-    waves: {fileID: 11400000, guid: 36a8c2ba1d19c974aa6c7a459624dd77, type: 2}
+    waves: {fileID: 11400000, guid: f20ddf746c215f84a8f9ab298dc5e498, type: 2}
     map:
       Name: 
       BuildingBlocks: []
@@ -29,7 +29,7 @@ MonoBehaviour:
     SceneIndex: 2
     Screenshot: {fileID: 21300000, guid: 62aa43067bd078c49bacf46ee661e907, type: 3}
     IsLocked: 1
-    waves: {fileID: 0}
+    waves: {fileID: 11400000, guid: 8114346618000b349b3b91bd2300c691, type: 2}
     map:
       Name: 
       BuildingBlocks: []
@@ -41,7 +41,7 @@ MonoBehaviour:
     SceneIndex: 3
     Screenshot: {fileID: 21300000, guid: 843d7299f2260af45b5b26d3fd116fa5, type: 3}
     IsLocked: 1
-    waves: {fileID: 0}
+    waves: {fileID: 11400000, guid: 3371ffdf5cac3424c9efd5fe57a79896, type: 2}
     map:
       Name: 
       BuildingBlocks: []

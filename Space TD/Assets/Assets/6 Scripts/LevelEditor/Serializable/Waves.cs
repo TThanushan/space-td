@@ -2,19 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "create new Wave")]
-public class Waves : ScriptableObject
+[System.Serializable]
+public class Waves
 {
-    public Wave[] wavesArray;
+    public string name;
 
-    public void ResetCurrentWaveTemporaryData(int currentWaveNumber)
-    {
-        foreach (EnemyType enemyType in wavesArray[currentWaveNumber].enemyTypes)
-        {
-            enemyType.currentEnemyCount = enemyType.EnemyCount;
-            enemyType.nextEnemySpawnTime = 0f;
-        }
-    }
+    public Wave[] wavesArray;
 
     [System.Serializable]
     public class Wave

@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abff08f66ca36a64c8d1bc6ae0cec5c8, type: 3}
-  m_Name: Level 1
+  m_Name: Level 3
   m_EditorClassIdentifier: 
   wavesArray:
   - enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      Health: 1
-      MoveSpeed: 2
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      Health: 15
+      MoveSpeed: 1
       MoneyRewardPerUnit: 10
-      TimeBetweenSpawn: 1
+      TimeBetweenSpawn: 3
       EnemyCount: 10
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 21.040535
+      currentEnemyCount: 2
+      nextEnemySpawnTime: 9.072904
   - enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
       Health: 2
@@ -30,7 +30,7 @@ MonoBehaviour:
       TimeBetweenSpawn: 1
       EnemyCount: 10
       currentEnemyCount: 0
-      nextEnemySpawnTime: 24.96303
+      nextEnemySpawnTime: 28.103296
   - enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
       Health: 3
@@ -39,7 +39,7 @@ MonoBehaviour:
       TimeBetweenSpawn: 1
       EnemyCount: 10
       currentEnemyCount: 0
-      nextEnemySpawnTime: 36.62343
+      nextEnemySpawnTime: 55.741394
   - enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
       Health: 4
@@ -48,7 +48,7 @@ MonoBehaviour:
       TimeBetweenSpawn: 1
       EnemyCount: 10
       currentEnemyCount: 0
-      nextEnemySpawnTime: 68.919106
+      nextEnemySpawnTime: 83.49769
   - enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
       Health: 5
@@ -56,8 +56,8 @@ MonoBehaviour:
       MoneyRewardPerUnit: 10
       TimeBetweenSpawn: 1
       EnemyCount: 10
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 107.80756
+      currentEnemyCount: 6
+      nextEnemySpawnTime: 86.023346
   - enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
       Health: 6
@@ -66,7 +66,7 @@ MonoBehaviour:
       TimeBetweenSpawn: 1
       EnemyCount: 10
       currentEnemyCount: 0
-      nextEnemySpawnTime: 127.8588
+      nextEnemySpawnTime: 105.80959
   - enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
       Health: 7
@@ -75,7 +75,7 @@ MonoBehaviour:
       TimeBetweenSpawn: 1
       EnemyCount: 10
       currentEnemyCount: 0
-      nextEnemySpawnTime: 127.8588
+      nextEnemySpawnTime: 126.130714
   - enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
       Health: 8
@@ -84,7 +84,7 @@ MonoBehaviour:
       TimeBetweenSpawn: 1
       EnemyCount: 10
       currentEnemyCount: 0
-      nextEnemySpawnTime: 127.8588
+      nextEnemySpawnTime: 156.29654
   - enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
       Health: 9
