@@ -77,7 +77,6 @@ public class SpawnerScript : MonoBehaviour {
         if (waveState == "Waiting" && enemiesRemainingToSpawn <= 0 && enemiesRemainingAlive <= 0)
         {
             PlayerStatsScript.UnpauseEvent += UpdateCurrentWaveSpawnTime;
-            waves.ResetCurrentWaveTemporaryData(currentWaveNumber);
             AudioManager.instance.Play("Wave Start", false);
             CountEnemiesToSpawn();
             waveState = "InProgress";

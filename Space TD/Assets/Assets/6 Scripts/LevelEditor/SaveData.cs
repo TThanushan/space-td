@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using System.Text.RegularExpressions;
 
 [System.Serializable]
 public class SaveData
@@ -17,24 +19,41 @@ public class SaveData
     }
 
     public Map map = new Map();
+    public Waves waves = new Waves();
+    public Level level = new Level();
 
     public void Save()
     {
-        if (!SaveConditionFullfilled())
-            return;
 
-        map.SaveAllObject();
-        SerializationManager.Save(map.Name, current);
-        LevelEditorUI.instance.ShowInfoText("'" + _current.map.Name + "' saved !");
+        //MapEditorUI.instance.ShowInfoText("'" + _current.map.Name + "' saved !");
     }
 
-    public void Load(string _name)
+    public void Load()
     {
-        _current = (SaveData)SerializationManager.Load(Application.dataPath + "/Assets/7 Others/Maps/" + _name + ".save");
-        LevelEditorUI.instance.ShowInfoText("'" + _current.map.Name + "' loaded !");
+        //MapEditorUI.instance.ShowInfoText("'" + _current.map.Name + "' loaded !");
     }
 
-    private bool SaveConditionFullfilled()
+    public void SaveMap()
+    {
+        if (!SaveMapConditionFullfilled())
+            return;
+        map.SaveAllObject();
+        SerializationManager.Save(map.Name, current, GetMapSavePath());
+    }
+
+    public void LoadMap()
+    {
+        string name = MapEditor.instance.GetLevelToLoadName();
+        _current = (SaveData)SerializationManager.Load(GetMapSavePath() + name + ".save");
+    }
+
+
+    public string GetMapSavePath()
+    {
+        return Application.dataPath + "/Assets/Resources/Maps/";
+    }
+
+    private bool SaveMapConditionFullfilled()
     {
         bool isFullfilled = true;
         string errorMessage = "";
@@ -48,7 +67,7 @@ public class SaveData
             isFullfilled = false;
             errorMessage = "You must place a Spawn Point";
         }
-        else if (!LevelEditor.instance.IsLevelNameDefined())
+        else if (!MapEditor.instance.IsLevelNameDefined())
         {
             isFullfilled = false;
             errorMessage = "Choose a name";
@@ -58,9 +77,24 @@ public class SaveData
             isFullfilled = false;
             errorMessage = "You must place at least one build block";
         }
+        else if (!ContainsOnlyLettersNumbersUnderscoreAndSpace(MapEditor.instance.levelName))
+        {
+            isFullfilled = false;
+            errorMessage = "Level name may contain only digits, and upper and lower letters";
+        }
         if (!isFullfilled)
-            LevelEditorUI.instance.ShowInfoText(errorMessage);
+            MapEditorUI.instance.ShowInfoText(errorMessage);
         return isFullfilled;
+    }
+
+    private bool ContainsOnlyLettersNumbersUnderscoreAndSpace(string str)
+    {
+        for (int i = 0; i < str.Length - 1; i++)
+        {
+            if (!char.IsLetterOrDigit(str[i]) && str[i] != '_' && !char.IsWhiteSpace(str[i]))
+                return false;
+        }
+        return true;
     }
 
 }

@@ -7,10 +7,9 @@ using System.IO;
 
 public class SerializationManager
 {
-    public static bool Save(string saveName, object saveData)
+    public static bool Save(string saveName, object saveData, string savePath)
     {
         BinaryFormatter formatter = GetBinaryFormatter();
-        string savePath = Application.dataPath + "/Assets/7 Others/Maps/";
         if (!Directory.Exists(savePath))
             Directory.CreateDirectory(savePath);
 
