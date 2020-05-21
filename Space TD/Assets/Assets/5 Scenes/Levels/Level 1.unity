@@ -6348,6 +6348,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1625389075}
     m_Modifications:
+    - target: {fileID: 1896074525, guid: 5a29486ca5ebb3d4bae330bc7da942ac, type: 3}
+      propertyPath: waves
+      value: 
+      objectReference: {fileID: 11400000, guid: 36a8c2ba1d19c974aa6c7a459624dd77,
+        type: 2}
     - target: {fileID: 2409013411674934122, guid: 5a29486ca5ebb3d4bae330bc7da942ac,
         type: 3}
       propertyPath: m_LocalPosition.x
