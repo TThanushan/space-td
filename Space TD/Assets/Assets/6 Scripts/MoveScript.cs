@@ -10,18 +10,9 @@ public class MoveScript : MonoBehaviour {
     public int wayX = 1;
     public int wayY = 1;
 
-    PlayerStatsScript playerStats;
-
-
-
-    private void Awake()
-    {
-        playerStats = PlayerStatsScript.instance;
-    }
-
     void Update () {
 
-        if (playerStats && playerStats.IsGamePaused)
+        if (PlayerStatsScript.instance.IsGamePaused)
             return;
         transform.Translate(new Vector2(moveSpeedX * wayX * Time.deltaTime, moveSpeedY * wayY * Time.deltaTime));
     }

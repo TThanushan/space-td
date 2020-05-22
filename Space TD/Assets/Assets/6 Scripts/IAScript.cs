@@ -19,7 +19,7 @@ public class IAScript : MonoBehaviour {
     PlayerStatsScript playerStats;
 
     void Start() {
-        pathArray = GameObject.FindGameObjectWithTag("PathPoints").GetComponent<PathPointsScript>().points;
+        pathArray = PoolObject.instance.pathArray;
         InvokeRepeating("RemoveEffect", 0f, 2f);
     }
 

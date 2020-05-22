@@ -30,16 +30,19 @@ public class MapStartBuilder : MonoBehaviour
         SaveData.current.Load(sceneName);
     }
 
-    private void CreateObjectFromSave(Vector2 _position, string name)
+    private void CreateObjectFromSave(Vector2 _position, string name, string parentTag="Bin")
     {
         GameObject newObj = PoolObject.instance.GetPoolObject(GetCorrespondingPrefab(name));
         newObj.transform.position = _position;
+
+        Transform parent = GameObject.FindGameObjectWithTag(parentTag).transform;
+        newObj.transform.parent = parent;
     }
 
-    private void CreateObjectFromSave(List<Vector2> _list, string name, string parentName="Bin")
+    private void CreateObjectFromSave(List<Vector2> _list, string name, string parentTag = "Bin")
     {
         GameObject newObj;
-        Transform parent = GameObject.FindGameObjectWithTag(parentName).transform;
+        Transform parent = GameObject.FindGameObjectWithTag(parentTag).transform;
         foreach (Vector2 _pos in _list)
         {
             newObj = PoolObject.instance.GetPoolObject(GetCorrespondingPrefab(name));

@@ -3,24 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class PlayerStatsScript : MonoBehaviour {
+[System.Serializable]
+public class PlayerStatsScript {
 
-    public static PlayerStatsScript instance;
-    
+    private static PlayerStatsScript _instance;
+    public static PlayerStatsScript instance
+    {
+        get
+        {
+            if (_instance == null)
+                _instance = new PlayerStatsScript();
+            return _instance;
+        }
+    }
+
     public delegate void PauseAction();
     public static event PauseAction PauseEvent;
 
     public delegate void UnpauseAction();
     public static event UnpauseAction UnpauseEvent;
 
-    public int life = 10;
-    public float money = 40;
+    public int life = 20;
+    public float money = 200;
     public bool pause;
     public float timeWhenPaused;
-    void Awake() {
-        if (instance == null)
-            instance = this;
-	}
+
     public bool IsGamePaused { get { return pause; } }
     public void PauseGame()
     {

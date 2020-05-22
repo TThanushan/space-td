@@ -32,14 +32,23 @@ public class PoolObject : MonoBehaviour {
         GameObject _binTransform = GameObject.FindGameObjectWithTag("Bin");
         if (_binTransform)
             binTransform = _binTransform.GetComponent<Transform>();
-
-        GameObject _pathArray = GameObject.FindGameObjectWithTag("PathPoints");
-        if (_pathArray)
-            pathArray = _pathArray.GetComponent<PathPointsScript>().points;
+        pathArray = GetPathPointsTransform();
     }
 
     void FixedUpdate () {
         FindEnemyFunc();
+    }
+
+    private Transform[] GetPathPointsTransform()
+    {
+        List<Transform> pathPointsList = new List<Transform>();
+        foreach (GameObject item in GameObject.FindGameObjectsWithTag("Path Point"))
+        {
+            pathPointsList.Add(item.transform);
+        }
+        if (GameObject.FindGameObjectWithTag("Base"))
+            pathPointsList.Add(GameObject.FindGameObjectWithTag("Base").transform);
+        return pathPointsList.ToArray();
     }
 
     void FindEnemyFunc()

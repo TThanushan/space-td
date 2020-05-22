@@ -165,14 +165,9 @@ public class UIScript : MonoBehaviour {
 
     public void SkipWaveTime()
     {
-        //int moneyGiven = (int)(SpawnerScript.instance.nextWaveTime) * 2;
-        //PlayerStatsScript.instance.money += moneyGiven;
-        //string text = "+" + moneyGiven.ToString() + "$";
-        //DisplayText(text, new Vector2(0, 4), 2);
-
         SpawnerScript.instance.nextWaveTime = 0;
-
     }
+
     public void PlaySfx(string sfxName)
     {
         if (sfxName == "")

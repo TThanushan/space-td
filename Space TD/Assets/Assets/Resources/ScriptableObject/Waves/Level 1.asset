@@ -21,7 +21,7 @@ MonoBehaviour:
       TimeBetweenSpawn: 1
       EnemyCount: 10
       currentEnemyCount: 0
-      nextEnemySpawnTime: 21.040535
+      nextEnemySpawnTime: 47.65079
   - enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
       Health: 2
@@ -30,7 +30,7 @@ MonoBehaviour:
       TimeBetweenSpawn: 1
       EnemyCount: 10
       currentEnemyCount: 0
-      nextEnemySpawnTime: 24.96303
+      nextEnemySpawnTime: 67.0863
   - enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
       Health: 3
@@ -39,7 +39,7 @@ MonoBehaviour:
       TimeBetweenSpawn: 1
       EnemyCount: 10
       currentEnemyCount: 0
-      nextEnemySpawnTime: 36.62343
+      nextEnemySpawnTime: 86.64397
   - enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
       Health: 4
@@ -48,7 +48,7 @@ MonoBehaviour:
       TimeBetweenSpawn: 1
       EnemyCount: 10
       currentEnemyCount: 0
-      nextEnemySpawnTime: 68.919106
+      nextEnemySpawnTime: 106.408966
   - enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
       Health: 5
@@ -57,49 +57,4 @@ MonoBehaviour:
       TimeBetweenSpawn: 1
       EnemyCount: 10
       currentEnemyCount: 0
-      nextEnemySpawnTime: 107.80756
-  - enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      Health: 6
-      MoveSpeed: 2
-      MoneyRewardPerUnit: 10
-      TimeBetweenSpawn: 1
-      EnemyCount: 10
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 127.8588
-  - enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      Health: 7
-      MoveSpeed: 2
-      MoneyRewardPerUnit: 10
-      TimeBetweenSpawn: 1
-      EnemyCount: 10
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 127.8588
-  - enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      Health: 8
-      MoveSpeed: 2
-      MoneyRewardPerUnit: 10
-      TimeBetweenSpawn: 1
-      EnemyCount: 10
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 127.8588
-  - enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      Health: 9
-      MoveSpeed: 2
-      MoneyRewardPerUnit: 10
-      TimeBetweenSpawn: 1
-      EnemyCount: 10
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 127.8588
-  - enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      Health: 10
-      MoveSpeed: 2
-      MoneyRewardPerUnit: 10
-      TimeBetweenSpawn: 1
-      EnemyCount: 10
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 127.8588
+      nextEnemySpawnTime: 136.65364

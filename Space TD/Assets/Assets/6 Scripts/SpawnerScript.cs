@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.SceneManagement;
 
 public class SpawnerScript : MonoBehaviour {
 
@@ -38,6 +39,7 @@ public class SpawnerScript : MonoBehaviour {
             instance = this;
         playerStats = PlayerStatsScript.instance;
         poolScript = GameObject.FindGameObjectWithTag("Data").GetComponent<PoolObject>();
+        waves = (Waves)Resources.Load("ScriptableObject/Waves/"+EditorSceneManager.GetActiveScene().name);
         nextWaveTime = 10;
         numberOfWaves = waves.wavesArray.Length;
     }

@@ -46,7 +46,7 @@ MonoBehaviour:
   sounds:
   - name: Tower Shoot
     clip: {fileID: 8300000, guid: 7a5c3a529a7d3654eb9543fc8c870876, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -155,6 +155,30 @@ MonoBehaviour:
   - name: Sell
     clip: {fileID: 8300000, guid: e21a8b07273884d429b298b2c2439e5b, type: 3}
     volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Woosh
+    clip: {fileID: 8300000, guid: 2361e9d9879cdf64db6a0c5a9c4c0827, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Click
+    clip: {fileID: 8300000, guid: 241cd1399cf60d74a8f89f0c262c3ea8, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Erase
+    clip: {fileID: 8300000, guid: 2d4ad065f06525d4c8a85d47f87c9d97, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: "Children\u2019s game tone soft"
+    clip: {fileID: 8300000, guid: 886a471dd3351c94392fcd591e50d5ec, type: 3}
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
