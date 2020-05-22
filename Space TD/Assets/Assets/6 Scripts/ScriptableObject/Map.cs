@@ -16,7 +16,8 @@ public class Map
 
     public void SaveAllObject()
     {
-        Name = LevelEditor.instance.levelName;
+        if (LevelEditor.instance)
+            Name = LevelEditor.instance.levelName;
         SaveObjectIntoList(ref BuildingBlocks, "Building Block");
         SaveObjectIntoList(ref PathPoints, "Path Point");
         SaveObjectIntoList(ref PathGrounds, "Path Ground");

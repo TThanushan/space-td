@@ -91,15 +91,22 @@ public class IAScript : MonoBehaviour {
 
     void Move()
     {
-        Vector2 dir = pathArray[pathPointIndex].position - transform.position;
+        Vector2 dir = GetMoveDirection();
         transform.Translate(dir.normalized * Time.deltaTime * moveSpeed);
     }
 
     bool ReachedPathPoint()
     {
-        Vector2 dir = pathArray[pathPointIndex].position - transform.position;
+        Vector2 dir = GetMoveDirection();
         float distance = moveSpeed * Time.deltaTime;
         return dir.magnitude <= distance;
+    }
+
+    private Vector2 GetMoveDirection()
+    {
+        if (pathPointIndex >= pathArray.Length - 1)
+            return PoolObject.instance._base.transform.position - transform.position;
+        return pathArray[pathPointIndex].position - transform.position;
     }
 
     bool ReachedPlayerBase()

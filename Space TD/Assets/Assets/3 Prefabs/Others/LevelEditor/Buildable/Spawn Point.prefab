@@ -146,6 +146,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedSquare
       objectReference: {fileID: 0}
+    - target: {fileID: 2823599318707642286, guid: 0123eb47528ebd94aabc25191e0af230,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0123eb47528ebd94aabc25191e0af230, type: 3}
 --- !u!4 &751369355775608873 stripped

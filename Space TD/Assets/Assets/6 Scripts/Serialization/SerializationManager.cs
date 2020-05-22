@@ -27,6 +27,7 @@ public class SerializationManager
 
     public static object Load(string path)
     {
+        Debug.Log(path + "=" + File.Exists(path));
         if (!File.Exists(path))
             return null;
         BinaryFormatter formatter = GetBinaryFormatter();

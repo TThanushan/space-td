@@ -6,15 +6,18 @@ public class PoolObject : MonoBehaviour {
 
     public static PoolObject instance;
 
-    [Header("Data")]
     public GameObject[] enemies;
+
     public Transform[] pathArray;
+
     public string enemyTag;
-    [Space(30)]
-    [Space]
-    //Size to start with.
+
     public int poolSize;
+
     public List<GameObject> unitPool;
+
+    public GameObject _base;
+
     Transform binTransform;
 
     void Awake()
@@ -25,7 +28,7 @@ public class PoolObject : MonoBehaviour {
     }
 
     void Start () {
-
+        _base = GameObject.FindGameObjectWithTag("Base");
         GameObject _binTransform = GameObject.FindGameObjectWithTag("Bin");
         if (_binTransform)
             binTransform = _binTransform.GetComponent<Transform>();

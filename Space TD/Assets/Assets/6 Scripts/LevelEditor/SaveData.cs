@@ -25,13 +25,19 @@ public class SaveData
 
         map.SaveAllObject();
         SerializationManager.Save(map.Name, current);
-        LevelEditorUI.instance.ShowInfoText("'" + _current.map.Name + "' saved !");
+        if (LevelEditor.instance)
+            LevelEditorUI.instance.ShowInfoText("'" + _current.map.Name + "' saved !");
     }
 
     public void Load(string _name)
     {
         _current = (SaveData)SerializationManager.Load(Application.dataPath + "/Assets/7 Others/Maps/" + _name + ".save");
-        LevelEditorUI.instance.ShowInfoText("'" + _current.map.Name + "' loaded !");
+
+        Debug.Log("<"+_current.map.Name+">");
+
+        if (LevelEditor.instance)
+            LevelEditorUI.instance.ShowInfoText("'" + _current.map.Name + "' loaded !");
+        Debug.Log("'" + _current.map.Name + "' loaded !");
     }
 
     private bool SaveConditionFullfilled()
@@ -58,7 +64,7 @@ public class SaveData
             isFullfilled = false;
             errorMessage = "You must place at least one build block";
         }
-        if (!isFullfilled)
+        if (!isFullfilled && LevelEditor.instance)
             LevelEditorUI.instance.ShowInfoText(errorMessage);
         return isFullfilled;
     }

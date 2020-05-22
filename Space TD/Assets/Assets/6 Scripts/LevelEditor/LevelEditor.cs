@@ -11,7 +11,6 @@ public class LevelEditor : MonoBehaviour
     public GameObject cursor;
     public GameObject prefabPreview;
     public string levelName;
-    public TextMeshProUGUI levelNameTextMesh;
     public GameObject[] prefabs;
     public GameObject[] prefabPreviews;
 
@@ -29,8 +28,6 @@ public class LevelEditor : MonoBehaviour
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         if (!cursor)
             cursor = GameObject.Find("Cursor");
-        GetlevelNameTextMeshComponent();
-
         if (!levelSelectionDropdown)
             levelSelectionDropdown = GetComponentInChildren<TMP_Dropdown>();
         UpdateLevelSelectionDropdown();
@@ -175,27 +172,19 @@ public class LevelEditor : MonoBehaviour
 
     public void LoadMap()
     {
-        string _name = levelSelectionDropdown.captionText.text.ToString();
-        Debug.Log(_name);
+        string _name = levelSelectionDropdown.options[levelSelectionDropdown.value].text;
         if (_name == "")
             return;
+        Debug.Log(_name.Length);
         SaveData.current.Load(_name);
         SaveData.current.map.LoadAllObjectFromSaveData();
         levelName = SaveData.current.map.Name;
-        SetNameFieldText(levelName);
+        SetNameFieldText(levelName.ToString());
     }
 
     private void SetNameFieldText(string _text)
     {
         transform.GetComponentInChildren<TMP_InputField>().text = _text;
-    }
-
-    public void GetlevelNameTextMeshComponent()
-    {
-        if (levelNameTextMesh)
-            return;
-        GameObject textObject = transform.Find("BuildToolbar/NameField/Text Area/Text").gameObject;
-        levelNameTextMesh = textObject.GetComponent<TextMeshProUGUI>();
     }
 
     public void SetSelectedPrefab(GameObject prefab)
@@ -250,7 +239,7 @@ public class LevelEditor : MonoBehaviour
 
     public void SetName()
     {
-        levelName = levelNameTextMesh.text;
+        levelName = GetComponentInChildren<TMP_InputField>().text;
     }
 
 }

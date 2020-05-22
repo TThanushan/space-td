@@ -4926,8 +4926,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3099583329903244119}
   m_Layer: 0
-  m_Name: GreenSquare
-  m_TagString: Untagged
+  m_Name: Base
+  m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
