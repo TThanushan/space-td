@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 96722054328757550}
   - component: {fileID: 114968194441022174}
   m_Layer: 0
-  m_Name: Enemy 8
+  m_Name: Enemy 3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ec975b64b581d42bab08687ac41c62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 2.5
   damage: 1
   pathArray:
   - {fileID: 0}
@@ -225,6 +225,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  startMoveSpeed: 0
 --- !u!114 &114759699370745256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,11 +239,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  maxHealth: 128
+  maxHealth: 3
   currentHealth: 0
   Healthbar: {fileID: 556790839924839079}
   healthText: {fileID: 0}
-  moneyGiven: 5
+  moneyGiven: 6
   deathEffect: {fileID: 1084755322472324951, guid: f73f78069030f0742af75d12faf9f235,
     type: 3}
 --- !u!96 &96722054328757550

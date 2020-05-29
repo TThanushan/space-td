@@ -27,6 +27,8 @@ public class ProgressBarScript : MonoBehaviour {
         Healthbar.transform.localScale = new Vector3(0, Healthbar.transform.localScale.y, Healthbar.transform.localScale.z);
 
         currentHealth = maxHealth;
+        DisableHealthBarFullLife();
+
     }
 
     void Start () {
@@ -46,15 +48,12 @@ public class ProgressBarScript : MonoBehaviour {
         Death();
 
         DisableHealthBarFullLife();
-	}
+    }
 
     void DisableHealthBarFullLife()
     {
         Transform healthBody = transform.Find("HealthBody");
-        if (currentHealth == maxHealth)
-            healthBody.gameObject.SetActive(false);
-        else
-            healthBody.gameObject.SetActive(true);
+        healthBody.gameObject.SetActive(currentHealth != maxHealth);
     }
 
     void Death()

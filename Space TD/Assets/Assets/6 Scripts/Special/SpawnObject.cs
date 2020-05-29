@@ -32,7 +32,9 @@ public class SpawnObject : MonoBehaviour {
     {
         if (positionA == null && positionB == null)
             return;
-        
+        if (PlayerStatsScript.instance != null && PlayerStatsScript.instance.IsGamePaused)
+            return;
+
         GameObject newPrefab = null;
 
         if (randomPrefabs)

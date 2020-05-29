@@ -13,48 +13,133 @@ MonoBehaviour:
   m_Name: Level 1
   m_EditorClassIdentifier: 
   wavesArray:
-  - enemyTypes:
+  - moneyReward: 100
+    enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      Health: 1
-      MoveSpeed: 2
-      MoneyRewardPerUnit: 10
+      TimeBetweenSpawn: 1
+      EnemyCount: 20
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 41.691402
+  - moneyReward: 100
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.5
+      EnemyCount: 30
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 64.553116
+  - moneyReward: 100
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 1
+      EnemyCount: 20
+      currentEnemyCount: 8
+      nextEnemySpawnTime: 97.42486
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 2
+      EnemyCount: 5
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 95.28656
+  - moneyReward: 100
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.5
+      EnemyCount: 30
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 112.287506
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 1.5
+      EnemyCount: 15
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 119.43747
+  - moneyReward: 100
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.5
+      EnemyCount: 5
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 124.192215
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 1
+      EnemyCount: 25
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 147.10626
+  - moneyReward: 100
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.5
+      EnemyCount: 5
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 124.192215
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 1
+      EnemyCount: 25
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 147.10626
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 1
+      EnemyCount: 4
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 147.10626
+  - moneyReward: 100
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.5
+      EnemyCount: 20
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 124.192215
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 1
+      EnemyCount: 25
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 147.10626
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 1
+      EnemyCount: 5
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 147.10626
+  - moneyReward: 100
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.5
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 124.192215
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 1
+      EnemyCount: 20
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 147.10626
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 1
+      EnemyCount: 14
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 147.10626
+  - moneyReward: 100
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.5
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 124.192215
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 1
+      EnemyCount: 5
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 147.10626
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 1
+      EnemyCount: 25
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 147.10626
+  - moneyReward: 100
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
       TimeBetweenSpawn: 1
       EnemyCount: 10
       currentEnemyCount: 0
-      nextEnemySpawnTime: 47.65079
-  - enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      Health: 2
-      MoveSpeed: 2
-      MoneyRewardPerUnit: 10
+      nextEnemySpawnTime: 124.192215
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
       TimeBetweenSpawn: 1
-      EnemyCount: 10
+      EnemyCount: 40
       currentEnemyCount: 0
-      nextEnemySpawnTime: 67.0863
-  - enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      Health: 3
-      MoveSpeed: 2
-      MoneyRewardPerUnit: 10
-      TimeBetweenSpawn: 1
-      EnemyCount: 10
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 86.64397
-  - enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      Health: 4
-      MoveSpeed: 2
-      MoneyRewardPerUnit: 10
-      TimeBetweenSpawn: 1
-      EnemyCount: 10
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 106.408966
-  - enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      Health: 5
-      MoveSpeed: 2
-      MoneyRewardPerUnit: 10
-      TimeBetweenSpawn: 1
-      EnemyCount: 10
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 136.65364
+      nextEnemySpawnTime: 147.10626

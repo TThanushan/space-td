@@ -28,7 +28,7 @@ MonoBehaviour:
   - Name: Level 2
     SceneIndex: 2
     Screenshot: {fileID: 21300000, guid: 62aa43067bd078c49bacf46ee661e907, type: 3}
-    IsLocked: 1
+    IsLocked: 0
     waves: {fileID: 11400000, guid: 8114346618000b349b3b91bd2300c691, type: 2}
     map:
       Name: 

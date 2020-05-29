@@ -526,6 +526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac8b932d154a2c44b5a529f6f64d873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugClosestE: {fileID: 0}
   attackDamage: 0.75
   attackSpeed: 1
   attackRange: 3
@@ -539,6 +540,7 @@ MonoBehaviour:
   towerEffect: 5
   isDisable: 0
   shootSFXName: Tower Shoot
+  lightningEffect: {fileID: 0}
   lineRenderer: {fileID: 0}
   burnTurretEffectG: {fileID: 0}
   chargingSpeed: 0.05

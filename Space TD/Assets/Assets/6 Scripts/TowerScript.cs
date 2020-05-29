@@ -166,7 +166,7 @@ public class TowerScript : MonoBehaviour {
     void UnchargeAttackSpeed()
     {
         if (!target && attackSpeed < maxAttackspeed)
-            attackSpeed += chargingSpeed / 2;
+            attackSpeed += chargingSpeed / 4;
         if (attackSpeed > maxAttackspeed)
             attackSpeed = maxAttackspeed;
     }

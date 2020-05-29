@@ -54,19 +54,11 @@ public class UIScript : MonoBehaviour {
 
         if (SpawnerScript.instance.nextWaveTime > 0)
         {
-            //skipButton.SetActive(true);
             waveTime.SetActive(true);
-            //waveTimeText.text = "Next Wave : " + SpawnerScript.instance.nextWaveTime.ToString("0");
             UpdateWaveTimerBar();
         }
         else
-        {
-            //skipButton.SetActive(false);
             waveTime.SetActive(false);
-            //waveTimeText.text = "";
-
-        }
-
         PlayerInputs();
         IsLevelComplete();
         HasPlayerLose();
@@ -117,45 +109,18 @@ public class UIScript : MonoBehaviour {
 
     }
 
-    public void SpeedButton(Transform spriteGroup)
+    public void SetTimeSpeed(float _speed)
     {
-        if (Time.timeScale == 0.5f)
-        {
-            spriteGroup.Find("Arrow1").gameObject.SetActive(true);
-            spriteGroup.Find("Arrow2").gameObject.SetActive(true);
-            spriteGroup.Find("Arrow3").gameObject.SetActive(false);
-            spriteGroup.Find("Arrow4").gameObject.SetActive(false);
+        Time.timeScale = _speed;
+    }
 
-            Time.timeScale = 1f;
-        }
-        else if (Time.timeScale == 1)
-        {
-
-            spriteGroup.Find("Arrow1").gameObject.SetActive(true);
-            spriteGroup.Find("Arrow2").gameObject.SetActive(true);
-            spriteGroup.Find("Arrow3").gameObject.SetActive(true);
-            spriteGroup.Find("Arrow4").gameObject.SetActive(false);
-
-            Time.timeScale = 2f;
-        }
-        else if (Time.timeScale == 2f)
-        {
-            spriteGroup.Find("Arrow1").gameObject.SetActive(true);
-            spriteGroup.Find("Arrow2").gameObject.SetActive(true);
-            spriteGroup.Find("Arrow3").gameObject.SetActive(true);
-            spriteGroup.Find("Arrow4").gameObject.SetActive(true);
-
-            Time.timeScale = 4f;
-        }
-        else
-        {
-            spriteGroup.Find("Arrow1").gameObject.SetActive(true);
-            spriteGroup.Find("Arrow2").gameObject.SetActive(false);
-            spriteGroup.Find("Arrow3").gameObject.SetActive(false);
-            spriteGroup.Find("Arrow4").gameObject.SetActive(false);
-
-            Time.timeScale = 0.5f;
-        }
+    public void SetImageEnableColor(Image image)
+    {
+        image.color = new Color(1f, 0.7331f, 0.0235f, 1f);
+    }
+    public void SetImageDisabledColor(Image image)
+    {
+        image.color = new Color(0.2075f, 0.1508f, 0f, 1f);
     }
 
     public void MuteSfxVolume(GameObject _image)
@@ -287,4 +252,10 @@ public class UIScript : MonoBehaviour {
 
 
     }
+
+    public void PauseGame()
+    {
+        PlayerStatsScript.instance.PauseGame();
+    }
+
 }

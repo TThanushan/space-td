@@ -226,6 +226,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  startMoveSpeed: 0
 --- !u!114 &114759699370745256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,6 +415,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HealthBody
+      objectReference: {fileID: 0}
+    - target: {fileID: 8662543900228306402, guid: 6312617b750fd2044aa2c3726c3907d4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8662543900228306414, guid: 6312617b750fd2044aa2c3726c3907d4,
         type: 3}

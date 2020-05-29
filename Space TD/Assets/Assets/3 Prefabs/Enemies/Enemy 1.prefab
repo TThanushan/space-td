@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 4991910471525934}
   - component: {fileID: 114385160911464918}
   - component: {fileID: 114295544670039834}
+  - component: {fileID: 7343450779608529841}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Enemy
@@ -224,6 +225,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  startMoveSpeed: 0
 --- !u!114 &114295544670039834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,13 +239,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  maxHealth: 2
+  maxHealth: 1
   currentHealth: 0
   Healthbar: {fileID: 7175028942859238887}
   healthText: {fileID: 0}
-  moneyGiven: 7
+  moneyGiven: 2
   deathEffect: {fileID: 1084755322472324951, guid: f73f78069030f0742af75d12faf9f235,
     type: 3}
+--- !u!95 &7343450779608529841
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725576515888812}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 421acef62235376499581c3451621cca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2989797231507869863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -255,6 +276,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HealthBody
+      objectReference: {fileID: 0}
+    - target: {fileID: 8662543900228306402, guid: 6312617b750fd2044aa2c3726c3907d4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8662543900228306414, guid: 6312617b750fd2044aa2c3726c3907d4,
         type: 3}
@@ -382,6 +408,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4413487703720396}
     m_Modifications:
+    - target: {fileID: 7433118261595210505, guid: 1afb0c58d3bb39c4891013b3943cc20e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7433118261595210506, guid: 1afb0c58d3bb39c4891013b3943cc20e,
         type: 3}
       propertyPath: m_LocalPosition.x

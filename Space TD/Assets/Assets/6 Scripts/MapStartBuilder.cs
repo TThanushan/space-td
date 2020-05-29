@@ -6,10 +6,12 @@ using System.Collections.Generic;
 public class MapStartBuilder : MonoBehaviour
 {
     public GameObject[] prefabs;
+    public int startMoney = 100;
 
     public void Awake()
     {
         LoadMap();
+        PlayerStatsScript.instance.money = startMoney;
     }
 
     public void LoadMap()

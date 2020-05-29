@@ -68,8 +68,8 @@ public class SpawnerScript : MonoBehaviour {
             StartNextWave();
             WaveOver();
         }
-        else
-            nextWaveTime -= Time.deltaTime;
+        //else 
+        //    nextWaveTime -= Time.deltaTime;
     }
 
 
@@ -104,7 +104,10 @@ public class SpawnerScript : MonoBehaviour {
             if (isAllWavesDone)
                 return;
             if (currentWaveNumber != numberOfWaves)
+            {
                 nextWaveTime = 10;
+                playerStats.money += waves.wavesArray[currentWaveNumber].moneyReward;
+            }
         }
     }
 
@@ -130,11 +133,11 @@ public class SpawnerScript : MonoBehaviour {
 			ProgressBarScript progressBarScript = newUnit.GetComponent<ProgressBarScript>();
 			IAScript enemyScript = newUnit.GetComponent<IAScript>();
 
-            progressBarScript.maxHealth = currentEnemyType.Health;
-            progressBarScript.currentHealth = currentEnemyType.Health;
-            enemyScript.startMoveSpeed = currentEnemyType.MoveSpeed;
-            enemyScript.moveSpeed = currentEnemyType.MoveSpeed;
-            progressBarScript.moneyGiven = currentEnemyType.MoneyRewardPerUnit;
+            //progressBarScript.maxHealth = currentEnemyType.Health;
+            //progressBarScript.currentHealth = currentEnemyType.Health;
+            //enemyScript.startMoveSpeed = currentEnemyType.MoveSpeed;
+            //enemyScript.moveSpeed = currentEnemyType.MoveSpeed;
+            //progressBarScript.moneyGiven = currentEnemyType.MoneyRewardPerUnit;
 
             progressBarScript.OnDeath += OnEnemyDeath;
 

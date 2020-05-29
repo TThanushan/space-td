@@ -14,20 +14,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wavesArray:
   - enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
-      Health: 3
-      MoveSpeed: 1
-      MoneyRewardPerUnit: 15
-      TimeBetweenSpawn: 1.5
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      Health: 1
+      MoveSpeed: 2
+      MoneyRewardPerUnit: 10
+      TimeBetweenSpawn: 1
       EnemyCount: 10
       currentEnemyCount: 0
-      nextEnemySpawnTime: 15.523157
+      nextEnemySpawnTime: 16.364746
+  - enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      Health: 2
+      MoveSpeed: 2
+      MoneyRewardPerUnit: 10
+      TimeBetweenSpawn: 1
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 33.425873
   - enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
       Health: 3
       MoveSpeed: 1
       MoneyRewardPerUnit: 15
-      TimeBetweenSpawn: 1.5
-      EnemyCount: 20
+      TimeBetweenSpawn: 2
+      EnemyCount: 5
       currentEnemyCount: 0
-      nextEnemySpawnTime: 15.523157
+      nextEnemySpawnTime: 48.508816
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      Health: 3
+      MoveSpeed: 2
+      MoneyRewardPerUnit: 10
+      TimeBetweenSpawn: 1
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 48.525345
+  - enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      Health: 3
+      MoveSpeed: 1
+      MoneyRewardPerUnit: 15
+      TimeBetweenSpawn: 2
+      EnemyCount: 5
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 77.32476
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      Health: 3
+      MoveSpeed: 2
+      MoneyRewardPerUnit: 10
+      TimeBetweenSpawn: 1
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 77.34043

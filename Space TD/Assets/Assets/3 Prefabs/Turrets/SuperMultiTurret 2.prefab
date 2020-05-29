@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac8b932d154a2c44b5a529f6f64d873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugClosestE: {fileID: 0}
   attackDamage: 3.5
   attackSpeed: 0.5
   attackRange: 2
@@ -138,6 +139,7 @@ MonoBehaviour:
   towerEffect: 0
   isDisable: 0
   shootSFXName: Tower shot
+  lightningEffect: {fileID: 0}
   lineRenderer: {fileID: 0}
   burnTurretEffectG: {fileID: 0}
   chargingSpeed: 0
@@ -452,6 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac8b932d154a2c44b5a529f6f64d873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugClosestE: {fileID: 0}
   attackDamage: 1
   attackSpeed: 2
   attackRange: 3
@@ -459,12 +462,13 @@ MonoBehaviour:
   slowAmount: 50
   rotateSpeed: 0
   shootPos: {fileID: 1349045832398162}
-  bulletG: {fileID: 1271134761775984, guid: a276cf88d10fe764a9adc98dd858ebe0, type: 3}
+  bulletG: {fileID: 1271134761775984, guid: 5bcdc38ac5e371247bc9616ad33e9a4d, type: 3}
   enemiesToAttack: []
   towerTargetMod: 2
   towerEffect: 1
   isDisable: 0
   shootSFXName: Tower Shoot
+  lightningEffect: {fileID: 0}
   lineRenderer: {fileID: 0}
   burnTurretEffectG: {fileID: 0}
   chargingSpeed: 0
@@ -5449,6 +5453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac8b932d154a2c44b5a529f6f64d873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugClosestE: {fileID: 0}
   attackDamage: 3.5
   attackSpeed: 0.5
   attackRange: 2
@@ -5462,6 +5467,7 @@ MonoBehaviour:
   towerEffect: 0
   isDisable: 0
   shootSFXName: Tower shot
+  lightningEffect: {fileID: 0}
   lineRenderer: {fileID: 0}
   burnTurretEffectG: {fileID: 0}
   chargingSpeed: 0
@@ -5867,6 +5873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac8b932d154a2c44b5a529f6f64d873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugClosestE: {fileID: 0}
   attackDamage: 3.5
   attackSpeed: 0.5
   attackRange: 2
@@ -5880,6 +5887,7 @@ MonoBehaviour:
   towerEffect: 0
   isDisable: 0
   shootSFXName: Tower shot
+  lightningEffect: {fileID: 0}
   lineRenderer: {fileID: 0}
   burnTurretEffectG: {fileID: 0}
   chargingSpeed: 0
@@ -6010,6 +6018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac8b932d154a2c44b5a529f6f64d873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugClosestE: {fileID: 0}
   attackDamage: 3.5
   attackSpeed: 0.5
   attackRange: 2
@@ -6023,6 +6032,7 @@ MonoBehaviour:
   towerEffect: 0
   isDisable: 0
   shootSFXName: Tower shot
+  lightningEffect: {fileID: 0}
   lineRenderer: {fileID: 0}
   burnTurretEffectG: {fileID: 0}
   chargingSpeed: 0

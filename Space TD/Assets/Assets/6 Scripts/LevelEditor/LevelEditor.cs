@@ -39,6 +39,15 @@ public class LevelEditor : MonoBehaviour
         ShowSelectedPrefabPreview();
     }
 
+    public void ClearAllPathPoints()
+    {
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Path Point"))
+        {
+            GameObject.Destroy(obj);
+        }
+
+    }
+
     public void SetDeletePanelText(TextMeshProUGUI textMeshProUGUI)
     {
         string levelName = 

@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac8b932d154a2c44b5a529f6f64d873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugClosestE: {fileID: 0}
   attackDamage: 2
   attackSpeed: 2
   attackRange: 3
@@ -53,12 +54,13 @@ MonoBehaviour:
   slowAmount: 1
   rotateSpeed: 15
   shootPos: {fileID: 1225090656591770}
-  bulletG: {fileID: 1271134761775984, guid: 7935d0243b4ce0946a43a0943e45c9f5, type: 3}
+  bulletG: {fileID: 1271134761775984, guid: 6e710f19342194a48b471e00dab3bc87, type: 3}
   enemiesToAttack: []
   towerTargetMod: 1
   towerEffect: 0
   isDisable: 0
   shootSFXName: Tower Shoot
+  lightningEffect: {fileID: 0}
   lineRenderer: {fileID: 0}
   burnTurretEffectG: {fileID: 0}
   chargingSpeed: 0
@@ -375,7 +377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9156599447129762730
 Transform:
   m_ObjectHideFlags: 0
@@ -456,7 +458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7942015172857535124
 Transform:
   m_ObjectHideFlags: 0
@@ -537,7 +539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1403170751170611685
 Transform:
   m_ObjectHideFlags: 0

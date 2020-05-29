@@ -20,9 +20,9 @@ public class Waves : ScriptableObject
     public class EnemyType
     {
         public GameObject Enemy;
-        public int Health;
-        public float MoveSpeed;
-        public int MoneyRewardPerUnit;
+        //public int Health;
+        //public float MoveSpeed;
+        //public int MoneyRewardPerUnit;
         public float TimeBetweenSpawn;
         public int EnemyCount;
 
@@ -37,6 +37,7 @@ public class Waves : ScriptableObject
     [System.Serializable]
     public class Wave
     {
+        public int moneyReward;
         public EnemyType[] enemyTypes;
     }
 }
