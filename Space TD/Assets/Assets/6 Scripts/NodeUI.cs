@@ -50,10 +50,10 @@ public class NodeUI : MonoBehaviour {
 
 	public void ShowRangeUpgrade(bool show)
 	{
-		if (show)
+		if (show && nodeTarget.turretBlueprint.IsUpgradeAvailable())
 		{
 			TowerScript towerScript = nodeTarget.turretBlueprint.upgradePrefab.GetComponent<TowerScript>();
-			float towerRange = towerScript.attackRange / 1.3f;
+            float towerRange = towerScript.attackRange / 1.3f;
 			upgradeRangeSprite.transform.localScale = new Vector3(towerRange, towerRange, 0);
 			upgradeRangeSprite.transform.position = nodeTarget.transform.position;
 			upgradeRangeSprite.SetActive(true);
@@ -70,10 +70,9 @@ public class NodeUI : MonoBehaviour {
 
 
         TextMeshProUGUI sellText = transform.Find("Canvas/UpgradesPanel/Buttons/SellButton/Text").GetComponent<TextMeshProUGUI>();
-//        sellText.text = BuildManagerScript.instance.GetTurretToBuild().GetSellAmount(_node.isUpgraded).ToString() + "$";
-        sellText.text = _node.turretBlueprint.GetSellAmount(_node.isUpgraded) + "$";
-        if(!nodeTarget.isUpgraded)
-            upgradeText.text = _node.turretBlueprint.upgradeCost.ToString() + "$";
+        sellText.text = _node.turretBlueprint.GetSellAmount() + "$";
+        if(nodeTarget.turretBlueprint.UpgradeAvailable())
+            upgradeText.text = _node.turretBlueprint.GetUpgradeCost() + "$";
         else
             upgradeText.text = "Done";
         
@@ -97,9 +96,9 @@ public class NodeUI : MonoBehaviour {
         nodeTarget.UpgradeTurret();
 
         TextMeshProUGUI sellText = transform.Find("Canvas/UpgradesPanel/Buttons/SellButton/Text").GetComponent<TextMeshProUGUI>();
-        TurretBluePrintScript turretBluePrint = BuildManagerScript.instance.GetTurretToBuild();
+        TurretBluePrint turretBluePrint = BuildManagerScript.instance.GetTurretToBuild();
         if (turretBluePrint != null)
-            sellText.text = turretBluePrint.GetSellAmount(nodeTarget.isUpgraded).ToString() + "$";
+            sellText.text = turretBluePrint.GetSellAmount() + "$";
     }
 
     public void Sell()
@@ -112,8 +111,6 @@ public class NodeUI : MonoBehaviour {
         //If the _node is null or the rangeSprite is disable.
         if (_node == null || rangeSprite.activeSelf == false || _node.turret == null)
             return;
-		//        1.65f
-
 		rangeSprite.transform.position = _node.turret.transform.position;
 		rangeSpriteMask.position = _node.turret.transform.position;
 

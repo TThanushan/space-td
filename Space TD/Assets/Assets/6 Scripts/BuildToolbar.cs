@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BuildToolbar : MonoBehaviour {
 
     public static BuildToolbar instance;
 
-    public List<TurretBluePrintScript> allTurretBluePrints;
+    public Turret[] turrets;
 
     private Animator myAnimator;
 
@@ -54,21 +55,21 @@ public class BuildToolbar : MonoBehaviour {
 
     void UpdatePriceText()
     {
-        foreach (TurretBluePrintScript blueprint in allTurretBluePrints)
+        foreach (Turret turret in turrets)
         {
-            if (!blueprint.priceText.IsActive())
+            if (!turret.priceText.IsActive())
                 continue;
-            if (buildManager.HasMoneyToBuildTurret(blueprint.cost))
-                blueprint.priceText.color = new Color(0.6593881f, 1, 0, 1);
+            if (buildManager.HasMoneyToBuildTurret(turret.GetCost()))
+                turret.priceText.color = new Color(0.6593881f, 1, 0, 1);
             else
-                blueprint.priceText.color = new Color(0.6593881f, 1, 0, 0.2117647f);
-            blueprint.priceText.text = blueprint.cost.ToString() + " $";
+                turret.priceText.color = new Color(0.6593881f, 1, 0, 0.2117647f);
+            turret.priceText.text = turret.GetCost().ToString() + " $";
         }
     }
 
     void ShowPreviewOnMouse()
     {
-        TurretBluePrintScript currentBlueprint = buildManager.GetTurretToBuild();
+        TurretBluePrint currentBlueprint = buildManager.GetTurretToBuild();
         if (currentBlueprint == null)
         {
             DestroyPreview();
@@ -76,7 +77,7 @@ public class BuildToolbar : MonoBehaviour {
         }
         LoadAndGetPreviewPoolObject(ref currentBlueprint);
 
-        float towerRange = currentBlueprint.prefab.GetComponent<TowerScript>().attackRange / 1.3f;
+        float towerRange = currentBlueprint.GetComponent<TowerScript>().attackRange / 1.3f;
         turretPreviewRange.transform.localScale = new Vector3(towerRange, towerRange, 0);
 
         MoveTurretPreview(mainCamera.ScreenToWorldPoint(Input.mousePosition));
@@ -87,11 +88,11 @@ public class BuildToolbar : MonoBehaviour {
         return mainCamera.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    void LoadAndGetPreviewPoolObject(ref TurretBluePrintScript currentBlueprint)
+    void LoadAndGetPreviewPoolObject(ref TurretBluePrint currentBlueprint)
     {
         if (!turretPreview)
         {
-            turretPreview = (GameObject)Resources.Load("TurretPreviews/Preview" + currentBlueprint.prefab.name);
+            turretPreview = (GameObject)Resources.Load("TurretPreviews/Preview" + currentBlueprint.name);
             turretPreview = PoolObject.instance.GetPoolObject(turretPreview);
             turretPreview.transform.position = transform.position;
             if (!turretPreviewRange)
@@ -144,15 +145,20 @@ public class BuildToolbar : MonoBehaviour {
         myAnimator.SetBool("Hide", false);
     }
 
-    public TurretBluePrintScript GetTurretBluePrintScript(string name)
+    public TurretBluePrint GetTurretBluePrint(string name)
     {
-        return allTurretBluePrints.Find(bluePrint => bluePrint.name == name);
+        foreach (Turret turret in turrets)
+        {
+            if (turret.name == name)
+                return turret.GetBluePrint();
+        }
+        return null;
     }
 
     public void SelectTurret(string name)
     {
-        if (buildManager.HasMoneyToBuildTurret(GetTurretBluePrintScript(name).cost))
-            buildManager.SetTurretToBuild(GetTurretBluePrintScript(name));
+        if (buildManager.HasMoneyToBuildTurret(GetTurretBluePrint(name).cost))
+            buildManager.SetTurretToBuild(GetTurretBluePrint(name));
         else
         {
             AudioManager.instance.Play("Error");
@@ -160,4 +166,21 @@ public class BuildToolbar : MonoBehaviour {
         }
     }
 
+    [System.Serializable]
+    public class Turret
+    {
+        public string name;
+        public GameObject prefab;
+        public TextMeshProUGUI priceText;
+
+        public TurretBluePrint GetBluePrint()
+        {
+            return prefab.GetComponent<TurretBluePrint>();
+        }
+
+        public int GetCost()
+        {
+            return prefab.GetComponent<TurretBluePrint>().cost;
+        }
+    }
 }

@@ -80,6 +80,19 @@ public class ProgressBarScript : MonoBehaviour {
         }
     }
 
+    public bool GetDamage(int damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth < 0)
+            currentHealth = 0;
+        return currentHealth <= 0;
+    }
+
+    public bool IsKilled(int damage)
+    {
+        return currentHealth - damage <= 0;
+    }
+
     void OnDisable()
     {
         if (OnDeath != null)

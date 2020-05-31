@@ -7,7 +7,7 @@ public class BuildManagerScript : MonoBehaviour {
 
     public static BuildManagerScript instance;
 
-    private TurretBluePrintScript turretToBuild;
+    private TurretBluePrint turretToBuild;
 
     private Node selectedNode;
 
@@ -62,7 +62,7 @@ public class BuildManagerScript : MonoBehaviour {
         return PlayerStatsScript.instance.money >= cost;
     }
 
-    public void SetTurretToBuild(TurretBluePrintScript turret)
+    public void SetTurretToBuild(TurretBluePrint turret)
     {
         turretToBuild = turret;
         DeselectNode();
@@ -102,7 +102,7 @@ public class BuildManagerScript : MonoBehaviour {
         turretToBuild = null;
     }
 
-    public TurretBluePrintScript GetTurretToBuild()
+    public TurretBluePrint GetTurretToBuild()
     {
         return turretToBuild;
     }

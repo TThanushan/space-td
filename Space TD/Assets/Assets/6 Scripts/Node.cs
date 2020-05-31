@@ -14,12 +14,8 @@ public class Node : MonoBehaviour {
 
     public float colorLerpSpeed;
 
-    [HideInInspector] 
     public GameObject turret;
-    [HideInInspector]
-    public TurretBluePrintScript turretBlueprint;
-    [HideInInspector]
-    public bool isUpgraded = false;
+    public TurretBluePrint turretBlueprint;
 
     BuildManagerScript buildManager;
 
@@ -37,12 +33,14 @@ public class Node : MonoBehaviour {
 
     float t;
 
+    PlayerStatsScript playerStatsScript;
 
     void Start()
     {
         buildManager = BuildManagerScript.instance;
+        playerStatsScript = PlayerStatsScript.instance;
     }
-    
+
     void Update()
     {
         //Change the color of the sprite.
@@ -59,16 +57,16 @@ public class Node : MonoBehaviour {
         }
     }
 
-    void BuildTurret(TurretBluePrintScript bluePrint)
+    void BuildTurret(TurretBluePrint bluePrint)
     {
-        if (!bluePrint.prefab)
+        if (!bluePrint)
             return;
-        else if (PlayerStatsScript.instance.money >= bluePrint.cost && bluePrint.prefab)
+        else if (PlayerStatsScript.instance.money >= bluePrint.cost)
         {
             Vector2 mousePos = BuildToolbar.instance.GetMouseRealPosition();
             UIScript.instance.DisplayText("-" + bluePrint.cost.ToString() + " $", mousePos, 1, "Red");
-            PlayerStatsScript.instance.money -= bluePrint.cost;
-            GameObject newTurret = PoolObject.instance.GetPoolObject(bluePrint.prefab);
+            playerStatsScript.money -= bluePrint.cost;
+            GameObject newTurret = PoolObject.instance.GetPoolObject(bluePrint.gameObject);
             newTurret.transform.position = transform.position;
             turret = newTurret;
             turretBlueprint = bluePrint;
@@ -88,23 +86,18 @@ public class Node : MonoBehaviour {
     public void UpgradeTurret()
     {
         Vector3 mousePos = (Vector3)BuildToolbar.instance.GetMouseRealPosition();
-        if (isUpgraded == true)
+        if (!turretBlueprint.UpgradeAvailable())
         {
             UIScript.instance.DisplayText("Max Upgrade !", mousePos + Vector3.up, 2, "Red");
             AudioManager.instance.Play("Error");
         }
-        else if (PlayerStatsScript.instance.money >= turretBlueprint.upgradeCost && turretBlueprint.upgradePrefab != null)
+        else if (PlayerHasEnoughMoney())
         {
             UIScript.instance.DisplayText("-" + turretBlueprint.cost.ToString() + " $", mousePos, 1,  "Red");
-            PlayerStatsScript.instance.money -= turretBlueprint.upgradeCost;
-            turret.SetActive(false);
-            turret = null;
-            GameObject newTurret = PoolObject.instance.GetPoolObject(turretBlueprint.upgradePrefab);
-            newTurret.transform.position = transform.position;
-            turret = newTurret;
-            isUpgraded = true;
-            NodeUI.instance.DisplayTurretRange(NodeUI.instance.GetNodeTarget, true);
-            NodeUI.instance.SetTarget(this);
+            playerStatsScript.money -= turretBlueprint.GetUpgradeCost();
+            DestroyTurret();
+            InstantiateUpgradeTurret();
+            UpdateNodeUITarget();
             DisplayEffect(NodeUI.instance.upgradeEffect);
             AudioManager.instance.Play("Turret Build");
             AudioManager.instance.Play("Upgrade");
@@ -118,7 +111,33 @@ public class Node : MonoBehaviour {
         }
     }
 
-    
+    void DestroyTurret()
+    {
+        turret.SetActive(false);
+        turret = null;
+    }
+
+    void InstantiateUpgradeTurret()
+    {
+        GameObject newTurret = PoolObject.instance.GetPoolObject(turretBlueprint.upgradePrefab);
+        newTurret.transform.position = transform.position;
+        turret = newTurret;
+        turretBlueprint = turret.GetComponent<TurretBluePrint>();
+    }
+
+    void UpdateNodeUITarget()
+    {
+        NodeUI nodeUI = NodeUI.instance;
+        nodeUI.DisplayTurretRange(NodeUI.instance.GetNodeTarget, true);
+        nodeUI.ShowRangeUpgrade(true);
+        nodeUI.SetTarget(this);
+    }
+
+    bool PlayerHasEnoughMoney()
+    {
+        return playerStatsScript.money >= turretBlueprint.GetUpgradeCost();
+    }
+
     void DisplayEffect(GameObject _effect)
     {
         if (_effect == null)
@@ -131,10 +150,9 @@ public class Node : MonoBehaviour {
     {
         if (turret == null)
             return;
-        int sellAmount = turretBlueprint.GetSellAmount(isUpgraded);
-        PlayerStatsScript.instance.money +=  sellAmount;
+        int sellAmount = turretBlueprint.GetSellAmount();
+        playerStatsScript.money +=  sellAmount;
         UIScript.instance.DisplayText("+" + sellAmount + "$" , Camera.main.ScreenToWorldPoint(Input.mousePosition), 2);
-        isUpgraded = false;
         buildManager.DeselectNode();
         turret.SetActive(false);
         turret = null;

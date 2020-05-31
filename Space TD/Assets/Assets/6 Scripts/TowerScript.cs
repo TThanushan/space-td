@@ -9,14 +9,14 @@ public class TowerScript : MonoBehaviour {
     public enum TowerTargetMod { singleTarget, multipleTarget, special }
     public enum TowerEffect { noEffect, slowTarget, BurnTarget, Electric, LaserBeam, ChargingTurret }
 
-    public GameObject debugClosestE;
-
     [Header("Main Data")]
     public float attackDamage = 1;
 
     public float attackSpeed;
 
     public float attackRange;
+
+    public int killCount;
 
     [Space]
     [Header("Others")]
@@ -42,7 +42,12 @@ public class TowerScript : MonoBehaviour {
 
     public string shootSFXName = "Tower shoot";
 
+    [Header("Eletric")]
     public GameObject lightningEffect;
+
+    public int lightningBounceCount;
+
+    public float lightningBounceRange;
 
     Transform partToRotate;
 
@@ -175,20 +180,15 @@ public class TowerScript : MonoBehaviour {
     List<GameObject> FindAllNearEnemy()
     {
         enemies = poolScript.enemies;
-
         List<GameObject> enemiesToReturn = new List<GameObject>();
-
         if (Time.time > nextAttackTime)
         {
             nextAttackTime = Time.time + attackSpeed;
-
             foreach (GameObject enemy in enemies)
             {
                 float distance = Vector2.Distance(enemy.transform.position, transform.position);
-
                 if (enemy.activeSelf == true)
                 {
-
                     if (distance <= attackRange)
                         enemiesToReturn.Add(enemy);
                     else
@@ -198,10 +198,7 @@ public class TowerScript : MonoBehaviour {
         }
         else
             enemiesToReturn = null;
-
         return enemiesToReturn;
-
-
     }
 
     void AttackEnemy()
@@ -215,6 +212,8 @@ public class TowerScript : MonoBehaviour {
 
             newBulletScript.target = target;
             newBulletScript.attackDamage = attackDamage;
+            if (target.GetComponent<ProgressBarScript>().IsKilled((int)attackDamage))
+                killCount++;
             newBulletScript.moveSpeed = bulletSpeed;
             newBullet.transform.position = shootPos.transform.position;
             if (animator)
@@ -320,11 +319,6 @@ public class TowerScript : MonoBehaviour {
         return closestEnemy;
     }
 
-    // Find enemies within range DONE
-    // Find the furthest pathpoint aimed DONE
-    // Get enemies aiming for this pathpoint DONE
-    // Find the closest enemy to this pathpoint DONE
-
     GameObject GetEnemyWithinRangeClosestToBase()
     {
         if (IsListNullOrEmpty(poolScript.enemies))
@@ -342,25 +336,25 @@ public class TowerScript : MonoBehaviour {
         return !target || (target && !target.activeSelf);
     }
 
-	void DrawLineToTarget()
-	{
-		if (!targetLineRenderer)
-			return;
-		if (target)
-		{
-			
-			Vector3 startPos = new Vector3(transform.position.x, transform.position.y, -1);
-			Vector3 endPos = new Vector3(target.transform.position.x, target.transform.position.y, -1);
-			targetLineRenderer.SetPosition(0, startPos);
-			targetLineRenderer.SetPosition(1, endPos);
-			targetLineRenderer.enabled = true;
-		}
-		else
-			targetLineRenderer.enabled = false;
+    void DrawLineToTarget()
+    {
+        if (!targetLineRenderer)
+            return;
+        if (target)
+        {
 
-	}
+            Vector3 startPos = new Vector3(transform.position.x, transform.position.y, -1);
+            Vector3 endPos = new Vector3(target.transform.position.x, target.transform.position.y, -1);
+            targetLineRenderer.SetPosition(0, startPos);
+            targetLineRenderer.SetPosition(1, endPos);
+            targetLineRenderer.enabled = true;
+        }
+        else
+            targetLineRenderer.enabled = false;
 
-	void LookAtEnemy()
+    }
+
+    void LookAtEnemy()
     {
         if (target != null)
         {
@@ -395,7 +389,7 @@ public class TowerScript : MonoBehaviour {
 
         if (enemies == null)
             return;
-        
+
         foreach (GameObject enemy in enemies)
         {
             IAScript enemyScript = enemy.GetComponent<IAScript>();
@@ -406,17 +400,14 @@ public class TowerScript : MonoBehaviour {
     void BurnEnemy()
     {
         List<GameObject> enemies = FindAllNearEnemy();
-
-        ActivateEffect();
-
+        PlayEffect();
         if (enemies == null || enemies.Count == 0)
             return;
 
         foreach (GameObject enemy in enemies)
         {
-            ProgressBarScript progressBarScript = enemy.GetComponent<ProgressBarScript>();
-
-            progressBarScript.currentHealth -= attackDamage;
+            if (enemy.GetComponent<ProgressBarScript>().GetDamage((int)attackDamage))
+                killCount++;
         }
     }
 
@@ -430,55 +421,162 @@ public class TowerScript : MonoBehaviour {
     }
 
 
+    //void ThrowLightning()
+    //{
+
+    //    List<GameObject> enemies = FindAllNearEnemy();
+    //    List<Vector3> lightningPositions = new List<Vector3>();
+
+    //    //Null could means that the turret is reloading.
+    //    if (enemies == null)
+    //        return;
+
+    //    //If there is not enemy, erase the line.
+    //    if (enemies.Count == 0)
+    //    {
+    //        GetComponent<Animator>().SetBool("Attacking", false);
+    //        lineRenderer.positionCount = 0;
+    //        return;
+    //    }
+
+    //    GetComponent<Animator>().SetBool("Attacking", true);
+
+    //    GetComponent<Animator>().Play("ElectricTurretAttack", 0);
+
+    //    lightningPositions.Add(transform.position);
+
+    //    foreach (GameObject enemy in enemies)
+    //    {
+    //        lightningPositions.Add(enemy.transform.position);
+    //        lightningPositions.Add(enemy.transform.position + new Vector3(Random.Range(0f, 2f), Random.Range(0f, 2f), 0));
+            //if (enemy.GetComponent<ProgressBarScript>().GetDamage((int) attackDamage))
+            //    killCount++;
+    //        GameObject newEffect = PoolObject.instance.GetPoolObject(lightningEffect);
+    //        newEffect.transform.position = enemy.transform.position;
+    //        AudioManager.instance.Play("Punch", true);
+    //    }
+    //    lineRenderer.positionCount = lightningPositions.Count;
+    //    foreach (Vector3 pos in lightningPositions)
+    //    {
+    //        lineRenderer.SetPosition(lightningPositions.IndexOf(pos), pos);
+    //    }
+    //}
+
     void ThrowLightning()
     {
-        List<GameObject> enemies = FindAllNearEnemy();
-
-        ActivateEffect();
-
+        if (!IsReloadOver())
+            return;
         List<Vector3> lightningPositions = new List<Vector3>();
-
-        //Null could means that the turret is reloading.
-        if (enemies == null)
-        {
+        List<GameObject> enemiesTouched = new List<GameObject>();
+        GameObject enemy;
+        if (!(enemy = BounceOnFirstEnemy(lightningPositions, enemiesTouched)))
             return;
-        }
-
-        //If there is not enemy, erase the line.
-        if (enemies.Count == 0)
+        nextAttackTime = Time.time + attackSpeed;
+        BounceOnOtherCloseEnemy(enemy, lightningPositions, enemiesTouched);
+        UpdateLineRenderer(lightningPositions);
+        PlayLightningEffect();
+    }
+    GameObject BounceOnFirstEnemy(List<Vector3> lightningPositions, List<GameObject> enemiesTouched)
+    {
+        GameObject enemy;
+        if (!(enemy = GetEnemyWithinRangeClosestToBase()))
         {
-            GetComponent<Animator>().SetBool("Attacking", false);
-            lineRenderer.positionCount = 0;
-            return;
+            StopLightningEffect();
+            return null;
         }
-
-        GetComponent<Animator>().SetBool("Attacking", true);
-
-        GetComponent<Animator>().Play("ElectricTurretAttack", 0);
-
         lightningPositions.Add(transform.position);
 
-        foreach (GameObject enemy in enemies)
+        AttackEnemy(enemy);
+        enemiesTouched.Add(enemy);
+        lightningPositions.Add(enemy.transform.position);
+        return enemy;
+    }
+
+    void BounceOnOtherCloseEnemy(GameObject enemy, List<Vector3> lightningPositions, List<GameObject> enemiesTouched)
+    {
+        for (int i = 0; i < lightningBounceCount - 1; i++)
         {
-            lightningPositions.Add(enemy.transform.position);
-            lightningPositions.Add(enemy.transform.position + new Vector3(Random.Range(0f, 2f), Random.Range(0f, 2f), 0));
-            ProgressBarScript progressBarScript = enemy.GetComponent<ProgressBarScript>();
-            progressBarScript.currentHealth -= attackDamage;
-            GameObject newEffect = PoolObject.instance.GetPoolObject(lightningEffect);
-            newEffect.transform.position = enemy.transform.position;
-            AudioManager.instance.Play("Punch", true);
+            if (!(enemy = GetClosestEnemyFromTargetNotIn(enemy, enemiesTouched)))
+                break;
+            StartCoroutine(ElectricBounceAfterTime(enemy, i));
+            enemiesTouched.Add(enemy);
         }
-        lineRenderer.positionCount = lightningPositions.Count;
-        foreach (Vector3 pos in lightningPositions)
+    }
+
+    void StopLightningEffect()
+    {
+        GetComponent<Animator>().SetBool("Attacking", false);
+        lineRenderer.positionCount = 0;
+    }
+
+    void PlayLightningEffect()
+    {
+        GetComponent<Animator>().SetBool("Attacking", true);
+        GetComponent<Animator>().Play("ElectricTurretAttack", 0);
+    }
+
+    void AttackEnemy(GameObject target)
+    {
+        if (target.GetComponent<ProgressBarScript>().GetDamage((int)attackDamage))
+            killCount++;
+
+        GameObject newEffect = PoolObject.instance.GetPoolObject(lightningEffect);
+        newEffect.transform.position = target.transform.position;
+        AudioManager.instance.Play("Punch", true);
+    }
+
+    bool IsReloadOver()
+    {
+        return Time.time > nextAttackTime;
+    }
+
+    void UpdateLineRenderer(List<Vector3> _list)
+    {
+        lineRenderer.positionCount = _list.Count;
+        foreach (Vector3 current in _list)
         {
-            lineRenderer.SetPosition(lightningPositions.IndexOf(pos), pos);
+            lineRenderer.SetPosition(_list.IndexOf(current), current);
         }
+    }
+
+    GameObject GetClosestEnemyFromTargetNotIn(GameObject _target, List<GameObject> _enemies)
+    {
+        GameObject closestEnemy = null;
+        float closestDistance = Mathf.Infinity;
+        foreach (GameObject enemy in poolScript.enemies)
+        {
+            if (_enemies.Contains(enemy))
+                continue;
+            float distance = Vector2.Distance(enemy.transform.position, _target.transform.position);
+            if (distance < closestDistance && distance < lightningBounceRange)
+            {
+                closestDistance = distance;
+                closestEnemy = enemy;
+            }
+        }
+        return closestEnemy;
+    }
+
+    IEnumerator ElectricBounceAfterTime(GameObject enemy, int time)
+    {
+        yield return new WaitForSeconds(0.15f * time);
+
+        AddPositionToLineRenderer(enemy.transform.position);
+        //if (i < lightningBounceCount - 1)
+        AddPositionToLineRenderer(enemy.transform.position + new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), 0));
+        AttackEnemy(enemy);
+    }
+
+    void AddPositionToLineRenderer(Vector3 pos)
+    {
+        lineRenderer.positionCount++;
+        lineRenderer.SetPosition(lineRenderer.positionCount - 1, pos);
     }
 
     void LaserBeam()
     {
         List<GameObject> enemies = FindAllNearEnemy();
-        ActivateEffect();
+        PlayEffect();
         List<Vector3> lightningPositions = new List<Vector3>();
         //Null means that the turret is reloading.
         if (enemies == null)
@@ -496,9 +594,8 @@ public class TowerScript : MonoBehaviour {
 
             lightningPositions.Add(enemy.transform.position);
 
-            ProgressBarScript progressBarScript = enemy.GetComponent<ProgressBarScript>();
-
-            progressBarScript.currentHealth -= attackDamage;
+            if (enemy.GetComponent<ProgressBarScript>().GetDamage((int)attackDamage))
+                killCount++;
         }
         lineRenderer.positionCount = lightningPositions.Count;
         int i = 0;
@@ -510,7 +607,7 @@ public class TowerScript : MonoBehaviour {
         }
     }
 
-    void ActivateEffect()
+    void PlayEffect()
     {
         if (particleSystem == null)
             return;
