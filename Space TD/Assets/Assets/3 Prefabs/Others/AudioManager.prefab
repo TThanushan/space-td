@@ -182,5 +182,11 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Boom
+    clip: {fileID: 8300000, guid: 58ae792b9f2f3d046a64d3ec09a31d89, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   musicMuted: 0
   SFXMuted: 0

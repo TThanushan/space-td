@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class BuildManagerScript : MonoBehaviour {
 
@@ -17,12 +18,12 @@ public class BuildManagerScript : MonoBehaviour {
 
 	public bool mouseOverNode;
 
-	private void Update()
-	{
+    public static System.Action SelectNodeEvent;
+    public static System.Action DeselectNodeEvent;
+    private void Update()
+    {
 		if (!mouseOverNode && Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
-		{
-			BuildManagerScript.instance.DeselectNode();
-		}
+			DeselectNode();
 	}
 
     void Awake()
@@ -36,8 +37,14 @@ public class BuildManagerScript : MonoBehaviour {
             instance = this;
         nodeUI = GameObject.Find("NodeUI").GetComponent<NodeUI>();
         allNodes = GameObject.FindGameObjectsWithTag("Node");
+        SceneManager.sceneLoaded += SetEventToNull;
      }
-    
+
+    void SetEventToNull(Scene scene, LoadSceneMode mode)
+    {
+        SelectNodeEvent = null;
+        DeselectNodeEvent = null;
+    }
 
     public Transform GetNearestNode(Vector2 fromTransform)
     {
@@ -80,6 +87,7 @@ public class BuildManagerScript : MonoBehaviour {
 
     public void DeselectNode()
     {
+        DeselectNodeEvent?.Invoke();
         selectedNode = null;
         nodeUI.Hide();
     }
@@ -95,6 +103,7 @@ public class BuildManagerScript : MonoBehaviour {
         selectedNode = node;
 
         nodeUI.SetTarget(node);
+        SelectNodeEvent?.Invoke();
     }
 
     public void CancelBuilding()

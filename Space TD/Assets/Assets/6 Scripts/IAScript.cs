@@ -9,8 +9,7 @@ public class IAScript : MonoBehaviour {
     public float moveSpeed;
     public int damage = 1;
     public Transform[] pathArray;
-    bool isSlowByTurret;
-    bool isBurnByTurret;
+    private bool isSlowByTurret;
     //The index of the point to go.
     int pathPointIndex = 0;
 
@@ -20,7 +19,7 @@ public class IAScript : MonoBehaviour {
 
     void Start() {
         pathArray = PoolObject.instance.pathArray;
-        InvokeRepeating("RemoveEffect", 0f, 2f);
+        InvokeRepeating("CancelSlowEffect", 0f, 1f);
     }
 
     void Awake()
@@ -47,26 +46,12 @@ public class IAScript : MonoBehaviour {
     public void Slow(float slowAmount)
     {
         moveSpeed = startMoveSpeed - (startMoveSpeed * slowAmount);
-        if (!isSlowByTurret)
-            CheckEffect("SlowEffect", isSlowByTurret, true);
+        EnableSlowEffect(true);
     }
 
-    void RemoveEffect()
+    private void EnableSlowEffect(bool value)
     {
-        if (isSlowByTurret)
-            CheckEffect("SlowEffect", isSlowByTurret, false);
-    }
-
-    void CheckEffect(string name, bool isEffect, bool newValue)
-    {
-        isSlowByTurret = newValue;
-        GameObject slowEffect = transform.Find("Sprite/" + name).gameObject;
-        if (!slowEffect)
-        {
-            GameObject slowRessource = (GameObject)Resources.Load("Effects/" + name);
-            slowEffect = (GameObject)Instantiate(slowRessource, transform.position, transform.rotation, transform.Find("Sprite"));
-        }
-        transform.Find("Sprite/" + name).gameObject.SetActive(newValue);
+        transform.Find("Sprite/SlowEffect").gameObject.SetActive(value);
     }
 
     void FixedUpdate() {
@@ -74,6 +59,7 @@ public class IAScript : MonoBehaviour {
             return;
         if (ReachedPlayerBase())
         {
+            SpawnerScript.instance.enemiesRemainingAlive--;
             Feedback();
             DoDamageToPlayer();
             Disable();
@@ -81,12 +67,12 @@ public class IAScript : MonoBehaviour {
         else if (ReachedPathPoint())
             MoveToNextPoint();
         Move();
-        CancelSlowEffect();
     }
 
     void CancelSlowEffect()
     {
         moveSpeed = startMoveSpeed;
+        EnableSlowEffect(false);
     }
 
     void Move()
@@ -122,6 +108,7 @@ public class IAScript : MonoBehaviour {
     void DoDamageToPlayer()
     {
         PlayerStatsScript.instance.life -= damage;
+        SpawnerScript.instance.IncreasePlayerHealthLoss();
     }
     void DisplayDamageAmount()
     {

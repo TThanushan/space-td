@@ -100,7 +100,6 @@ public class LevelEditorNode : MonoBehaviour
     {
         if (currentPrefab || PrefabAlreadyCreatedOnCurrentNode())
             return;
-        Debug.Log("Prefab created");
         InstantiatePrefab();
         LevelEditorUI.instance.CreatePlacingEffect(transform.position);
         AudioManager.instance.PlaySfx("Click");
@@ -110,7 +109,6 @@ public class LevelEditorNode : MonoBehaviour
     {
         if (!firstTimeReplacing || PrefabAlreadyCreatedOnCurrentNode())
             return;
-        Debug.Log("Prefab replaced");
         DestroyPrefab();
         CreatePrefab();
         firstTimeReplacing = false;
@@ -120,7 +118,6 @@ public class LevelEditorNode : MonoBehaviour
     {
         if (!currentPrefab)
             return;
-        Debug.Log("Prefab destroyed");
         RemoveCurrentPrefab();
         LevelEditorUI.instance.CreateDeleteEffect(transform.position);
         AudioManager.instance.PlaySfx("Erase");

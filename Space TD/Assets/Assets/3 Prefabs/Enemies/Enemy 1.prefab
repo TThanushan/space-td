@@ -26,10 +26,11 @@ Transform:
   m_GameObject: {fileID: 1049434368593578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2976511, y: 0.2976511, z: 0.8504318}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.8504318}
   m_Children:
   - {fileID: 4912691590520580}
   - {fileID: 1654309244}
+  - {fileID: 3103047891698001980}
   m_Father: {fileID: 4991910471525934}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -175,7 +176,7 @@ GameObject:
   - component: {fileID: 4991910471525934}
   - component: {fileID: 114385160911464918}
   - component: {fileID: 114295544670039834}
-  - component: {fileID: 7343450779608529841}
+  - component: {fileID: 5572840592548291787}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Enemy
@@ -192,7 +193,7 @@ Transform:
   m_GameObject: {fileID: 1725576515888812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.519, y: -5.11306, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1}
   m_Children:
   - {fileID: 4413487703720396}
   - {fileID: 5857614637011096905}
@@ -243,28 +244,54 @@ MonoBehaviour:
   currentHealth: 0
   Healthbar: {fileID: 7175028942859238887}
   healthText: {fileID: 0}
-  moneyGiven: 2
+  moneyGiven: 1
   deathEffect: {fileID: 1084755322472324951, guid: f73f78069030f0742af75d12faf9f235,
     type: 3}
---- !u!95 &7343450779608529841
-Animator:
-  serializedVersion: 3
+--- !u!114 &5572840592548291787
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725576515888812}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 421acef62235376499581c3451621cca, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bfc184dd5b46b340a50e87f86a8739e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 524884180976413873, guid: b5bed5fe71da23f498ffa43579bd7bdd, type: 3}
+  randomXPosition: 0.15
+  randomYPosition: 0.15
+--- !u!1 &3479631150872646058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3103047891698001980}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3103047891698001980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3479631150872646058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4413487703720396}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2989797231507869863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -408,20 +435,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4413487703720396}
     m_Modifications:
-    - target: {fileID: 7433118261595210505, guid: 1afb0c58d3bb39c4891013b3943cc20e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7433118261595210506, guid: 1afb0c58d3bb39c4891013b3943cc20e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.04
+      value: -0.026494
       objectReference: {fileID: 0}
     - target: {fileID: 7433118261595210506, guid: 1afb0c58d3bb39c4891013b3943cc20e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.84
+      value: 0.849
       objectReference: {fileID: 0}
     - target: {fileID: 7433118261595210506, guid: 1afb0c58d3bb39c4891013b3943cc20e,
         type: 3}
@@ -472,11 +494,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SlowEffect
-      objectReference: {fileID: 0}
-    - target: {fileID: 7433118261595210507, guid: 1afb0c58d3bb39c4891013b3943cc20e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1afb0c58d3bb39c4891013b3943cc20e, type: 3}

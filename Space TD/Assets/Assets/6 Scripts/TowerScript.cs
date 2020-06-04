@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class TowerScript : MonoBehaviour {
 
     public enum TowerTargetMod { singleTarget, multipleTarget, special }
-    public enum TowerEffect { noEffect, slowTarget, BurnTarget, Electric, LaserBeam, ChargingTurret }
+    public enum TowerEffect { noEffect, slowTarget, Electric, LaserBeam, ChargingTurret }
 
     [Header("Main Data")]
     public float attackDamage = 1;
@@ -17,6 +17,8 @@ public class TowerScript : MonoBehaviour {
     public float attackRange;
 
     public int killCount;
+
+    public float damageDealt;
 
     [Space]
     [Header("Others")]
@@ -61,20 +63,15 @@ public class TowerScript : MonoBehaviour {
 
     GameObject[] newEnemie;
 
-
     [Header("Use Laser")]
     public LineRenderer lineRenderer;
     //Particle System
-
-    public GameObject burnTurretEffectG;
 
     [Header("Charging Turret")]
     public float chargingSpeed;
     public float maxAttackspeed;
     public float minAttackspeed;
     private Image chargingBar;
-
-    private new ParticleSystem particleSystem;
 
     LineRenderer targetLineRenderer;
 
@@ -90,10 +87,7 @@ public class TowerScript : MonoBehaviour {
     {
         if (isDisable)
             return;
-        //For burnTurret.
 
-        if (burnTurretEffectG != null)
-            particleSystem = burnTurretEffectG.GetComponent<ParticleSystem>();
         if (towerEffect == TowerEffect.Electric || towerEffect == TowerEffect.LaserBeam)
             lineRenderer = GetComponent<LineRenderer>();
         else
@@ -118,13 +112,16 @@ public class TowerScript : MonoBehaviour {
         TowerManager();
     }
 
+    private void OnDisable()
+    {
+        killCount = 0;
+        damageDealt = 0;
+    }
 
     void TowerManager()
     {
         if (towerEffect == TowerEffect.slowTarget)
             SlowEnemy();
-        if (towerEffect == TowerEffect.BurnTarget)
-            BurnEnemy();
         if (towerEffect == TowerEffect.Electric)
             ThrowLightning();
         if (towerEffect == TowerEffect.LaserBeam)
@@ -132,6 +129,7 @@ public class TowerScript : MonoBehaviour {
         if (towerEffect == TowerEffect.ChargingTurret)
         {
             UpdateChargingBar();
+            ChargeAttackSpeed();
             UnchargeAttackSpeed();
         }
         if (towerTargetMod == TowerTargetMod.singleTarget)
@@ -162,6 +160,8 @@ public class TowerScript : MonoBehaviour {
 
     void ChargeAttackSpeed()
     {
+        if (!ReadyToShoot())
+            return;
         if (target && attackSpeed > minAttackspeed)
             attackSpeed -= chargingSpeed;
         if (attackSpeed < minAttackspeed)
@@ -181,7 +181,7 @@ public class TowerScript : MonoBehaviour {
     {
         enemies = poolScript.enemies;
         List<GameObject> enemiesToReturn = new List<GameObject>();
-        if (Time.time > nextAttackTime)
+        if (ReadyToShoot())
         {
             nextAttackTime = Time.time + attackSpeed;
             foreach (GameObject enemy in enemies)
@@ -204,24 +204,93 @@ public class TowerScript : MonoBehaviour {
     void AttackEnemy()
     {
 
-        if (Time.time > nextAttackTime && target != null && target.activeSelf)
+        if (target && ReadyToShoot())
         {
             nextAttackTime = Time.time + attackSpeed;
-            GameObject newBullet = poolScript.GetPoolObject(bulletG);
+            GameObject newBullet = InstantiateBullet();
             BulletScript newBulletScript = newBullet.GetComponent<BulletScript>();
 
-            newBulletScript.target = target;
-            newBulletScript.attackDamage = attackDamage;
             if (target.GetComponent<ProgressBarScript>().IsKilled((int)attackDamage))
                 killCount++;
-            newBulletScript.moveSpeed = bulletSpeed;
-            newBullet.transform.position = shootPos.transform.position;
-            if (animator)
-                animator.Play("Shoot");
+
+            AddSubscribers();
+            PlayAnimation();
             AudioManager.instance.Play(shootSFXName, true, 0.3f);
+
             if (towerEffect == TowerEffect.ChargingTurret)
                 ChargeAttackSpeed();
         }
+    }
+
+    private bool ReadyToShoot()
+    {
+        return Time.time > nextAttackTime;
+    }
+
+    private void AddSubscribers()
+    {
+        if (!bulletG)
+            return;
+        if (bulletG.GetComponent<MissileBullet>())
+        {
+            MissileBullet.enemyKilled += IncreaseKillCount;
+            BulletScript.damageEvent += IncreaseDamageDealtMissile;
+        }
+        else
+            BulletScript.damageEvent += IncreaseDamageDealt;
+    }
+
+    private void PlayAnimation()
+    {
+        if (animator)
+            animator.Play("Shoot");
+    }
+    private GameObject InstantiateBullet()
+    {
+        if (!bulletG)
+            return null;
+        GameObject newBullet = poolScript.GetPoolObject(bulletG);
+        newBullet.transform.position = shootPos.transform.position;
+
+        BulletScript newBulletScript = newBullet.GetComponent<BulletScript>();
+        newBulletScript.target = target;
+        newBulletScript.attackDamage = attackDamage;
+        newBulletScript.moveSpeed = bulletSpeed;
+        return newBullet;
+    }
+
+    private void IncreaseKillCount(int nbKilled)
+    {
+        killCount += nbKilled;
+        MissileBullet.enemyKilled -= IncreaseKillCount;
+    }
+
+    private void IncreaseDamageDealtMissile(float damage)
+    {
+        damageDealt += damage;
+        BulletScript.damageEvent -= IncreaseDamageDealtMissile;
+    }
+
+    private void IncreaseDamageDealt(float damage)
+    {
+        if (!target)
+            return;
+        float enemyHealth = target.GetComponent<ProgressBarScript>().currentHealth - damage;
+        if (enemyHealth < 0)
+            damage += enemyHealth;
+        damageDealt += damage;
+        BulletScript.damageEvent -= IncreaseDamageDealt;
+    }
+
+    private void IncreaseDamageDealt(float damage, GameObject target)
+    {
+        if (!target)
+            return;
+        float damageDealtOnEnemy = target.GetComponent<ProgressBarScript>().currentHealth - damage;
+        if (damageDealtOnEnemy < 0)
+            damageDealtOnEnemy += damage;
+        damageDealt += damage;
+        BulletScript.damageEvent -= IncreaseDamageDealt;
     }
 
     void AttackAllNearEnemy()
@@ -233,7 +302,6 @@ public class TowerScript : MonoBehaviour {
 
         foreach (GameObject enemy in enemies)
         {
-
             GameObject newBullet = poolScript.GetPoolObject(bulletG);
             BulletScript newBulletScript = newBullet.GetComponent<BulletScript>();
 
@@ -242,10 +310,7 @@ public class TowerScript : MonoBehaviour {
             newBulletScript.moveSpeed = bulletSpeed;
             newBullet.transform.position = shootPos.transform.position;
             AudioManager.instance.Play(shootSFXName, true);
-
-
         }
-
     }
 
     bool IsEnemyInRange(GameObject target)
@@ -397,20 +462,6 @@ public class TowerScript : MonoBehaviour {
         }
     }
 
-    void BurnEnemy()
-    {
-        List<GameObject> enemies = FindAllNearEnemy();
-        PlayEffect();
-        if (enemies == null || enemies.Count == 0)
-            return;
-
-        foreach (GameObject enemy in enemies)
-        {
-            if (enemy.GetComponent<ProgressBarScript>().GetDamage((int)attackDamage))
-                killCount++;
-        }
-    }
-
     public GameObject DisplayImpactEffect(GameObject effect)
     {
         if (effect == null)
@@ -419,48 +470,6 @@ public class TowerScript : MonoBehaviour {
         GameObject newEffect = PoolObject.instance.GetPoolObject(effect);
         return newEffect;
     }
-
-
-    //void ThrowLightning()
-    //{
-
-    //    List<GameObject> enemies = FindAllNearEnemy();
-    //    List<Vector3> lightningPositions = new List<Vector3>();
-
-    //    //Null could means that the turret is reloading.
-    //    if (enemies == null)
-    //        return;
-
-    //    //If there is not enemy, erase the line.
-    //    if (enemies.Count == 0)
-    //    {
-    //        GetComponent<Animator>().SetBool("Attacking", false);
-    //        lineRenderer.positionCount = 0;
-    //        return;
-    //    }
-
-    //    GetComponent<Animator>().SetBool("Attacking", true);
-
-    //    GetComponent<Animator>().Play("ElectricTurretAttack", 0);
-
-    //    lightningPositions.Add(transform.position);
-
-    //    foreach (GameObject enemy in enemies)
-    //    {
-    //        lightningPositions.Add(enemy.transform.position);
-    //        lightningPositions.Add(enemy.transform.position + new Vector3(Random.Range(0f, 2f), Random.Range(0f, 2f), 0));
-            //if (enemy.GetComponent<ProgressBarScript>().GetDamage((int) attackDamage))
-            //    killCount++;
-    //        GameObject newEffect = PoolObject.instance.GetPoolObject(lightningEffect);
-    //        newEffect.transform.position = enemy.transform.position;
-    //        AudioManager.instance.Play("Punch", true);
-    //    }
-    //    lineRenderer.positionCount = lightningPositions.Count;
-    //    foreach (Vector3 pos in lightningPositions)
-    //    {
-    //        lineRenderer.SetPosition(lightningPositions.IndexOf(pos), pos);
-    //    }
-    //}
 
     void ThrowLightning()
     {
@@ -487,6 +496,7 @@ public class TowerScript : MonoBehaviour {
         lightningPositions.Add(transform.position);
 
         AttackEnemy(enemy);
+        IncreaseDamageDealt(attackDamage, enemy);
         enemiesTouched.Add(enemy);
         lightningPositions.Add(enemy.transform.position);
         return enemy;
@@ -519,7 +529,7 @@ public class TowerScript : MonoBehaviour {
     {
         if (target.GetComponent<ProgressBarScript>().GetDamage((int)attackDamage))
             killCount++;
-
+        IncreaseDamageDealt(attackDamage);
         GameObject newEffect = PoolObject.instance.GetPoolObject(lightningEffect);
         newEffect.transform.position = target.transform.position;
         AudioManager.instance.Play("Punch", true);
@@ -565,6 +575,7 @@ public class TowerScript : MonoBehaviour {
         //if (i < lightningBounceCount - 1)
         AddPositionToLineRenderer(enemy.transform.position + new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), 0));
         AttackEnemy(enemy);
+        IncreaseDamageDealt(attackDamage, enemy);
     }
 
     void AddPositionToLineRenderer(Vector3 pos)
@@ -576,7 +587,6 @@ public class TowerScript : MonoBehaviour {
     void LaserBeam()
     {
         List<GameObject> enemies = FindAllNearEnemy();
-        PlayEffect();
         List<Vector3> lightningPositions = new List<Vector3>();
         //Null means that the turret is reloading.
         if (enemies == null)
@@ -606,19 +616,6 @@ public class TowerScript : MonoBehaviour {
             i++;
         }
     }
-
-    void PlayEffect()
-    {
-        if (particleSystem == null)
-            return;
-        if (particleSystem.isPlaying == true && SpawnerScript.instance.enemiesRemainingToSpawn <= 0 && SpawnerScript.instance.enemiesRemainingToSpawn <= 0)
-            particleSystem.Stop();
-        else if(particleSystem.isPlaying == false)
-            particleSystem.Play();
-    }
-
-
-
 
     void OnDrawGizmosSelected()
     {

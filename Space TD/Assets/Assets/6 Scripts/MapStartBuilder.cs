@@ -7,11 +7,13 @@ public class MapStartBuilder : MonoBehaviour
 {
     public GameObject[] prefabs;
     public int startMoney = 100;
+    public int startLife = 50;
 
     public void Awake()
     {
         LoadMap();
         PlayerStatsScript.instance.money = startMoney;
+        PlayerStatsScript.instance.life = startLife;
     }
 
     public void LoadMap()
@@ -19,9 +21,9 @@ public class MapStartBuilder : MonoBehaviour
         LoadMapData();
         Map map = SaveData.current.map;
         
-        CreateObjectFromSave(map.BuildingBlocks, "Node");
-        CreateObjectFromSave(map.PathPoints, "Path Point");
-        CreateObjectFromSave(map.PathGrounds, "Path Ground");
+        CreateObjectFromSave(map.BuildingBlocks, "Node", "Nodes");
+        CreateObjectFromSave(map.PathPoints, "Path Point", "Path Points");
+        CreateObjectFromSave(map.PathGrounds, "Path Ground", "Path Grounds");
         CreateObjectFromSave(map.SpawnPoint, "Spawn Point");
         CreateObjectFromSave(map.Base, "Base");
     }
@@ -32,24 +34,32 @@ public class MapStartBuilder : MonoBehaviour
         SaveData.current.Load(sceneName);
     }
 
-    private void CreateObjectFromSave(Vector2 _position, string name, string parentTag="Bin")
+    private void CreateObjectFromSave(Vector2 _position, string name)
     {
         GameObject newObj = PoolObject.instance.GetPoolObject(GetCorrespondingPrefab(name));
         newObj.transform.position = _position;
-
-        Transform parent = GameObject.FindGameObjectWithTag(parentTag).transform;
+        Transform parent = GameObject.FindGameObjectWithTag("Bin").transform;
         newObj.transform.parent = parent;
     }
 
-    private void CreateObjectFromSave(List<Vector2> _list, string name, string parentTag = "Bin")
+    private GameObject InstantiateParent(string name)
+    {
+        GameObject objModel = new GameObject(name);
+        GameObject parent = Instantiate(objModel, GameObject.FindGameObjectWithTag("Bin").transform);
+        parent.name = name;
+        Destroy(objModel);
+        return parent;
+    }
+
+    private void CreateObjectFromSave(List<Vector2> _list, string name, string parentName)
     {
         GameObject newObj;
-        Transform parent = GameObject.FindGameObjectWithTag(parentTag).transform;
+        GameObject parent = InstantiateParent(parentName);
         foreach (Vector2 _pos in _list)
         {
             newObj = PoolObject.instance.GetPoolObject(GetCorrespondingPrefab(name));
             newObj.transform.position = _pos;
-            newObj.transform.parent = parent;
+            newObj.transform.parent = parent.transform;
         }
     }
 

@@ -171,7 +171,7 @@ public class Node : MonoBehaviour {
 			buildManager.SelectNode(this);
 			return;
         }
-        buildManager.nodeUI.Hide();
+        NodeUI.instance.Hide();
         BuildTurret(buildManager.GetTurretToBuild());
     }
 
@@ -179,8 +179,8 @@ public class Node : MonoBehaviour {
     {
         StartColorFade();
         buildManager.mouseOverNode = true;
-		if (!buildManager.GetSelectedNode)
-			buildManager.nodeUI.DisplayTurretRange(this, true);
+        if (!buildManager.GetSelectedNode)
+            NodeUI.instance.DisplayTurretRange(this, true);
     }
 
     void StartColorFade()

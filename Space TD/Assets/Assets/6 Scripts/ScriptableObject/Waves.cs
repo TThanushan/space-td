@@ -6,7 +6,12 @@ using UnityEngine;
 public class Waves : ScriptableObject
 {
     public Wave[] wavesArray;
-    
+
+    private void Awake()
+    {
+        
+    }
+
     public void ResetCurrentWaveTemporaryData(int currentWaveNumber)
     {
         foreach (EnemyType enemyType in wavesArray[currentWaveNumber].enemyTypes)
@@ -20,9 +25,6 @@ public class Waves : ScriptableObject
     public class EnemyType
     {
         public GameObject Enemy;
-        //public int Health;
-        //public float MoveSpeed;
-        //public int MoneyRewardPerUnit;
         public float TimeBetweenSpawn;
         public int EnemyCount;
 
@@ -31,7 +33,15 @@ public class Waves : ScriptableObject
         [HideInInspector]
         public float nextEnemySpawnTime;
 
-        
+        public void ResetNextSpawnTime()
+        {
+            nextEnemySpawnTime = Time.time + TimeBetweenSpawn;
+        }
+        public bool ReadyToSpawn()
+        {
+            return Time.time >= nextEnemySpawnTime && currentEnemyCount > 0;
+        }
+
     }
 
     [System.Serializable]

@@ -42,7 +42,6 @@ public class UIScript : MonoBehaviour {
             instance = this;
     }
     void Update() {
-
         lifeText.text = PlayerStatsScript.instance.life.ToString();
         moneyText.text = PlayerStatsScript.instance.money.ToString() + " $";
         int waveNb = SpawnerScript.instance.currentWaveNumber + 1;
@@ -52,11 +51,8 @@ public class UIScript : MonoBehaviour {
             waveNb = numberOfWaves;
         waveNumberText.text = "Wave " + waveNb.ToString() + " / " + numberOfWaves.ToString();
 
-        if (SpawnerScript.instance.nextWaveTime > 0)
-        {
+        if (SpawnerScript.instance.waveState == "Waiting" && SpawnerScript.instance.enemiesRemainingAlive <= 0)
             waveTime.SetActive(true);
-            UpdateWaveTimerBar();
-        }
         else
             waveTime.SetActive(false);
         PlayerInputs();
@@ -67,15 +63,6 @@ public class UIScript : MonoBehaviour {
     public void PlayRandomMusic()
     {
         TrackPlayer.instance.PlayRandomMusic();
-    }
-
-    void UpdateWaveTimerBar()
-    {
-
-        float barLenght = SpawnerScript.instance.nextWaveTime / 10;
-
-        waveTimeBar.localScale = new Vector3(barLenght, waveTimeBar.localScale.y, waveTimeBar.localScale.z);
-
     }
 
     public void Disable(Transform obj)
@@ -130,7 +117,7 @@ public class UIScript : MonoBehaviour {
 
     public void SkipWaveTime()
     {
-        SpawnerScript.instance.nextWaveTime = 0;
+        SpawnerScript.instance.StartWave();
     }
 
     public void PlaySfx(string sfxName)

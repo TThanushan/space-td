@@ -48,9 +48,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac8b932d154a2c44b5a529f6f64d873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 4
+  attackDamage: 12
   attackSpeed: 1
   attackRange: 2
+  killCount: 0
+  damageDealt: 0
   bulletSpeed: 20
   slowAmount: 1
   rotateSpeed: 15
@@ -63,8 +65,8 @@ MonoBehaviour:
   shootSFXName: Tower Shoot
   lightningEffect: {fileID: 1539791933989730, guid: 7532d848fa8e46648a3853126ab2f0c3,
     type: 3}
-  lightningBounceCount: 8
-  lightningBounceRange: 2.5
+  lightningBounceCount: 9
+  lightningBounceRange: 3
   lineRenderer: {fileID: 0}
   burnTurretEffectG: {fileID: 0}
   chargingSpeed: 0

@@ -48,9 +48,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac8b932d154a2c44b5a529f6f64d873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 2.25
+  attackDamage: 8
   attackSpeed: 1.75
   attackRange: 2
+  killCount: 0
+  damageDealt: 0
   bulletSpeed: 20
   slowAmount: 1
   rotateSpeed: 15
@@ -63,8 +65,8 @@ MonoBehaviour:
   shootSFXName: Tower Shoot
   lightningEffect: {fileID: 1539791933989730, guid: adf4dbbfa70b51d46a13f0623a300988,
     type: 3}
-  lightningBounceCount: 3
-  lightningBounceRange: 1.6
+  lightningBounceCount: 4
+  lightningBounceRange: 3
   lineRenderer: {fileID: 0}
   burnTurretEffectG: {fileID: 0}
   chargingSpeed: 0
@@ -196,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a1b03c01425544afc4e4b00011d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 350
+  cost: 450
   upgradePrefab: {fileID: 1043044441382698, guid: 546e7bb0b1f2018439d2fd7184b361be,
     type: 3}
 --- !u!1 &1092811536782074

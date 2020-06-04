@@ -34,7 +34,6 @@ public class SaveData
         _current = (SaveData)SerializationManager.Load(Application.dataPath + "/Assets/7 Others/Maps/" + _name + ".save");
         if (LevelEditor.instance)
             LevelEditorUI.instance.ShowInfoText("'" + _current.map.Name + "' loaded !");
-        Debug.Log("'" + _current.map.Name + "' loaded !");
     }
 
     private bool SaveConditionFullfilled()

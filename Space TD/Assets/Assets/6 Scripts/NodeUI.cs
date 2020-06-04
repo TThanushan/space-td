@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 public class NodeUI : MonoBehaviour {
 
     private Node nodeTarget;
+    public Node nodeTargetHovering;
 
     public GameObject uI;
 
@@ -19,13 +22,23 @@ public class NodeUI : MonoBehaviour {
     public GameObject upgradeEffect;
     public GameObject SellingEffect;
 
+    public static System.Action OverTurret;
+    public static System.Action NotOverTurret;
+
     void Awake()
     {
         if (instance == null)
             instance = this;
+        SceneManager.sceneLoaded += SetEventToNull;
     }
 
-	void Start()
+    void SetEventToNull(Scene scene, LoadSceneMode mode)
+    {
+        OverTurret = null;
+        NotOverTurret = null;
+    }
+
+    void Start()
     {
 		rangeSprite = transform.Find("Canvas/UpgradesPanel/RangeSprite").gameObject;
 		upgradeRangeSprite = transform.Find("Canvas/UpgradesPanel/UpgradeRangeSprite").gameObject;
@@ -35,12 +48,7 @@ public class NodeUI : MonoBehaviour {
             Hide();
     }
 
-	void Update()
-	{
-
-	}
-
-	public Node GetNodeTarget
+    public Node GetNodeTarget
     {
         get
         {
@@ -50,19 +58,19 @@ public class NodeUI : MonoBehaviour {
 
 	public void ShowRangeUpgrade(bool show)
 	{
-		if (show && nodeTarget.turretBlueprint.IsUpgradeAvailable())
-		{
-			TowerScript towerScript = nodeTarget.turretBlueprint.upgradePrefab.GetComponent<TowerScript>();
+        if (show && nodeTarget.turretBlueprint.IsUpgradeAvailable())
+        {
+            TowerScript towerScript = nodeTarget.turretBlueprint.upgradePrefab.GetComponent<TowerScript>();
             float towerRange = towerScript.attackRange / 1.3f;
-			upgradeRangeSprite.transform.localScale = new Vector3(towerRange, towerRange, 0);
-			upgradeRangeSprite.transform.position = nodeTarget.transform.position;
-			upgradeRangeSprite.SetActive(true);
-		}
-		else
-			upgradeRangeSprite.SetActive(false);
-	}
+            upgradeRangeSprite.transform.localScale = new Vector3(towerRange, towerRange, 0);
+            upgradeRangeSprite.transform.position = nodeTarget.transform.position;
+            upgradeRangeSprite.SetActive(true);
+        }
+        else
+            upgradeRangeSprite.SetActive(false);
+    }
 
-	public void SetTarget(Node _node)
+    public void SetTarget(Node _node)
     {
         nodeTarget = _node;
 
@@ -79,15 +87,14 @@ public class NodeUI : MonoBehaviour {
 
         transform.position = nodeTarget.GetBuildPosition();
         uI.SetActive(true);
-        
-        DisplayTurretRange(nodeTarget ,true);
+
+        DisplayTurretRange(nodeTarget, true);
     }
 
     public void Hide()
     {
         if(nodeTarget != null)
             DisplayTurretRange(nodeTarget, false);
-
         uI.SetActive(false);
     }
 
@@ -114,14 +121,19 @@ public class NodeUI : MonoBehaviour {
 		rangeSprite.transform.position = _node.turret.transform.position;
 		rangeSpriteMask.position = _node.turret.transform.position;
 
-		if (state == true)
-		{
-			float towerRange = _node.turret.GetComponent<TowerScript>().attackRange / 1.3f;
-			rangeSprite.transform.localScale = new Vector3(towerRange, towerRange, 0);
-		}
-		else
-			rangeSprite.transform.localScale = Vector3.zero;
-        
+        if (state == true)
+        {
+            float towerRange = _node.turret.GetComponent<TowerScript>().attackRange / 1.3f;
+            rangeSprite.transform.localScale = new Vector3(towerRange, towerRange, 0);
+            nodeTargetHovering = _node;
+            OverTurret?.Invoke();
+        }
+        else
+        {
+            rangeSprite.transform.localScale = Vector3.zero;
+            nodeTargetHovering = null;
+            NotOverTurret?.Invoke();
+        }
     }
 
 }

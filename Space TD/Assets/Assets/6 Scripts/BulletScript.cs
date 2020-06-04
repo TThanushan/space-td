@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour {
 
-    public float attackRange = 1;
+    private float attackRange = 1f;
 
     public float moveSpeed = 1;
 
@@ -15,7 +15,11 @@ public class BulletScript : MonoBehaviour {
 	public GameObject effect;
     PlayerStatsScript playerStats;
 
-	void Awake () {
+    //public delegate void DamageEvent(float damage);
+    //public static event DamageEvent DamageDealt;
+    public static System.Action<float> damageEvent;
+
+    void Awake ()   {
         playerStats = PlayerStatsScript.instance;
 	}
     void FixedUpdate()
@@ -26,7 +30,7 @@ public class BulletScript : MonoBehaviour {
         MoveToTarget();
     }
 
-    void MoveToTarget()
+    private void MoveToTarget()
     {
         if (target != null)
         {
@@ -35,59 +39,70 @@ public class BulletScript : MonoBehaviour {
         }
     }
 
-    void AttackTarget()
+    protected virtual void AttackTarget()
+    {
+        if (target == null)
+            gameObject.SetActive(false);
+        if(IsTargetInRange())
+        {
+            DamageTarget();
+            TargetDestroyEffect();
+            DestroyEffect();
+            target = null;
+            gameObject.SetActive(false);
+        }
+    }
+
+    private void TargetDestroyEffect()
+    {
+        ProgressBarScript targetProgressBarScript = target.GetComponent<ProgressBarScript>();
+        if (targetProgressBarScript.IsKilled((int)attackDamage) && targetProgressBarScript.deathEffect)
+            CreateTargetDeathEffect(targetProgressBarScript.deathEffect);
+    }
+
+    protected void DestroyEffect()
+    {
+        if (effect)
+        {
+            GameObject newEffect = PoolObject.instance.GetPoolObject(effect);
+            newEffect.transform.position = transform.position;
+            RotateObjAwayFrom(newEffect, target);
+        }
+    }
+
+    protected bool IsTargetInRange()
     {
         Vector2 dir = target.transform.position - transform.position;
         float distanceThisFrame = moveSpeed * Time.deltaTime;
-
-        if(dir.magnitude <= distanceThisFrame)
-        {
-            if (target.GetComponent<ProgressBarScript>() == null)
-            {
-                gameObject.SetActive(false);
-                return;
-            }
-            ProgressBarScript targetProgressBarScript = target.GetComponent<ProgressBarScript>();
-
-            DamageTarget();
-
-            if (targetProgressBarScript.currentHealth <= 0 && targetProgressBarScript.deathEffect)
-                CreateTargetDeathEffect(targetProgressBarScript.deathEffect);
-
-            if (effect)
-            {
-                GameObject newEffect = PoolObject.instance.GetPoolObject(effect);
-                newEffect.transform.position = transform.position;
-                RotateObjAwayFrom(newEffect, target);
-
-            }
-            gameObject.SetActive(false);
-        }
-        if(target == null)
-            gameObject.SetActive(false);
+        return dir.magnitude <= distanceThisFrame;
     }
 
-    void DamageTarget()
+    private void DamageTarget()
     {
-        ProgressBarScript targetProgressBarScript = target.GetComponent<ProgressBarScript>();
-        targetProgressBarScript.currentHealth -= attackDamage;
+        OnDamageDealt(attackDamage);
+        target.GetComponent<ProgressBarScript>().GetDamage(attackDamage);
     }
 
-    void CreateTargetDeathEffect(GameObject deathEffect)
+    public virtual void OnDamageDealt(float damage)
+    {
+        damageEvent?.Invoke(damage);
+    }
+
+    protected void CreateTargetDeathEffect(GameObject deathEffect)
     {
         GameObject effect = PoolObject.instance.GetPoolObject(deathEffect);
         RotateObjToward(effect, target);
         effect.transform.position = target.transform.position;
     }
 
-    void RotateObjToward(GameObject obj, GameObject _target)
+    private void RotateObjToward(GameObject obj, GameObject _target)
     {
         Vector3 dir = _target.transform.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         obj.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
     }
 
-    void RotateObjAwayFrom(GameObject obj, GameObject _target)
+    private void RotateObjAwayFrom(GameObject obj, GameObject _target)
     {
         Vector3 dir = _target.transform.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;

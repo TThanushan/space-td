@@ -57,13 +57,13 @@ public class BuildToolbar : MonoBehaviour {
     {
         foreach (Turret turret in turrets)
         {
-            if (!turret.priceText.IsActive())
+            if (!turret.enoughMoneyShadeG.transform.parent.gameObject.activeSelf)
                 continue;
+
             if (buildManager.HasMoneyToBuildTurret(turret.GetCost()))
-                turret.priceText.color = new Color(0.6593881f, 1, 0, 1);
+                turret.enoughMoneyShadeG.SetActive(false);
             else
-                turret.priceText.color = new Color(0.6593881f, 1, 0, 0.2117647f);
-            turret.priceText.text = turret.GetCost().ToString() + " $";
+                turret.enoughMoneyShadeG.SetActive(true);
         }
     }
 
@@ -155,6 +155,26 @@ public class BuildToolbar : MonoBehaviour {
         return null;
     }
 
+    public Turret GetTurret(string turretName)
+    {
+        foreach (Turret turret in turrets)
+        {
+            if (turret.name == turretName)
+                return turret;
+        }
+        return null;
+    }
+
+    public GameObject GetTurretPrefab(string turretName)
+    {
+        foreach (Turret turret in turrets)
+        {
+            if (turret.name == turretName)
+                return turret.prefab;
+        }
+        return null;
+    }
+
     public void SelectTurret(string name)
     {
         if (buildManager.HasMoneyToBuildTurret(GetTurretBluePrint(name).cost))
@@ -171,7 +191,8 @@ public class BuildToolbar : MonoBehaviour {
     {
         public string name;
         public GameObject prefab;
-        public TextMeshProUGUI priceText;
+        public GameObject enoughMoneyShadeG;
+        public string presentationText;
 
         public TurretBluePrint GetBluePrint()
         {

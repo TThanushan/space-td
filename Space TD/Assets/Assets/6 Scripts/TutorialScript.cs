@@ -16,10 +16,10 @@ public class TutorialScript : MonoBehaviour
         if (currentWaveNumber >= tutoPanels.Length)
             return;
 
-        Debug.Log(currentWaveNumber);
         if (!tutoPanels[currentWaveNumber].HasBeenShown)
         {
-            PlayerStatsScript.instance.pause = true;
+            Time.timeScale = 1;
+            //PlayerStatsScript.instance.pause = true;
             tutoPanels[currentWaveNumber].panelRef.SetActive(true);
             tutoPanels[currentWaveNumber].turretButton.SetActive(true);
             tutoPanels[currentWaveNumber].HasBeenShown = true;
@@ -31,6 +31,7 @@ public class TutorialScript : MonoBehaviour
         GameObject introPanel = tutoPanels[SpawnerScript.instance.currentWaveNumber].panelRef;
         Animator introPanelAnimator = introPanel.GetComponent<Animator>();
         introPanelAnimator.Play("FadeOut");
+        //PlayerStatsScript.instance.pause = false;
     }
 
     public void UnpauseGame()

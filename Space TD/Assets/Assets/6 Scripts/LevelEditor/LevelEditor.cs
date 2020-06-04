@@ -184,7 +184,6 @@ public class LevelEditor : MonoBehaviour
         string _name = levelSelectionDropdown.options[levelSelectionDropdown.value].text;
         if (_name == "")
             return;
-        Debug.Log(_name.Length);
         SaveData.current.Load(_name);
         SaveData.current.map.LoadAllObjectFromSaveData();
         levelName = SaveData.current.map.Name;
@@ -223,7 +222,6 @@ public class LevelEditor : MonoBehaviour
                 LevelEditorUI.instance.CreateDeleteEffect(levelEditorNode.transform.position);
             }
         }
-        Debug.Log("Map reset !");
     }
 
     public void DeleteSaveFile(string _name)
@@ -234,7 +232,6 @@ public class LevelEditor : MonoBehaviour
             Debug.Log("File '" + _name + "' not found");
         else
         {
-            Debug.Log("File '" + _name + " deleted !");
             File.Delete(savePath + _name + ".save");
         }
     }

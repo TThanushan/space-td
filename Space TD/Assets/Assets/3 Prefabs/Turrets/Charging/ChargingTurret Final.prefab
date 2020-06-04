@@ -324,9 +324,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac8b932d154a2c44b5a529f6f64d873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 0.75
+  attackDamage: 4
   attackSpeed: 1
-  attackRange: 2
+  attackRange: 2.4
+  killCount: 0
+  damageDealt: 0
   bulletSpeed: 30
   slowAmount: 1
   rotateSpeed: 20
@@ -334,13 +336,14 @@ MonoBehaviour:
   bulletG: {fileID: 1271134761775984, guid: 6e710f19342194a48b471e00dab3bc87, type: 3}
   enemiesToAttack: []
   towerTargetMod: 0
-  towerEffect: 5
+  towerEffect: 4
   isDisable: 0
   shootSFXName: Tower Shoot
   lightningEffect: {fileID: 0}
+  lightningBounceCount: 0
+  lightningBounceRange: 0
   lineRenderer: {fileID: 0}
-  burnTurretEffectG: {fileID: 0}
-  chargingSpeed: 0.1
+  chargingSpeed: 0.075
   maxAttackspeed: 1
   minAttackspeed: 0.125
 --- !u!199 &199590053107507718
@@ -5096,7 +5099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a1b03c01425544afc4e4b00011d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 200
+  cost: 300
   upgradePrefab: {fileID: 0}
 --- !u!1 &1977535024081980852
 GameObject:

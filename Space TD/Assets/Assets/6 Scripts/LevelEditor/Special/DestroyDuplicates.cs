@@ -19,7 +19,6 @@ public class DestroyDuplicates : MonoBehaviour
             {
                 if (obj.GetInstanceID() != gameObject.GetInstanceID())
                 {
-                    Debug.Log("MyId:" + GetInstanceID() + "|Deleting this id:" + obj.GetInstanceID());
                     Destroy(obj);
                 }
             }

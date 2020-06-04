@@ -78,12 +78,10 @@ public class LevelEditorUI : MonoBehaviour
     public void OpenPanel(GameObject panel)
     {
         panel.SetActive(true);
-        Debug.Log("open panel");
     }
 
     public void ClosePanel(GameObject panel)
     {
         panel.SetActive(false);
-        Debug.Log("close panel");
     }
 }

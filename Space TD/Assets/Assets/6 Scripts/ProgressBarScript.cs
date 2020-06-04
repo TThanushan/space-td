@@ -19,23 +19,25 @@ public class ProgressBarScript : MonoBehaviour {
 
 	public float moneyGiven;
 
-    public event System.Action OnDeath;
+    public event System.Action<GameObject> OnDeath;
     public GameObject deathEffect;
+
+
+
 
     void OnEnable()
     {
         Healthbar.transform.localScale = new Vector3(0, Healthbar.transform.localScale.y, Healthbar.transform.localScale.z);
 
         currentHealth = maxHealth;
-        DisableHealthBarFullLife();
-
+        //DisableHealthBarFullLife();
     }
 
     void Start () {
         
         currentHealth = maxHealth;
         healthText = transform.Find("HealthBody/HealthText").GetComponent<TextMeshProUGUI>();
-        InvokeRepeating("DisableHealthBarFullLife", 0f, 1f);
+        //InvokeRepeating("DisableHealthBarFullLife", 0f, 1f);
     }
 
 	
@@ -47,7 +49,7 @@ public class ProgressBarScript : MonoBehaviour {
 			healthText.text = (System.Math.Round(currentHealth,1)).ToString();
         Death();
 
-        DisableHealthBarFullLife();
+        //DisableHealthBarFullLife();
     }
 
     void DisableHealthBarFullLife()
@@ -60,11 +62,7 @@ public class ProgressBarScript : MonoBehaviour {
     {
         if (currentHealth <= 0)
         {
-            if (OnDeath != null)
-            {
-                OnDeath();
-                OnDeath = null;
-            }
+            OnDeath?.Invoke(gameObject);
             if (type == Type.basic)
             {
                 //Given money When i die.
@@ -80,7 +78,7 @@ public class ProgressBarScript : MonoBehaviour {
         }
     }
 
-    public bool GetDamage(int damage)
+    public bool GetDamage(float damage)
     {
         currentHealth -= damage;
         if (currentHealth < 0)
@@ -88,20 +86,12 @@ public class ProgressBarScript : MonoBehaviour {
         return currentHealth <= 0;
     }
 
-    public bool IsKilled(int damage)
+    public bool IsKilled(float damage)
     {
         return currentHealth - damage <= 0;
     }
 
-    void OnDisable()
-    {
-        if (OnDeath != null)
-        {
-            OnDeath();
-            OnDeath = null;
-        }
-        
-    }
+
 
     void SetHealthBarFunc()
     {
