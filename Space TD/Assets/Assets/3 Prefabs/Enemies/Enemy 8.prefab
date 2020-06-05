@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &920441920860641810
 RectTransform:
   m_ObjectHideFlags: 0
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 28.6
-  m_fontSizeBase: 28.6
+  m_fontSize: 16.2
+  m_fontSizeBase: 16.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -632,7 +632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfc184dd5b46b340a50e87f86a8739e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8049254310020723441, guid: a2b2dc048e8e6b74dabf90f51b71c765, type: 3}
+  prefab: {fileID: 524884180976413873, guid: b5bed5fe71da23f498ffa43579bd7bdd, type: 3}
   randomXPosition: 0.15
   randomYPosition: 0.15
 --- !u!1 &2436561111022512040

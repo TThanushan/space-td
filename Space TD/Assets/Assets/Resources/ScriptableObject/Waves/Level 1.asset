@@ -17,129 +17,4113 @@ MonoBehaviour:
     enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
       TimeBetweenSpawn: 1
-      EnemyCount: 20
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 26.389627
+      EnemyCount: 5
+      currentEnemyCount: 5
+      nextEnemySpawnTime: 0
   - moneyReward: 200
     enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      TimeBetweenSpawn: 1
+      TimeBetweenSpawn: 0.98
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.96
+      EnemyCount: 15
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.94
+      EnemyCount: 20
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.94
+      EnemyCount: 8
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.92
+      EnemyCount: 25
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.92
+      EnemyCount: 10
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.9
       EnemyCount: 30
-      currentEnemyCount: 27
-      nextEnemySpawnTime: 43.943413
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.9
+      EnemyCount: 12
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
   - moneyReward: 200
     enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      TimeBetweenSpawn: 1
-      EnemyCount: 20
+      TimeBetweenSpawn: 0.88
+      EnemyCount: 35
       currentEnemyCount: 0
-      nextEnemySpawnTime: 102.14033
+      nextEnemySpawnTime: 0
     - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
-      TimeBetweenSpawn: 2
-      EnemyCount: 5
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 94.18834
-  - moneyReward: 200
-    enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      TimeBetweenSpawn: 0.5
-      EnemyCount: 25
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 125.7635
-    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
-      TimeBetweenSpawn: 1.5
-      EnemyCount: 10
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 131.3835
-  - moneyReward: 200
-    enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      TimeBetweenSpawn: 0.5
-      EnemyCount: 5
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 142.30795
-    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
-      TimeBetweenSpawn: 1
-      EnemyCount: 25
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 168.71013
-  - moneyReward: 200
-    enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      TimeBetweenSpawn: 0.5
-      EnemyCount: 15
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 182.49194
-    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
-      TimeBetweenSpawn: 1
-      EnemyCount: 15
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 193.36876
-    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
-      TimeBetweenSpawn: 1
-      EnemyCount: 4
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 181.9736
-  - moneyReward: 100
-    enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      TimeBetweenSpawn: 0.5
-      EnemyCount: 20
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 213.66293
-    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
-      TimeBetweenSpawn: 1
-      EnemyCount: 25
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 233.55203
-    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
-      TimeBetweenSpawn: 1
-      EnemyCount: 5
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 212.14368
-  - moneyReward: 100
-    enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
-      TimeBetweenSpawn: 0.5
-      EnemyCount: 10
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 249.26527
-    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
-      TimeBetweenSpawn: 1
-      EnemyCount: 20
-      currentEnemyCount: 0
-      nextEnemySpawnTime: 272.0918
-    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
-      TimeBetweenSpawn: 1
+      TimeBetweenSpawn: 0.88
       EnemyCount: 14
       currentEnemyCount: 0
-      nextEnemySpawnTime: 265.92294
-  - moneyReward: 100
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.88
+      EnemyCount: 7
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.86
+      EnemyCount: 40
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.86
+      EnemyCount: 16
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.86
+      EnemyCount: 8
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.84
+      EnemyCount: 45
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.84
+      EnemyCount: 18
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.84
+      EnemyCount: 9
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.82
+      EnemyCount: 50
+      currentEnemyCount: 50
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.82
+      EnemyCount: 20
+      currentEnemyCount: 20
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.82
+      EnemyCount: 10
+      currentEnemyCount: 10
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.82
+      EnemyCount: 10
+      currentEnemyCount: 10
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.8
+      EnemyCount: 55
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.8
+      EnemyCount: 22
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.8
+      EnemyCount: 11
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.8
+      EnemyCount: 11
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.78
+      EnemyCount: 60
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.78
+      EnemyCount: 24
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.78
+      EnemyCount: 12
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.78
+      EnemyCount: 12
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.76
+      EnemyCount: 65
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.76
+      EnemyCount: 26
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.76
+      EnemyCount: 13
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.76
+      EnemyCount: 13
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.76
+      EnemyCount: 13
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.74
+      EnemyCount: 70
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.74
+      EnemyCount: 28
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.74
+      EnemyCount: 14
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.74
+      EnemyCount: 14
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.74
+      EnemyCount: 14
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.72
+      EnemyCount: 75
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.72
+      EnemyCount: 30
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.72
+      EnemyCount: 15
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.72
+      EnemyCount: 15
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.72
+      EnemyCount: 15
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.7
+      EnemyCount: 80
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.7
+      EnemyCount: 32
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.7
+      EnemyCount: 16
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.7
+      EnemyCount: 16
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.7
+      EnemyCount: 16
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.7
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.68
+      EnemyCount: 85
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.68
+      EnemyCount: 34
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.68
+      EnemyCount: 17
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.68
+      EnemyCount: 17
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.68
+      EnemyCount: 17
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.68
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.66
+      EnemyCount: 90
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.66
+      EnemyCount: 36
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.66
+      EnemyCount: 18
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.66
+      EnemyCount: 18
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.66
+      EnemyCount: 18
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.66
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.64
+      EnemyCount: 95
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.64
+      EnemyCount: 38
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.64
+      EnemyCount: 19
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.64
+      EnemyCount: 19
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.64
+      EnemyCount: 19
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.64
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.64
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.62
+      EnemyCount: 100
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.62
+      EnemyCount: 40
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.62
+      EnemyCount: 20
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.62
+      EnemyCount: 20
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.62
+      EnemyCount: 20
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.62
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.62
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.6
+      EnemyCount: 105
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.6
+      EnemyCount: 42
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.6
+      EnemyCount: 21
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.6
+      EnemyCount: 21
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.6
+      EnemyCount: 21
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.6
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.6
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.58
+      EnemyCount: 110
+      currentEnemyCount: 7
+      nextEnemySpawnTime: 200.68178
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.58
+      EnemyCount: 44
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 165.71239
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.58
+      EnemyCount: 22
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 151.31787
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.58
+      EnemyCount: 22
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 151.31787
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.58
+      EnemyCount: 22
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 151.31787
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.58
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 32.269882
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.58
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 32.269882
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.58
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 32.269882
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.56
+      EnemyCount: 115
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.56
+      EnemyCount: 46
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.56
+      EnemyCount: 23
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.56
+      EnemyCount: 23
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.56
+      EnemyCount: 23
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.56
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.56
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.56
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.54
+      EnemyCount: 120
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.54
+      EnemyCount: 48
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.54
+      EnemyCount: 24
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.54
+      EnemyCount: 24
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.54
+      EnemyCount: 24
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.54
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.54
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.54
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.52
+      EnemyCount: 125
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.52
+      EnemyCount: 50
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.52
+      EnemyCount: 25
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.52
+      EnemyCount: 25
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.52
+      EnemyCount: 25
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.52
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.52
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.52
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
     enemyTypes:
     - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
       TimeBetweenSpawn: 0.5
-      EnemyCount: 10
+      EnemyCount: 130
       currentEnemyCount: 0
-      nextEnemySpawnTime: 292.9337
+      nextEnemySpawnTime: 0
     - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
-      TimeBetweenSpawn: 1
-      EnemyCount: 5
+      TimeBetweenSpawn: 0.5
+      EnemyCount: 52
       currentEnemyCount: 0
-      nextEnemySpawnTime: 302.3859
+      nextEnemySpawnTime: 0
     - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
-      TimeBetweenSpawn: 1
-      EnemyCount: 25
+      TimeBetweenSpawn: 0.5
+      EnemyCount: 26
       currentEnemyCount: 0
-      nextEnemySpawnTime: 322.90363
-  - moneyReward: 100
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.5
+      EnemyCount: 26
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.5
+      EnemyCount: 26
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.5
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.5
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.5
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
     enemyTypes:
-    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
-      TimeBetweenSpawn: 1
-      EnemyCount: 10
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.48
+      EnemyCount: 135
       currentEnemyCount: 0
-      nextEnemySpawnTime: 371.46204
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.48
+      EnemyCount: 54
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
     - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
-      TimeBetweenSpawn: 1
+      TimeBetweenSpawn: 0.48
+      EnemyCount: 27
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.48
+      EnemyCount: 27
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.48
+      EnemyCount: 27
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.48
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.48
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.48
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.46
+      EnemyCount: 140
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.46
+      EnemyCount: 56
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.46
+      EnemyCount: 28
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.46
+      EnemyCount: 28
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.46
+      EnemyCount: 28
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.46
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.46
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.46
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.44
+      EnemyCount: 145
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.44
+      EnemyCount: 58
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.44
+      EnemyCount: 29
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.44
+      EnemyCount: 29
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.44
+      EnemyCount: 29
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.44
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.44
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.44
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.42
+      EnemyCount: 150
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.42
+      EnemyCount: 60
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.42
+      EnemyCount: 30
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.42
+      EnemyCount: 30
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.42
+      EnemyCount: 30
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.42
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.42
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.42
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.4
+      EnemyCount: 155
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.4
+      EnemyCount: 62
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.4
+      EnemyCount: 31
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.4
+      EnemyCount: 31
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.4
+      EnemyCount: 31
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.4
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.4
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.4
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.38
+      EnemyCount: 160
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.38
+      EnemyCount: 64
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.38
+      EnemyCount: 32
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.38
+      EnemyCount: 32
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.38
+      EnemyCount: 32
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.38
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.38
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.38
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.36
+      EnemyCount: 165
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.36
+      EnemyCount: 66
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.36
+      EnemyCount: 33
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.36
+      EnemyCount: 33
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.36
+      EnemyCount: 33
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.36
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.36
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.36
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.34
+      EnemyCount: 170
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.34
+      EnemyCount: 68
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.34
+      EnemyCount: 34
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.34
+      EnemyCount: 34
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.34
+      EnemyCount: 34
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.34
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.34
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.34
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.32
+      EnemyCount: 175
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.32
+      EnemyCount: 70
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.32
+      EnemyCount: 35
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.32
+      EnemyCount: 35
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.32
+      EnemyCount: 35
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.32
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.32
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.32
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 180
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 72
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 36
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 36
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 36
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 185
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 74
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 37
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 37
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 37
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 190
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 76
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 38
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 38
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 38
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 195
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 78
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 39
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 39
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 39
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 200
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 80
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
       EnemyCount: 40
       currentEnemyCount: 0
-      nextEnemySpawnTime: 404.43762
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 40
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 40
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 205
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 82
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 41
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 41
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 41
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 210
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 84
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 42
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 42
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 42
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 215
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 86
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 43
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 43
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 43
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 220
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 88
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 44
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 44
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 44
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 225
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 90
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 45
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 45
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 45
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 230
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 92
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 46
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 46
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 46
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 235
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 94
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 47
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 47
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 47
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 240
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 96
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 48
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 48
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 48
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 245
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 98
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 49
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 49
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 49
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 250
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 100
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 50
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 50
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 50
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 255
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 102
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 51
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 51
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 51
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 260
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 104
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 52
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 52
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 52
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 265
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 106
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 53
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 53
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 53
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 270
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 108
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 54
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 54
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 54
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 275
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 110
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 55
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 55
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 55
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 280
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 112
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 56
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 56
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 56
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 285
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 114
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 57
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 57
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 57
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 290
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 116
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 58
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 58
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 58
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 295
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 118
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 59
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 59
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 59
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 300
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 120
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 60
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 60
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 60
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 305
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 122
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 61
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 61
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 61
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 310
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 124
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 62
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 62
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 62
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 315
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 126
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 63
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 63
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 63
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 320
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 128
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 64
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 64
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 64
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 325
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 130
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 65
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 65
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 65
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 330
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 132
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 66
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 66
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 66
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 335
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 134
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 67
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 67
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 67
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 340
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 136
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 68
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 68
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 68
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 345
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 138
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 69
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 69
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 69
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 350
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 140
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 70
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 70
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 70
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 355
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 142
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 71
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 71
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 71
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 360
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 144
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 72
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 72
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 72
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 365
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 146
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 73
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 73
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 73
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 370
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 148
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 74
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 74
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 74
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 375
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 150
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 75
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 75
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 75
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 380
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 152
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 76
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 76
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 76
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 385
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 154
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 77
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 77
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 77
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 390
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 156
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 78
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 78
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 78
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 395
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 158
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 79
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 79
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 79
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 400
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 160
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 80
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 80
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 80
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 405
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 162
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 81
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 81
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 81
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 410
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 164
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 82
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 82
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 82
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 415
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 166
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 83
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 83
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 83
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 420
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 168
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 84
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 84
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 84
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 425
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 170
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 85
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 85
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 85
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 430
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 172
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 86
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 86
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 86
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 435
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 174
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 87
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 87
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 87
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 440
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 176
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 88
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 88
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 88
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 445
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 178
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 89
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 89
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 89
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 450
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 180
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 90
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 90
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 90
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 455
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 182
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 91
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 91
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 91
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 460
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 184
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 92
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 92
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 92
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 465
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 186
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 93
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 93
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 93
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 470
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 188
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 94
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 94
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 94
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 475
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 190
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 95
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 95
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 95
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 480
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 192
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 96
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 96
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 96
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 485
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 194
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 97
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 97
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 97
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 490
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 196
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 98
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 98
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 98
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 495
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 198
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 99
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 99
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 99
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+  - moneyReward: 200
+    enemyTypes:
+    - Enemy: {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 500
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 200
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 100
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 100
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 100
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0
+    - Enemy: {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5,
+        type: 3}
+      TimeBetweenSpawn: 0.3
+      EnemyCount: 0
+      currentEnemyCount: 0
+      nextEnemySpawnTime: 0

@@ -13,8 +13,9 @@ public class SpawnObjectOnDisable : MonoBehaviour
     {
         Vector2 newPosition = transform.position;
         if (randomXPosition != 0f || randomYPosition != 0f)
-            newPosition = RandomPosition(); 
-        Instantiate(prefab, newPosition, prefab.transform.rotation, PoolObject.instance.GetBinTransform);
+            newPosition = RandomPosition();
+        GameObject newPrefab = PoolObject.instance.GetPoolObject(prefab);
+        newPrefab.transform.position = newPosition;
     }
 
     private Vector2 RandomPosition()

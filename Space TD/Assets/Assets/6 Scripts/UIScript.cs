@@ -60,6 +60,12 @@ public class UIScript : MonoBehaviour {
         HasPlayerLose();
     }
 
+    public void MuteMusic(GameObject sprite)
+    {
+        TrackPlayer.instance.MuteMusic();
+        sprite.SetActive(!sprite.activeSelf);
+    }
+
     public void PlayRandomMusic()
     {
         TrackPlayer.instance.PlayRandomMusic();
@@ -113,6 +119,11 @@ public class UIScript : MonoBehaviour {
     public void MuteSfxVolume(GameObject _image)
     {
         AudioManager.instance.MuteSfxVolume(_image);
+    }
+
+    public void MuteSfxVolume(bool value)
+    {
+        AudioManager.instance.MuteSfxVolume(value);
     }
 
     public void SkipWaveTime()

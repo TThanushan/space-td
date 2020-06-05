@@ -95,8 +95,11 @@ public class Node : MonoBehaviour {
         {
             UIScript.instance.DisplayText("-" + turretBlueprint.cost.ToString() + " $", mousePos, 1,  "Red");
             playerStatsScript.money -= turretBlueprint.GetUpgradeCost();
+            float damageDealt = turret.GetComponent<TowerScript>().damageDealt;
+            int killCount = turret.GetComponent<TowerScript>().killCount;
             DestroyTurret();
             InstantiateUpgradeTurret();
+            SetDamageDealtAndKillCOunt(damageDealt, killCount);
             UpdateNodeUITarget();
             DisplayEffect(NodeUI.instance.upgradeEffect);
             AudioManager.instance.Play("Turret Build");
@@ -110,6 +113,13 @@ public class Node : MonoBehaviour {
             UIScript.instance.DisplayText("Not enough money to Upgrade !", mousePos, 2, "Red");
         }
     }
+
+    private void SetDamageDealtAndKillCOunt(float damageDealt, int killCount)
+    {
+        turret.GetComponent<TowerScript>().damageDealt = damageDealt;
+        turret.GetComponent<TowerScript>().killCount = killCount;
+    }
+
 
     void DestroyTurret()
     {

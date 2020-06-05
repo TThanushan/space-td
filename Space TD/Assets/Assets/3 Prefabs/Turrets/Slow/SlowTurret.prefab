@@ -52,7 +52,7 @@ MonoBehaviour:
   killCount: 0
   damageDealt: 0
   bulletSpeed: 20
-  slowAmount: 50
+  slowAmount: 25
   rotateSpeed: 15
   shootPos: {fileID: 1720596494567032}
   bulletG: {fileID: 1271134761775984, guid: 7935d0243b4ce0946a43a0943e45c9f5, type: 3}
@@ -65,7 +65,6 @@ MonoBehaviour:
   lightningBounceCount: 0
   lightningBounceRange: 0
   lineRenderer: {fileID: 0}
-  burnTurretEffectG: {fileID: 0}
   chargingSpeed: 0
   maxAttackspeed: 0
   minAttackspeed: 0

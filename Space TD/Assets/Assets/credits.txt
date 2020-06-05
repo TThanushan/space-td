@@ -1,0 +1,5 @@
+Art assets:
+-by Viktor Hahn (Viktor.Hahn@web.de), https://opengameart.org/content/32-star-sprites , licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. http://creativecommons.org/licenses/by-sa/3.0/
+
+-by Cmdr G, https://opengameart.org/content/asteroid-l
+- flatIcon

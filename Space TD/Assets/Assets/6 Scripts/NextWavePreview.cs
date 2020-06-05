@@ -14,6 +14,12 @@ public class NextWavePreview : MonoBehaviour
         CreatePreview();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+            ShowPreview();
+    }
+
     private void Awake()
     {
         if (!instance)
@@ -24,15 +30,11 @@ public class NextWavePreview : MonoBehaviour
         ClearPreviewBlocks();
         CreatePreview();
         GetComponent<Animator>().Play("Show");
-        //panel.SetActive(true);
-        //bar.SetActive(true);
     }
 
     public void HidePreview()
     {
         GetComponent<Animator>().Play("Hide");
-        //panel.SetActive(false);
-        //bar.SetActive(false);
     }
 
     private void CreatePreview()

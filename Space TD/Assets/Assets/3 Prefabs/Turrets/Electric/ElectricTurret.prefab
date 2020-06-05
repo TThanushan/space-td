@@ -60,7 +60,7 @@ MonoBehaviour:
   bulletG: {fileID: 0}
   enemiesToAttack: []
   towerTargetMod: 2
-  towerEffect: 3
+  towerEffect: 2
   isDisable: 0
   shootSFXName: Tower Shoot
   lightningEffect: {fileID: 1539791933989730, guid: adf4dbbfa70b51d46a13f0623a300988,
@@ -68,7 +68,6 @@ MonoBehaviour:
   lightningBounceCount: 3
   lightningBounceRange: 3
   lineRenderer: {fileID: 0}
-  burnTurretEffectG: {fileID: 0}
   chargingSpeed: 0
   maxAttackspeed: 0
   minAttackspeed: 0
@@ -114,7 +113,7 @@ LineRenderer:
   m_Positions: []
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.06
+    widthMultiplier: 0.03
     widthCurve:
       serializedVersion: 2
       m_Curve:

@@ -91,6 +91,8 @@ public class UISelectedTurretStats : MonoBehaviour
     {
         if (towerScript.bulletG && towerScript.bulletG.GetComponent<MissileBullet>())
             damageText.text = "Damage : " + towerScript.bulletG.GetComponent<MissileBullet>().ExplosionDamage.ToString();
+        else if (towerScript.towerEffect == TowerScript.TowerEffect.slowTarget)
+            damageText.text = "Slow : " + towerScript.slowAmount.ToString() + '%';
         else
             damageText.text = "Damage : " + towerScript.attackDamage.ToString();
     }

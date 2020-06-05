@@ -65,6 +65,7 @@ public class SpawnerScript : MonoBehaviour {
             difficultyData.IncreaseDifficulty();
         else
             difficultyData.DecreaseDifficulty(playerHealthLoss);
+        playerHealthLoss = 0;
     }
 
     private void ApplyDifficulty()
@@ -94,7 +95,7 @@ public class SpawnerScript : MonoBehaviour {
         foreach (Waves.EnemyType _currentEnemyType in nextWave)
         {
             _currentEnemyType.currentEnemyCount = _currentEnemyType.EnemyCount;
-            _currentEnemyType.currentEnemyCount += difficultyData.SpawnPoint;
+            //_currentEnemyType.currentEnemyCount += difficultyData.SpawnPoint;
         }
         return nextWave;
     }
@@ -155,13 +156,13 @@ public class SpawnerScript : MonoBehaviour {
             if (isAllWavesDone)
                 return;
             if (currentWaveNumber != numberOfWaves)
-            {
+            { 
                 nextWaveTime = 10;
                 playerStats.money += waves.wavesArray[currentWaveNumber].moneyReward;
                 UpdateDifficulty();
                 ApplyDifficulty();
+               NextWavePreview.instance.ShowPreview();
             }
-            NextWavePreview.instance.ShowPreview();
         }
     }
 
@@ -217,7 +218,6 @@ public class SpawnerScript : MonoBehaviour {
     {
         ProgressBarScript progressBar = newEnemy.GetComponent<ProgressBarScript>();
         progressBar.maxHealth = currentEnemyType.Enemy.GetComponent<ProgressBarScript>().maxHealth + difficultyData.StatusPoint;
-        print(progressBar.maxHealth);
         if (progressBar.maxHealth <= 0)
             progressBar.maxHealth = 1;
         progressBar.currentHealth = progressBar.maxHealth;
@@ -273,7 +273,7 @@ public class SpawnerScript : MonoBehaviour {
         private float statusMultiplier = 1;
         private float spawnMultiplier = 1;
         private float goldMultiplier = 1;
-        private int statusPointMax = 5;
+        private int statusPointMax = 10;
 
         public float GlobalDifficulty { get => globalDifficulty;}
         public int StatusPoint { get => statusPoint;}
@@ -321,7 +321,8 @@ public class SpawnerScript : MonoBehaviour {
 
         public void IncreaseDifficulty()
         {
-            statusMultiplier += 0.07f;
+            //statusMultiplier += 0.07f;
+            statusMultiplier += 0.03f;
             spawnMultiplier += 0.05f;
             goldMultiplier -= 0.05f;
             statusPoint += 1;

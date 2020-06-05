@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfc184dd5b46b340a50e87f86a8739e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2274855807541826701, guid: 8b9f8dd87790d284da918799a34aa910, type: 3}
+  prefab: {fileID: 524884180976413873, guid: b5bed5fe71da23f498ffa43579bd7bdd, type: 3}
   randomXPosition: 0.15
   randomYPosition: 0.15
 --- !u!1 &3182269289801531629

@@ -103,12 +103,13 @@ public class AudioManager : MonoBehaviour {
     public void MuteSfxVolume(GameObject _image)
     {
         SFXMuted = !SFXMuted;
-
         if (_image != null)
-        {
             _image.SetActive(SFXMuted);
-        }
+    }
 
+    public void MuteSfxVolume(bool value)
+    {
+        SFXMuted = value;
     }
 
     public void ChangeMainVolume(float _volume)

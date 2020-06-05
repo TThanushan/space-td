@@ -46,7 +46,7 @@ public class GenerateWavesScriptableObject : MonoBehaviour
 
     private int GetEnemyCount(int waveNumber, int prefabIndex)
     {
-        return (waveNumber + 1) * (5 / (prefabIndex + 1));
+        return Mathf.RoundToInt(((float)waveNumber + 1f) * ((5f + (float)prefabIndex) / ((float)prefabIndex + 1f)));
     }
 
     private void AddNewPrefab(int currentWaveNumber)
