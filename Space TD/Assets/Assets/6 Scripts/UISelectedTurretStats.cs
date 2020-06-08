@@ -10,6 +10,7 @@ public class UISelectedTurretStats : MonoBehaviour
     public TextMeshProUGUI damageText;
     public TextMeshProUGUI attackSpeedText;
     public TextMeshProUGUI rangeText;
+    public TextMeshProUGUI specificText;
     public TextMeshProUGUI damageDealtText;
     public TextMeshProUGUI killCounterText;
 
@@ -17,6 +18,7 @@ public class UISelectedTurretStats : MonoBehaviour
     public TextMeshProUGUI damageUpgradeText;
     public TextMeshProUGUI attackSpeedUpgradeText;
     public TextMeshProUGUI rangeUpgradeText;
+    public TextMeshProUGUI specificUpgradeText;
 
     public GameObject upgradeStatsPanel;
     public GameObject panel;
@@ -55,17 +57,69 @@ public class UISelectedTurretStats : MonoBehaviour
         TowerScript towerScript = GetSelectUpgradeTowerScript();
         if (!towerScript)
             return;
-        if (towerScript.bulletG && towerScript.bulletG.GetComponent<MissileBullet>())
-            damageUpgradeText.text = "=> " + towerScript.bulletG.GetComponent<MissileBullet>().ExplosionDamage;
-        else
-            damageUpgradeText.text = "=> " + towerScript.attackDamage;
+        damageUpgradeText.text = "=> " + GetAttackDamage(towerScript).ToString();
+        if (IsSlowTurret(towerScript))
+            damageUpgradeText.text += '%';
         attackSpeedUpgradeText.text = "=> " + towerScript.attackSpeed;
         rangeUpgradeText.text = "=> " + towerScript.attackRange;
+        if (towerScript.towerEffect != TowerScript.TowerEffect.noEffect)
+            specificUpgradeText.text = "=> " + GetSpecificUpgradeText(towerScript);
     }
     
     public void HideUpgradeStatsPanel()
     {
         upgradeStatsPanel.SetActive(false);
+    }
+
+    private float GetAttackDamage(TowerScript towerScript)
+    {
+        if (IsCannonTurret(towerScript))
+            return towerScript.bulletG.GetComponent<MissileBullet>().ExplosionDamage;
+        else if (IsSlowTurret(towerScript))
+            return towerScript.slowAmount;
+        return towerScript.attackDamage;
+    }
+
+    private string GetSpecificText(TowerScript towerScript)
+    {
+        if (IsCannonTurret(towerScript))
+            return "Explosion Range : " + towerScript.bulletG.GetComponent<MissileBullet>().ExplosionRange;
+        else if (IsElectricTurret(towerScript))
+            return "Ricochet : " + towerScript.lightningBounceCount;
+        else if (IsChargingTurret(towerScript))
+            return "Attackspeed Range : " + towerScript.maxAttackspeed + " <-> " + towerScript.minAttackspeed;
+        return string.Empty;
+    }
+
+    private string GetSpecificUpgradeText(TowerScript towerScript)
+    {
+        if (IsCannonTurret(towerScript))
+            return towerScript.bulletG.GetComponent<MissileBullet>().ExplosionRange.ToString();
+        else if (IsElectricTurret(towerScript))
+            return towerScript.lightningBounceCount.ToString();
+        else if (IsChargingTurret(towerScript))
+            return towerScript.maxAttackspeed.ToString() + " <-> " + towerScript.minAttackspeed.ToString();
+        return string.Empty;
+    }
+
+    private bool IsSlowTurret(TowerScript towerScript)
+    {
+        return towerScript.towerEffect == TowerScript.TowerEffect.slowTarget;
+    }
+
+    private bool IsChargingTurret(TowerScript towerScript)
+    {
+        return towerScript.towerEffect == TowerScript.TowerEffect.ChargingTurret;
+    }
+
+    private bool IsElectricTurret(TowerScript towerScript)
+    {
+        return towerScript.towerEffect == TowerScript.TowerEffect.Electric;
+    }
+
+    private bool IsCannonTurret(TowerScript towerScript)
+    {
+        return towerScript.bulletG && towerScript.bulletG.GetComponent<MissileBullet>();
     }
 
     private void UpdateText()
@@ -75,6 +129,7 @@ public class UISelectedTurretStats : MonoBehaviour
         {
             turretNameText.text = towerScript.name;
             UpdateBasicStatsText(towerScript);
+            specificText.text = GetSpecificText(towerScript);
             UpdatedDamageDealtAndKillCounterText(towerScript);
             UpdateButtonText();
         }
@@ -82,26 +137,19 @@ public class UISelectedTurretStats : MonoBehaviour
 
     private void UpdateBasicStatsText(TowerScript towerScript)
     {
-        UpdateDamageText(towerScript);
-        attackSpeedText.text = "Attack Speed : " + towerScript.attackSpeed.ToString();
-        rangeText.text = "Range : " + towerScript.attackRange.ToString();
-    }
-
-    private void UpdateDamageText(TowerScript towerScript)
-    {
-        if (towerScript.bulletG && towerScript.bulletG.GetComponent<MissileBullet>())
-            damageText.text = "Damage : " + towerScript.bulletG.GetComponent<MissileBullet>().ExplosionDamage.ToString();
-        else if (towerScript.towerEffect == TowerScript.TowerEffect.slowTarget)
-            damageText.text = "Slow : " + towerScript.slowAmount.ToString() + '%';
+        if (IsSlowTurret(towerScript))
+            damageText.text = "Slow : " + GetAttackDamage(towerScript) + '%';
         else
-            damageText.text = "Damage : " + towerScript.attackDamage.ToString();
+            damageText.text = "Damage : " + GetAttackDamage(towerScript);
+        attackSpeedText.text = "Attack Speed : " + towerScript.attackSpeed;
+        rangeText.text = "Range : " + towerScript.attackRange;
     }
 
     private void UpdatedDamageDealtAndKillCounterText(TowerScript towerScript)
     {
-        killCounterText.text = "Enemy Killed : " + towerScript.killCount.ToString();
-        damageDealtText.text = "Damage Dealt : " + towerScript.damageDealt.ToString();
-        sellAmountText.text = "Sell : " + GetNodeUISelectedTowerScript().GetComponent<TurretBluePrint>().GetSellAmount().ToString() + " $";
+        killCounterText.text = "Enemy Killed : " + towerScript.killCount;
+        damageDealtText.text = "Damage Dealt : " + towerScript.damageDealt;
+        sellAmountText.text = "Sell : " + GetNodeUISelectedTowerScript().GetComponent<TurretBluePrint>().GetSellAmount() + " $";
     }
 
     private void UpdateButtonText()

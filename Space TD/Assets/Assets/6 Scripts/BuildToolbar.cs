@@ -9,6 +9,10 @@ public class BuildToolbar : MonoBehaviour {
 
     public Turret[] turrets;
 
+    public GameObject buildLocationPrefab;
+    public GameObject transparentSquare;
+    private GameObject[] buildLocations;
+
     private Animator myAnimator;
 
     BuildManagerScript buildManager;
@@ -34,8 +38,7 @@ public class BuildToolbar : MonoBehaviour {
     void Start()
     {
         buildManager = BuildManagerScript.instance;
-        InvokeRepeating("UpdatePriceText", 0f, 0.5f);
-
+        InvokeRepeating("UpdatePriceText", 0f, 0.25f);
     }
 
     private void Update()
@@ -49,6 +52,7 @@ public class BuildToolbar : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             CancelBuilding();
+            DisableAllLocationSprite();
             AudioManager.instance.Play("Usual Button");
         }
     }
@@ -59,14 +63,47 @@ public class BuildToolbar : MonoBehaviour {
         {
             if (!turret.enoughMoneyShadeG.transform.parent.gameObject.activeSelf)
                 continue;
-
-            if (buildManager.HasMoneyToBuildTurret(turret.GetCost()))
+            if (turret.enoughMoneyShadeG.activeSelf && buildManager.HasMoneyToBuildTurret(turret.GetCost()))
+            {
+                turret.buttonAnimator.Play("Show");
                 turret.enoughMoneyShadeG.SetActive(false);
-            else
+            }
+            else if (!turret.enoughMoneyShadeG.activeSelf && !buildManager.HasMoneyToBuildTurret(turret.GetCost()))
                 turret.enoughMoneyShadeG.SetActive(true);
         }
     }
 
+    public void ShowAllBuildLocation()
+    {
+        if (buildLocations != null && buildLocations[0].activeSelf)
+            return;
+        PlayerStatsScript.instance.pause = true;
+        transparentSquare.SetActive(true);
+        int i = 0;
+        buildLocations = new GameObject[buildManager.allNodes.Length];
+        foreach (GameObject node in buildManager.allNodes)
+        {
+            if (node.GetComponent<Node>().turret)
+                continue;
+            GameObject obj = PoolObject.instance.GetPoolObject(buildLocationPrefab);
+            obj.transform.position = node.transform.position;
+            buildLocations[i] = obj;
+            i++;
+        }
+    }
+
+    public void DisableAllLocationSprite()
+    {
+        if (buildLocations == null || buildLocations.Length == 0)
+            return;
+        PlayerStatsScript.instance.pause = false;
+        transparentSquare.SetActive(false);
+        foreach (GameObject item in buildLocations)
+        {
+            if (item)
+                item.SetActive(false);
+        }
+    }
     void ShowPreviewOnMouse()
     {
         TurretBluePrint currentBlueprint = buildManager.GetTurretToBuild();
@@ -80,7 +117,18 @@ public class BuildToolbar : MonoBehaviour {
         float towerRange = currentBlueprint.GetComponent<TowerScript>().attackRange / 1.3f;
         turretPreviewRange.transform.localScale = new Vector3(towerRange, towerRange, 0);
 
-        MoveTurretPreview(mainCamera.ScreenToWorldPoint(Input.mousePosition));
+        MoveTurretPreview(GetNodeCloseToMouse());
+        ShowAllBuildLocation();
+    }
+
+    private Vector2 GetNodeCloseToMouse()
+    {
+        foreach (GameObject node in buildManager.allNodes)
+        {
+            if (Vector2.Distance(GetMouseRealPosition(), node.transform.position) < 0.35f)
+                return node.transform.position;
+        }
+        return GetMouseRealPosition();
     }
 
     public Vector2 GetMouseRealPosition()
@@ -192,6 +240,7 @@ public class BuildToolbar : MonoBehaviour {
         public string name;
         public GameObject prefab;
         public GameObject enoughMoneyShadeG;
+        public Animator buttonAnimator;
         public string presentationText;
 
         public TurretBluePrint GetBluePrint()

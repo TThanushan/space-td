@@ -61,26 +61,23 @@ public class Node : MonoBehaviour {
     {
         if (!bluePrint)
             return;
-        else if (PlayerStatsScript.instance.money >= bluePrint.cost)
-        {
-            Vector2 mousePos = BuildToolbar.instance.GetMouseRealPosition();
-            UIScript.instance.DisplayText("-" + bluePrint.cost.ToString() + " $", mousePos, 1, "Red");
-            playerStatsScript.money -= bluePrint.cost;
-            GameObject newTurret = PoolObject.instance.GetPoolObject(bluePrint.gameObject);
-            newTurret.transform.position = transform.position;
-            turret = newTurret;
-            turretBlueprint = bluePrint;
-            DisplayEffect(NodeUI.instance.upgradeEffect);
-            AudioManager.instance.Play("Turret Build");
-            BuildToolbar.instance.ShowToolbar();
-            buildManager.SetTurretToBuild(null);
-        }
-        else
-        {
-            AudioManager.instance.Play("Error");
+        playerStatsScript.money -= bluePrint.cost;
 
-            UIScript.instance.DisplayText("Not enough money !", Camera.main.ScreenToWorldPoint(Input.mousePosition), 2, "Red");
-        }
+        GameObject newTurret = PoolObject.instance.GetPoolObject(bluePrint.gameObject);
+        newTurret.transform.position = transform.position;
+        turret = newTurret;
+
+        turretBlueprint = bluePrint;
+
+        buildManager.SetTurretToBuild(null);
+
+        BuildToolbar.instance.DisableAllLocationSprite();
+        Vector2 mousePos = BuildToolbar.instance.GetMouseRealPosition();
+        UIScript.instance.DisplayText("-" + bluePrint.cost.ToString() + " $", mousePos, 1, "Red");
+        DisplayEffect(NodeUI.instance.upgradeEffect);
+        AudioManager.instance.Play("Turret Build");
+        BuildToolbar.instance.ShowToolbar();
+
     }
 
     public void UpgradeTurret()

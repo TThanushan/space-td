@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 18103a9715cf0a0408669c1f40ce83c6, type: 3}
-  m_Color: {r: 0.8596461, g: 1, b: 0.49411762, a: 1}
+  m_Color: {r: 0.598783, g: 1, b: 0.32352942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -152,7 +152,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 18103a9715cf0a0408669c1f40ce83c6, type: 3}
-  m_Color: {r: 0.8596461, g: 1, b: 0.49411762, a: 1}
+  m_Color: {r: 0.598783, g: 1, b: 0.32352942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 4702061016971224}
   - component: {fileID: 114176210751841022}
   - component: {fileID: 113914421288024976}
-  - component: {fileID: -7018898586790767913}
+  - component: {fileID: 1332739265685894463}
   m_Layer: 0
   m_Name: StandardTurret 1
   m_TagString: Untagged
@@ -222,7 +222,7 @@ Transform:
   m_GameObject: {fileID: 1842854299711606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 4579561283237226}
   m_Father: {fileID: 0}
@@ -242,14 +242,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 2
   attackSpeed: 1
-  attackRange: 2.25
+  attackRange: 2.1
   killCount: 0
   damageDealt: 0
   bulletSpeed: 30
   slowAmount: 1
   rotateSpeed: 15
   shootPos: {fileID: 1057281814638574}
-  bulletG: {fileID: 1271134761775984, guid: 5bcdc38ac5e371247bc9616ad33e9a4d, type: 3}
+  bulletG: {fileID: 1271134761775984, guid: ebe6ee73957fa5f4fa00309b9235187b, type: 3}
   enemiesToAttack: []
   towerTargetMod: 0
   towerEffect: 0
@@ -258,8 +258,8 @@ MonoBehaviour:
   lightningEffect: {fileID: 0}
   lightningBounceCount: 0
   lightningBounceRange: 0
+  lightningBounceDelay: 0.15
   lineRenderer: {fileID: 0}
-  burnTurretEffectG: {fileID: 0}
   chargingSpeed: 0
   maxAttackspeed: 0
   minAttackspeed: 0
@@ -282,7 +282,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-7018898586790767913
+--- !u!114 &1332739265685894463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a1b03c01425544afc4e4b00011d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 60
+  cost: 50
   upgradePrefab: {fileID: 1842854299711606, guid: 7dc2ea2be6f1932499c979e1e67c7a1d,
     type: 3}
 --- !u!1 &1500545386357532203
@@ -354,8 +354,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4879236022032133791}
   m_LocalRotation: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -0.001, y: 0, z: 0}
-  m_LocalScale: {x: 0.2314938, y: 0.2314938, z: 0.2314938}
+  m_LocalPosition: {x: -0.00099996, y: 1e-15, z: 0}
+  m_LocalScale: {x: 0.23149379, y: 0.23149478, z: 0.23149478}
   m_Children: []
   m_Father: {fileID: 6509763372391764825}
   m_RootOrder: 1
@@ -400,7 +400,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 30a0c080c86f5e6418000726ef9b567d, type: 3}
-  m_Color: {r: 0.8596461, g: 1, b: 0.49411762, a: 1}
+  m_Color: {r: 0.598783, g: 1, b: 0.32352942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

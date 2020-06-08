@@ -8,6 +8,7 @@ public class BuildManagerScript : MonoBehaviour {
 
     public static BuildManagerScript instance;
 
+
     private TurretBluePrint turretToBuild;
 
     private Node selectedNode;
@@ -18,8 +19,15 @@ public class BuildManagerScript : MonoBehaviour {
 
 	public bool mouseOverNode;
 
+
     public static System.Action SelectNodeEvent;
     public static System.Action DeselectNodeEvent;
+
+    private void Start()
+    {
+        allNodes = GameObject.FindGameObjectsWithTag("Node");
+    }
+
     private void Update()
     {
 		if (!mouseOverNode && Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
@@ -76,6 +84,8 @@ public class BuildManagerScript : MonoBehaviour {
         if (turret != null)
             BuildToolbar.instance.HideToolbar();
     }
+
+
 
 	public Node GetSelectedNode
 	{

@@ -342,7 +342,6 @@ MonoBehaviour:
   lightningBounceCount: 0
   lightningBounceRange: 0
   lineRenderer: {fileID: 0}
-  burnTurretEffectG: {fileID: 0}
   chargingSpeed: 0
   maxAttackspeed: 0
   minAttackspeed: 0

@@ -59,9 +59,9 @@ public class IAScript : MonoBehaviour {
             return;
         if (ReachedPlayerBase())
         {
-            SpawnerScript.instance.enemiesRemainingAlive--;
             Feedback();
             DoDamageToPlayer();
+            DoDeathEvent();
             Disable();
         }
         else if (ReachedPathPoint())
@@ -120,6 +120,13 @@ public class IAScript : MonoBehaviour {
         AudioManager.instance.Play("Lose life", true);
         ShakeCamera.instance.Shake(0.2f, 0.2f);
     }
+
+    private void DoDeathEvent()
+    {
+        GetComponent<ProgressBarScript>().currentHealth = 0;
+        GetComponent<ProgressBarScript>().Death();
+    }
+
     void Disable()
     {
         gameObject.SetActive(false);

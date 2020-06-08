@@ -259,7 +259,6 @@ MonoBehaviour:
   lightningBounceCount: 0
   lightningBounceRange: 0
   lineRenderer: {fileID: 0}
-  burnTurretEffectG: {fileID: 0}
   chargingSpeed: 0
   maxAttackspeed: 0
   minAttackspeed: 0
@@ -295,7 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 100
-  upgradePrefab: {fileID: 1842854299711606, guid: af3b07fadc1d85644962754ee7e0bdc7,
+  upgradePrefab: {fileID: 1842854299711606, guid: 79f73b8773c48f3428a233498862abbb,
     type: 3}
 --- !u!1 &1500545386357532203
 GameObject:

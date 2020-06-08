@@ -51,6 +51,8 @@ public class TowerScript : MonoBehaviour {
 
     public float lightningBounceRange;
 
+    public float lightningBounceDelay = 0.15f;
+
     Transform partToRotate;
 
     GameObject target;
@@ -567,9 +569,9 @@ public class TowerScript : MonoBehaviour {
         return closestEnemy;
     }
 
-    IEnumerator ElectricBounceAfterTime(GameObject enemy, int time)
+    IEnumerator ElectricBounceAfterTime(GameObject enemy, float time)
     {
-        yield return new WaitForSeconds(0.15f * time);
+        yield return new WaitForSeconds(lightningBounceDelay * time);
 
         AddPositionToLineRenderer(enemy.transform.position);
         //if (i < lightningBounceCount - 1)

@@ -22,8 +22,9 @@ public class ProgressBarScript : MonoBehaviour {
     public event System.Action<GameObject> OnDeath;
     public GameObject deathEffect;
 
+    public Gradient gradient;
 
-
+    private Animator animator;
 
     void OnEnable()
     {
@@ -36,20 +37,19 @@ public class ProgressBarScript : MonoBehaviour {
     void Start () {
         
         currentHealth = maxHealth;
-        healthText = transform.Find("HealthBody/HealthText").GetComponent<TextMeshProUGUI>();
-        //InvokeRepeating("DisableHealthBarFullLife", 0f, 1f);
+        healthText = transform.Find("HealthBody/Body/HealthText").GetComponent<TextMeshProUGUI>();
+        animator = transform.Find("HealthBody").GetComponent<Animator>();
     }
 
 	
 	void Update () {
-
-        if(Healthbar != null)
+        if (Healthbar != null)
             SetHealthBarFunc();
 		if (healthText)
 			healthText.text = (System.Math.Round(currentHealth,1)).ToString();
         Death();
-
-        //DisableHealthBarFullLife();
+        DecreaseHitBarSize();
+        UpdateHealthBarColor();
     }
 
     void DisableHealthBarFullLife()
@@ -58,18 +58,18 @@ public class ProgressBarScript : MonoBehaviour {
         healthBody.gameObject.SetActive(currentHealth != maxHealth);
     }
 
-    void Death()
+    public void Death()
     {
         if (currentHealth <= 0)
         {
             OnDeath?.Invoke(gameObject);
             if (type == Type.basic)
             {
-                //Given money When i die.
                 if (moneyGiven > 0)
                 {
 					float randomXPos = transform.position.x + Random.Range(-0.4f, 0.4f);
                     UIScript.instance.DisplayText("+" + moneyGiven + " $", new Vector2(randomXPos, transform.position.y), 1f);
+                    UIScript.instance.PlayGainMoneyAnimation();
                     PlayerStatsScript.instance.money += moneyGiven;
                 }
                 AudioManager.instance.Play("CoinsSlimeDeath", true);
@@ -83,7 +83,47 @@ public class ProgressBarScript : MonoBehaviour {
         currentHealth -= damage;
         if (currentHealth < 0)
             currentHealth = 0;
+        PlayHitAnimation();
         return currentHealth <= 0;
+    }
+
+    private void PlayHitAnimation()
+    {
+        animator.Play("Hit");
+    }
+
+    private void DecreaseHitBarSize()
+    {
+        Transform hitBar = GetHitBar();
+        float decreaseSpeed = 0.5f;
+        float lengthGoal = currentHealth / maxHealth;
+        float newLength = hitBar.localScale.x - Time.deltaTime * decreaseSpeed;
+        if (newLength < lengthGoal)
+        {
+            SetHealthBarLocalScaleX(lengthGoal);
+            return;
+        }
+        else if (newLength == lengthGoal)
+            return;
+        SetHealthBarLocalScaleX(newLength);
+    }
+
+    private void UpdateHealthBarColor()
+    {
+        float value = (currentHealth / maxHealth);
+        Healthbar.GetComponent<Image>().color = new Color(gradient.Evaluate(value).r, gradient.Evaluate(value).g, gradient.Evaluate(value).b);
+    }
+
+    private void SetHealthBarLocalScaleX(float x)
+    {
+        Transform hitBar = GetHitBar();
+        hitBar.transform.localScale = new Vector3(x, hitBar.transform.localScale.y, hitBar.transform.localScale.z);
+
+    }
+
+    private Transform GetHitBar()
+    {
+        return transform.Find("HealthBody/Body/HitBar");
     }
 
     public bool IsKilled(float damage)

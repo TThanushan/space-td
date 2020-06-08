@@ -30,6 +30,8 @@ public class UIScript : MonoBehaviour {
     public TextMeshProUGUI waveNumberText;
     public Transform waveTimeBar;
     public GameObject waveTime;
+    public Animator announceWaveAnimator;
+
     float cameraSizeSave;
     bool isLevelComplete = false;
     Dictionary<string, string> animationsDict;
@@ -41,6 +43,12 @@ public class UIScript : MonoBehaviour {
         if (instance == null)
             instance = this;
     }
+
+    private void Start()
+    {
+        SpawnerScript.instance.OnWaveOver += PlayWaveStartButtonShowAnimation;
+    }
+
     void Update() {
         lifeText.text = PlayerStatsScript.instance.life.ToString();
         moneyText.text = PlayerStatsScript.instance.money.ToString() + " $";
@@ -49,15 +57,18 @@ public class UIScript : MonoBehaviour {
 
         if (waveNb > numberOfWaves)
             waveNb = numberOfWaves;
-        waveNumberText.text = "Wave " + waveNb.ToString() + " / " + numberOfWaves.ToString();
+        //waveNumberText.text = "Wave " + waveNb.ToString() + " / " + numberOfWaves.ToString();
+        waveNumberText.text = "Wave " + waveNb.ToString();
 
-        if (SpawnerScript.instance.waveState == "Waiting" && SpawnerScript.instance.enemiesRemainingAlive <= 0)
-            waveTime.SetActive(true);
-        else
-            waveTime.SetActive(false);
         PlayerInputs();
         IsLevelComplete();
         HasPlayerLose();
+    }
+
+
+    private void PlayWaveStartButtonShowAnimation()
+    {
+        waveTime.GetComponent<Animator>().Play("Show");
     }
 
     public void MuteMusic(GameObject sprite)
@@ -102,6 +113,11 @@ public class UIScript : MonoBehaviour {
 
     }
 
+    public void PlayGainMoneyAnimation()
+    {
+        moneyText.GetComponent<Animator>().Play("GainMoney");
+    }
+
     public void SetTimeSpeed(float _speed)
     {
         Time.timeScale = _speed;
@@ -109,11 +125,11 @@ public class UIScript : MonoBehaviour {
 
     public void SetImageEnableColor(Image image)
     {
-        image.color = new Color(1f, 0.7331f, 0.0235f, 1f);
+        image.color = new Color(0f, 0.7193136f, 1f, 1f);
     }
     public void SetImageDisabledColor(Image image)
     {
-        image.color = new Color(0.2075f, 0.1508f, 0f, 1f);
+        image.color = new Color(0f, 0.1110315f, 0.2735849f, 1f);
     }
 
     public void MuteSfxVolume(GameObject _image)
@@ -129,6 +145,24 @@ public class UIScript : MonoBehaviour {
     public void SkipWaveTime()
     {
         SpawnerScript.instance.StartWave();
+        waveTime.GetComponent<Animator>().Play("Hide");
+    }
+
+    public void PlayAnnounceWaveAnimation()
+    {
+        announceWaveAnimator.gameObject.transform.Find("Text (TMP)")
+            .GetComponent<TextMeshProUGUI>().text 
+            = "Wave " + (SpawnerScript.instance.currentWaveNumber + 1);
+        StartCoroutine(UnpauseAtAnnounceAnimationEnd());
+    }
+
+    IEnumerator UnpauseAtAnnounceAnimationEnd()
+    {
+        PlayerStatsScript.instance.pause = true;
+        announceWaveAnimator.Play("Show");
+        //yield return new WaitUntil(() => announceWaveAnimator.GetCurrentAnimatorStateInfo(0).IsName("New State") == false);
+        yield return new WaitForSeconds(1.75f);
+        PlayerStatsScript.instance.pause = false;
     }
 
     public void PlaySfx(string sfxName)

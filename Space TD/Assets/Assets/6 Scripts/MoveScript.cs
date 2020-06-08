@@ -10,7 +10,7 @@ public class MoveScript : MonoBehaviour {
     public int wayX = 1;
     public int wayY = 1;
 
-    void Update () {
+    void FixedUpdate () {
 
         if (PlayerStatsScript.instance.IsGamePaused)
             return;
