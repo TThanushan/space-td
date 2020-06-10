@@ -45,8 +45,8 @@ public class BulletScript : MonoBehaviour {
             gameObject.SetActive(false);
         if(IsTargetInRange())
         {
-            DamageTarget();
             TargetDestroyEffect();
+            DamageTarget();
             DestroyEffect();
             target = null;
             gameObject.SetActive(false);

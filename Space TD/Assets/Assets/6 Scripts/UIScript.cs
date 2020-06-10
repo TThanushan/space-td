@@ -144,12 +144,16 @@ public class UIScript : MonoBehaviour {
 
     public void SkipWaveTime()
     {
+        if (PlayerStatsScript.instance.IsGamePaused)
+            return;
         SpawnerScript.instance.StartWave();
         waveTime.GetComponent<Animator>().Play("Hide");
     }
 
     public void PlayAnnounceWaveAnimation()
     {
+        if (PlayerStatsScript.instance.IsGamePaused)
+            return;
         announceWaveAnimator.gameObject.transform.Find("Text (TMP)")
             .GetComponent<TextMeshProUGUI>().text 
             = "Wave " + (SpawnerScript.instance.currentWaveNumber + 1);
@@ -158,11 +162,11 @@ public class UIScript : MonoBehaviour {
 
     IEnumerator UnpauseAtAnnounceAnimationEnd()
     {
-        PlayerStatsScript.instance.pause = true;
+        PlayerStatsScript.instance.PauseGame(true);
         announceWaveAnimator.Play("Show");
         //yield return new WaitUntil(() => announceWaveAnimator.GetCurrentAnimatorStateInfo(0).IsName("New State") == false);
         yield return new WaitForSeconds(1.75f);
-        PlayerStatsScript.instance.pause = false;
+        PlayerStatsScript.instance.PauseGame(false);
     }
 
     public void PlaySfx(string sfxName)
@@ -207,7 +211,7 @@ public class UIScript : MonoBehaviour {
 
     public void RestartLevel()
     {
-        PlayerStatsScript.instance.pause = false;
+        PlayerStatsScript.instance.PauseGame(false);
         Time.timeScale = 1;
         StartCoroutine(FadeInScene(SceneManager.GetActiveScene().buildIndex));
     }
@@ -240,6 +244,7 @@ public class UIScript : MonoBehaviour {
         if (!playerLoose && PlayerStatsScript.instance.life <= 0)
         {
             Time.timeScale = 1;
+            PlayerStatsScript.instance.PauseGame(true);
             gameOverPanel.transform.Find("WaveNumberText").GetComponent<TextMeshProUGUI>().text = waveNumberText.text;
             SpecialFuncScript.DisplayPanel(gameOverPanel.GetComponent<Animator>(), gameOverPanel);
             playerLoose = true;

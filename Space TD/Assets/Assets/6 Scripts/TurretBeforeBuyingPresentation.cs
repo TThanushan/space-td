@@ -42,7 +42,7 @@ public class TurretBeforeBuyingPresentation : MonoBehaviour
         else if (IsElectricTurret(towerScript))
             return "Ricochet : " + towerScript.lightningBounceCount;
         else if (IsChargingTurret(towerScript))
-            return "Attackspeed Range : " + towerScript.maxAttackspeed + " <-> " + towerScript.minAttackspeed;
+            return "Min Attackspeed : " + towerScript.minAttackspeed;
         else
             return string.Empty;
     }

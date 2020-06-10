@@ -8,10 +8,13 @@ public class TurretBluePrint : MonoBehaviour{
     public int cost;
 
     public GameObject upgradePrefab;
+    private float previousCost;
+
+    public float PreviousCost { get => previousCost; set => previousCost = value; }
 
     public int GetSellAmount()
     {
-        return (int)(cost *  0.8f);
+        return (int)(cost *  0.75f + PreviousCost);
     }
 
     public bool IsUpgradeAvailable()

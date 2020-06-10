@@ -18,6 +18,7 @@ public class SpawnerScript : MonoBehaviour {
     public int numberOfWaves;
 
     public event System.Action OnWaveOver;
+    public event System.Action OnWaveStart;
 
     PoolObject poolScript;
     PlayerStatsScript playerStats;
@@ -54,6 +55,16 @@ public class SpawnerScript : MonoBehaviour {
             WaveOver();
 
         }
+    }
+
+    public float GetWaveTotalHealth()
+    {
+        float total = 0f;
+        foreach (Waves.EnemyType enemyType in GetCurrentWave().enemyTypes)
+        {
+            total += GetUpdatedEnemyHealth(enemyType) * enemyType.EnemyCount;
+        }
+        return total;
     }
 
     public Waves.EnemyType[] GetEnemyTypes()
@@ -122,6 +133,7 @@ public class SpawnerScript : MonoBehaviour {
             CountEnemiesToSpawn();
             NextWavePreview.instance.HidePreview();
             waveState = "InProgress";
+            OnWaveStart?.Invoke();
         }
     }
 
@@ -170,7 +182,7 @@ public class SpawnerScript : MonoBehaviour {
         }
     }
 
-    ref Waves.Wave GetCurrentWave()
+    public ref Waves.Wave GetCurrentWave()
     {
         return ref waves.wavesArray[currentWaveNumber];
     }

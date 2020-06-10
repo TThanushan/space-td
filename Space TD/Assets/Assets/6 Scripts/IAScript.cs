@@ -54,7 +54,7 @@ public class IAScript : MonoBehaviour {
         transform.Find("Sprite/SlowEffect").gameObject.SetActive(value);
     }
 
-    void FixedUpdate() {
+    void Update() {
         if (playerStats.IsGamePaused)
             return;
         if (ReachedPlayerBase())

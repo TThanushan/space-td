@@ -44,10 +44,8 @@ public class MissileBullet : BulletScript
             }
         }
         if (i > 0)
-        {
             enemyKilled?.Invoke(i);
-            damageEvent?.Invoke(totalDamageDealt);
-        }
+        damageEvent?.Invoke(totalDamageDealt);
     }
 
     private float ComputeDamageDealt(ProgressBarScript progressBarScript)

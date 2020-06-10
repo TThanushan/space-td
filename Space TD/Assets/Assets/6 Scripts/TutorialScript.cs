@@ -36,7 +36,7 @@ public class TutorialScript : MonoBehaviour
 
     public void UnpauseGame()
     {
-        PlayerStatsScript.instance.pause = false;
+        PlayerStatsScript.instance.PauseGame(false);
     }
 
     [System.Serializable]

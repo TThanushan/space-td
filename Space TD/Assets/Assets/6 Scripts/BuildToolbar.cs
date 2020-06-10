@@ -77,7 +77,7 @@ public class BuildToolbar : MonoBehaviour {
     {
         if (buildLocations != null && buildLocations[0].activeSelf)
             return;
-        PlayerStatsScript.instance.pause = true;
+        PlayerStatsScript.instance.PauseGame(true);
         transparentSquare.SetActive(true);
         int i = 0;
         buildLocations = new GameObject[buildManager.allNodes.Length];
@@ -96,7 +96,7 @@ public class BuildToolbar : MonoBehaviour {
     {
         if (buildLocations == null || buildLocations.Length == 0)
             return;
-        PlayerStatsScript.instance.pause = false;
+        PlayerStatsScript.instance.PauseGame(false);
         transparentSquare.SetActive(false);
         foreach (GameObject item in buildLocations)
         {

@@ -41,6 +41,18 @@ public class PlayerStatsScript {
         else if (!pause && UnpauseEvent != null)
             UnpauseEvent();
     }
+    public void PauseGame(bool value)
+    {
+        pause = value;
+        if (pause)
+        {
+            timeWhenPaused = Time.time;
+            if (PauseEvent != null)
+                PauseEvent();
+        }
+        else if (!pause && UnpauseEvent != null)
+            UnpauseEvent();
+    }
     public float GetTimeElapsedSincePause()
     {
         return Time.time - timeWhenPaused;

@@ -87,7 +87,7 @@ public class UISelectedTurretStats : MonoBehaviour
         else if (IsElectricTurret(towerScript))
             return "Ricochet : " + towerScript.lightningBounceCount;
         else if (IsChargingTurret(towerScript))
-            return "Attackspeed Range : " + towerScript.maxAttackspeed + " <-> " + towerScript.minAttackspeed;
+            return "Min Attackspeed : " + towerScript.minAttackspeed;
         return string.Empty;
     }
 
@@ -98,7 +98,7 @@ public class UISelectedTurretStats : MonoBehaviour
         else if (IsElectricTurret(towerScript))
             return towerScript.lightningBounceCount.ToString();
         else if (IsChargingTurret(towerScript))
-            return towerScript.maxAttackspeed.ToString() + " <-> " + towerScript.minAttackspeed.ToString();
+            return towerScript.minAttackspeed.ToString();
         return string.Empty;
     }
 

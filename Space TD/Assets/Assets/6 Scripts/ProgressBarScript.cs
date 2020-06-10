@@ -72,7 +72,7 @@ public class ProgressBarScript : MonoBehaviour {
                     UIScript.instance.PlayGainMoneyAnimation();
                     PlayerStatsScript.instance.money += moneyGiven;
                 }
-                AudioManager.instance.Play("CoinsSlimeDeath", true);
+                AudioManager.instance.Play("Click", true);
             }       
             gameObject.SetActive(false);
         }
@@ -118,7 +118,6 @@ public class ProgressBarScript : MonoBehaviour {
     {
         Transform hitBar = GetHitBar();
         hitBar.transform.localScale = new Vector3(x, hitBar.transform.localScale.y, hitBar.transform.localScale.z);
-
     }
 
     private Transform GetHitBar()

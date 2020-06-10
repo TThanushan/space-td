@@ -19,6 +19,7 @@ TagManager:
   - Path Point
   - Path Ground
   - Building Block
+  - Path Indication
   layers:
   - Default
   - TransparentFX

@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4352238395348924425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4352238395348924426}
+  - component: {fileID: 4352238395348924427}
+  m_Layer: 0
+  m_Name: GenerateWave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4352238395348924426
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4352238395348924425}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.904168, y: 1.028141, z: -1.0411757}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4352238395348924427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4352238395348924425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a88d6693d3dc26439f8b9c561933075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves: {fileID: 11400000, guid: f20ddf746c215f84a8f9ab298dc5e498, type: 2}
+  prefabs:
+  - {fileID: 1725576515888812, guid: 23e47b53c276fc148bc7827ee4a74936, type: 3}
+  - {fileID: 1725576515888812, guid: 001d0c3e8772be44781862021616d4f9, type: 3}
+  - {fileID: 1725576515888812, guid: 37bc6aa892633d943aa2761c13451e6c, type: 3}
+  - {fileID: 1725576515888812, guid: 9873bd7694d0f564b88f622a3240347b, type: 3}
+  - {fileID: 3747616040531891447, guid: 22e278bc0baf9c548a215ac3b9b0905e, type: 3}
+  - {fileID: 7879947128022260213, guid: 372a7bb9ed18a41448fe89fcce89fe97, type: 3}
+  - {fileID: 8063771247291294243, guid: 1372806a86750d5469413ca0c1022da7, type: 3}
+  - {fileID: 2235968200017112723, guid: 1151bd7e3e844934589d91b17d1cade5, type: 3}
+  fileWhereToSave: {fileID: 11400000, guid: f20ddf746c215f84a8f9ab298dc5e498, type: 2}

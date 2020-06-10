@@ -242,7 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 4
   attackSpeed: 1
-  attackRange: 2.75
+  attackRange: 2.4
   killCount: 0
   damageDealt: 0
   bulletSpeed: 30

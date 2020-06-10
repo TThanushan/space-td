@@ -128,6 +128,8 @@ public class Node : MonoBehaviour {
     {
         GameObject newTurret = PoolObject.instance.GetPoolObject(turretBlueprint.upgradePrefab);
         newTurret.transform.position = transform.position;
+        newTurret.GetComponent<TurretBluePrint>().PreviousCost
+            = turretBlueprint.cost + turretBlueprint.PreviousCost;
         turret = newTurret;
         turretBlueprint = turret.GetComponent<TurretBluePrint>();
     }
