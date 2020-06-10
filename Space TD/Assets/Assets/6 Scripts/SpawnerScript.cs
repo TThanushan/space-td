@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
-
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 public class SpawnerScript : MonoBehaviour {
 
     public static SpawnerScript instance;
@@ -25,6 +26,13 @@ public class SpawnerScript : MonoBehaviour {
     DifficultyData difficultyData;
     int playerHealthLoss;
 
+    private void SetWaves()
+    {
+#if UNITY_EDITOR
+        waves = (Waves)Resources.Load("ScriptableObject/Waves/" + UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().name);
+#endif
+    }
+
     void Awake()
     {
         difficultyData = new DifficultyData();
@@ -33,7 +41,7 @@ public class SpawnerScript : MonoBehaviour {
             instance = this;
         playerStats = PlayerStatsScript.instance;
         poolScript = GameObject.FindGameObjectWithTag("Data").GetComponent<PoolObject>();
-        waves = (Waves)Resources.Load("ScriptableObject/Waves/"+EditorSceneManager.GetActiveScene().name);
+        SetWaves();
         nextWaveTime = 10;
         numberOfWaves = waves.wavesArray.Length;
     }

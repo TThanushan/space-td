@@ -3,13 +3,26 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
-using UnityEditor.Events;
+using UnityEditor;
 
 public class LevelSelection : MonoBehaviour
 {
     public Levels levels;
     public GameObject buttonPrefab;
     public int startIndex;
+
+    public void GenerateLevelButton()
+    {
+        Transform panelParent = transform.Find("MainPanel/ScrollView/ScrollViewport/Levels Panel");
+        foreach (Levels.Level level in levels.levelArray)
+        {
+            GameObject newButton = InstantiateNewButton(level, panelParent);
+            if (!level.IsLocked)
+                AddLoadSceneFunctionToOnclickEvent(ref newButton, level.SceneIndex);
+            AddSFXMethodToOnClickEvent(ref newButton);
+        }
+    }
+
     public void Start()
     {
         UpdateLevelArrayFromLevelsScriptableObject();
@@ -21,18 +34,6 @@ public class LevelSelection : MonoBehaviour
         foreach (Levels.Level level in levels.levelArray)
         {
             level.waves = (Waves)Resources.Load("ScriptableObject/Waves/" + level.Name);
-        }
-    }
-
-    public void GenerateLevelButton()
-    {
-        Transform panelParent = transform.Find("MainPanel/ScrollView/ScrollViewport/Levels Panel");
-        foreach (Levels.Level level in levels.levelArray)
-        {
-            GameObject newButton = InstantiateNewButton(level, panelParent);
-            if (!level.IsLocked)
-                AddLoadSceneFunctionToOnclickEvent(ref newButton, level.SceneIndex);
-            AddSFXMethodToOnClickEvent(ref newButton);
         }
     }
 
@@ -49,19 +50,17 @@ public class LevelSelection : MonoBehaviour
         newButton.transform.Find("Title").GetComponent<TextMeshProUGUI>().text = level.Name;
         newButton.transform.Find("LockImage").gameObject.SetActive(level.IsLocked);
     }
-
     private void AddLoadSceneFunctionToOnclickEvent(ref GameObject button, int index)
     {
         Button buttonScript = button.GetComponent<Button>();
         UnityAction<int> functionToAdd = new UnityAction<int>(GetComponent<MenuScript>().LoadScene);
-        UnityEventTools.AddIntPersistentListener(buttonScript.onClick, functionToAdd, index + startIndex - 1);
+        UnityEditor.Events.UnityEventTools.AddIntPersistentListener(buttonScript.onClick, functionToAdd, index + startIndex - 1);
     }
 
     private void AddSFXMethodToOnClickEvent(ref GameObject button)
     {
         Button buttonScript = button.GetComponent<Button>();
         UnityAction playSFXMethod = System.Delegate.CreateDelegate(typeof(UnityAction), AudioManager.instance, "PlaySfx") as UnityAction;
-        UnityEventTools.AddPersistentListener(buttonScript.onClick, playSFXMethod);
+        UnityEditor.Events.UnityEventTools.AddPersistentListener(buttonScript.onClick, playSFXMethod);
     }
-
 }
