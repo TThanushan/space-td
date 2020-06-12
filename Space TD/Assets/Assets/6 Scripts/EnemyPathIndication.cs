@@ -19,11 +19,28 @@ public class EnemyPathIndication : MonoBehaviour
     {
         allIndications = new List<GameObject>();
         poolObject = PoolObject.instance;
-        pathArray = GameObject.FindGameObjectsWithTag("Path Point");
+        pathArray = GetOrderedPathPoints();
         spawnPosition = GameObject.FindGameObjectWithTag("Spawn Point").transform.position;
         SpawnerScript.instance.OnWaveStart += DisablePathIndications;
         SpawnerScript.instance.OnWaveOver += EnablePathIndication;
         InitPathIndication();
+    }
+
+    private GameObject[] GetOrderedPathPoints()
+    {
+        List<GameObject> pathPointsList = new List<GameObject>();
+        for (int i = 0; i < GameObject.FindGameObjectsWithTag("Path Point").Length; i++)
+        {
+            foreach (GameObject item in GameObject.FindGameObjectsWithTag("Path Point"))
+            {
+                if (item.transform.GetSiblingIndex() == i)
+                {
+                    pathPointsList.Add(item);
+                    break;
+                }
+            }
+        }
+        return pathPointsList.ToArray();
     }
 
     private void Update()

@@ -255,7 +255,6 @@ GameObject:
   - component: {fileID: 3753092318934160501}
   - component: {fileID: 3860276728324856717}
   - component: {fileID: 3860606186813435891}
-  - component: {fileID: 7830873682704931834}
   m_Layer: 0
   m_Name: Enemy 5
   m_TagString: Enemy
@@ -355,21 +354,6 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 4
     m_NumAlphaKeys: 2
---- !u!114 &7830873682704931834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3747616040531891447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bfc184dd5b46b340a50e87f86a8739e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 524884180976413873, guid: b5bed5fe71da23f498ffa43579bd7bdd, type: 3}
-  randomXPosition: 0.15
-  randomYPosition: 0.15
 --- !u!1 &3749158718386207985
 GameObject:
   m_ObjectHideFlags: 0

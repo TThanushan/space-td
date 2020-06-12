@@ -85,7 +85,6 @@ public class Node : MonoBehaviour {
         Vector3 mousePos = (Vector3)BuildToolbar.instance.GetMouseRealPosition();
         if (!turretBlueprint.UpgradeAvailable())
         {
-            UIScript.instance.DisplayText("Max Upgrade !", mousePos + Vector3.up, 2, "Red");
             AudioManager.instance.Play("Error");
         }
         else if (PlayerHasEnoughMoney())
@@ -107,7 +106,7 @@ public class Node : MonoBehaviour {
         else
         {
             AudioManager.instance.Play("Error");
-            UIScript.instance.DisplayText("Not enough money to Upgrade !", mousePos, 2, "Red");
+            //UIScript.instance.DisplayText("Not enough money to Upgrade !", mousePos, 2, "Red");
         }
     }
 

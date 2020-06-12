@@ -292,7 +292,6 @@ GameObject:
   - component: {fileID: 2238390451699854865}
   - component: {fileID: 2204372304591446505}
   - component: {fileID: 2204042571495495063}
-  - component: {fileID: 5163710993392886174}
   m_Layer: 0
   m_Name: Enemy 8
   m_TagString: Enemy
@@ -392,21 +391,6 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 4
     m_NumAlphaKeys: 2
---- !u!114 &5163710993392886174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2235968200017112723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bfc184dd5b46b340a50e87f86a8739e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 524884180976413873, guid: b5bed5fe71da23f498ffa43579bd7bdd, type: 3}
-  randomXPosition: 0.15
-  randomYPosition: 0.15
 --- !u!1 &3178030787404343609
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,8 +23,8 @@ public class PlayerStatsScript {
     public delegate void UnpauseAction();
     public static event UnpauseAction UnpauseEvent;
 
-    public int life = 20;
-    public float money = 200;
+    public int life = 50;
+    public float money = 300f;
     public bool pause;
     public float timeWhenPaused;
 

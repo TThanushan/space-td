@@ -41,7 +41,6 @@ public class ProgressBarScript : MonoBehaviour {
         animator = transform.Find("HealthBody").GetComponent<Animator>();
     }
 
-	
 	void Update () {
         if (Healthbar != null)
             SetHealthBarFunc();
@@ -72,7 +71,7 @@ public class ProgressBarScript : MonoBehaviour {
                     UIScript.instance.PlayGainMoneyAnimation();
                     PlayerStatsScript.instance.money += moneyGiven;
                 }
-                AudioManager.instance.Play("Click", true);
+                AudioManager.instance.Play("CoinsSlimeDeath", true);
             }       
             gameObject.SetActive(false);
         }

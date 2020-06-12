@@ -15,8 +15,6 @@ public class BulletScript : MonoBehaviour {
 	public GameObject effect;
     PlayerStatsScript playerStats;
 
-    //public delegate void DamageEvent(float damage);
-    //public static event DamageEvent DamageDealt;
     public static System.Action<float> damageEvent;
 
     void Awake ()   {
@@ -32,22 +30,24 @@ public class BulletScript : MonoBehaviour {
 
     private void MoveToTarget()
     {
-        if (target != null)
-        {
-            Vector2 dir = target.transform.position - transform.position;
-            transform.Translate(dir.normalized * moveSpeed * Time.deltaTime);
-        }
+        if (!target) return;
+
+        Vector2 dir = target.transform.position - transform.position;
+        transform.Translate(dir.normalized * moveSpeed * Time.deltaTime);
     }
 
     protected virtual void AttackTarget()
     {
-        if (target == null)
+        if (target == null && gameObject.activeSelf)
+        {
             gameObject.SetActive(false);
-        if(IsTargetInRange())
+            return;
+        }
+        if (IsTargetInRange())
         {
             TargetDestroyEffect();
             DamageTarget();
-            DestroyEffect();
+            //DestroyEffect();
             target = null;
             gameObject.SetActive(false);
         }

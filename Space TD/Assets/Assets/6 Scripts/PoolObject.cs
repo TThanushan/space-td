@@ -41,14 +41,27 @@ public class PoolObject : MonoBehaviour {
 
     private Transform[] GetPathPointsTransform()
     {
-        List<Transform> pathPointsList = new List<Transform>();
-        foreach (GameObject item in GameObject.FindGameObjectsWithTag("Path Point"))
-        {
-            pathPointsList.Add(item.transform);
-        }
+        List<Transform> pathPointsList = GetOrderedPathPointsList();
         if (GameObject.FindGameObjectWithTag("Base"))
             pathPointsList.Add(GameObject.FindGameObjectWithTag("Base").transform);
         return pathPointsList.ToArray();
+    }
+
+    private List<Transform> GetOrderedPathPointsList()
+    {
+        List<Transform> pathPointsList = new List<Transform>();
+        for (int i = 0; i < GameObject.FindGameObjectsWithTag("Path Point").Length; i++)
+        {
+            foreach (GameObject item in GameObject.FindGameObjectsWithTag("Path Point"))
+            {
+                if (item.transform.GetSiblingIndex() == i)
+                {
+                    pathPointsList.Add(item.transform);
+                    break;
+                }
+            }
+        }
+        return pathPointsList;
     }
 
     void FindEnemyFunc()
@@ -66,16 +79,10 @@ public class PoolObject : MonoBehaviour {
                 return currentUnit;
             }
         }
-
         GameObject newUnit = (GameObject)Instantiate(unitP, transform.position, transform.rotation, binTransform);
-
         newUnit.name = unitP.name;
-
         newUnit.SetActive(true);
-
         unitPool.Add(newUnit);
-       
-
         return newUnit;
     }
 

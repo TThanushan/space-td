@@ -14,11 +14,6 @@ public class NextWavePreview : MonoBehaviour
         CreatePreview();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-            ShowPreview();
-    }
 
     private void Awake()
     {

@@ -8,7 +8,7 @@ public class MenuScript : MonoBehaviour {
 
     public Animator fadeAnimator;
     public Transform loadingBarTransform;
-
+    public Animator creditsAnimator;
     public void ShowPanel(GameObject panel)
     {
         panel.SetActive(!panel.activeSelf);
@@ -39,5 +39,15 @@ public class MenuScript : MonoBehaviour {
     public void Quit()
     {
         LoadScene(0);
+    }
+
+    public void DisplayCredits()
+    {
+        creditsAnimator.Play("DisplayIn");
+    }
+
+    public void HideCredits()
+    {
+        creditsAnimator.Play("DisplayOut");
     }
 }

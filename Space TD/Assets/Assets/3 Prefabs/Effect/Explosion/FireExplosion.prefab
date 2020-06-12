@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5055164274061790321}
   - component: {fileID: 168144587}
   m_Layer: 0
-  m_Name: PurpleExplosion
+  m_Name: FireExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5081,8 +5081,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.14528942, g: 0, b: 1, a: 1}
-      maxColor: {r: 1, g: 0, b: 0.9740772, a: 1}
+      minColor: {r: 1, g: 0.07291311, b: 0, a: 1}
+      maxColor: {r: 1, g: 0.86642706, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 0.80784315, g: 0.7885955, b: 0, a: 1}
@@ -5144,7 +5144,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.25
+      scalar: 1
       minScalar: 0.01
       maxCurve:
         serializedVersion: 2
@@ -9893,8 +9893,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.14528942, g: 0, b: 1, a: 1}
-      maxColor: {r: 1, g: 0, b: 0.9740772, a: 1}
+      minColor: {r: 1, g: 0.027406313, b: 0, a: 1}
+      maxColor: {r: 1, g: 0.80982494, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 0.80784315, g: 0.7885955, b: 0, a: 1}
@@ -9956,8 +9956,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
-      minScalar: 0.01
+      scalar: 1
+      minScalar: 0.02
       maxCurve:
         serializedVersion: 2
         m_Curve:

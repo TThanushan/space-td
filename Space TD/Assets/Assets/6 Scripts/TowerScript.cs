@@ -106,11 +106,8 @@ public class TowerScript : MonoBehaviour {
 
     void Update() {
 
-        if (playerStats.IsGamePaused)
-            return;
-        if (isDisable)
-            return;
-        DrawLineToTarget();
+        if (playerStats.IsGamePaused || isDisable) return;
+        //DrawLineToTarget();
         TowerManager();
     }
 
@@ -124,11 +121,11 @@ public class TowerScript : MonoBehaviour {
     {
         if (towerEffect == TowerEffect.slowTarget)
             SlowEnemy();
-        if (towerEffect == TowerEffect.Electric)
+        else if (towerEffect == TowerEffect.Electric)
             ThrowLightning();
-        if (towerEffect == TowerEffect.LaserBeam)
+        else if (towerEffect == TowerEffect.LaserBeam)
             LaserBeam();
-        if (towerEffect == TowerEffect.ChargingTurret)
+        else if (towerEffect == TowerEffect.ChargingTurret)
         {
             UpdateChargingBar();
             ChargeAttackSpeed();
@@ -173,7 +170,7 @@ public class TowerScript : MonoBehaviour {
     void UnchargeAttackSpeed()
     {
         if (!target && attackSpeed < maxAttackspeed)
-            attackSpeed += chargingSpeed / 8;
+            attackSpeed += chargingSpeed / 16;
         if (attackSpeed > maxAttackspeed)
             attackSpeed = maxAttackspeed;
     }
@@ -462,15 +459,6 @@ public class TowerScript : MonoBehaviour {
             IAScript enemyScript = enemy.GetComponent<IAScript>();
             enemyScript.Slow(slowAmount / 100f);
         }
-    }
-
-    public GameObject DisplayImpactEffect(GameObject effect)
-    {
-        if (effect == null)
-            return null;
-
-        GameObject newEffect = PoolObject.instance.GetPoolObject(effect);
-        return newEffect;
     }
 
     void ThrowLightning()

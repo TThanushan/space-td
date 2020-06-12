@@ -8,7 +8,7 @@ public class SpawnerScript : MonoBehaviour {
 
     public static SpawnerScript instance;
     public Transform spawnPosition;
-    private Waves waves;
+    public Waves waves;
     public int currentWaveNumber = 0;
     public int enemiesRemainingAlive;
     //Waiting, InProgress
@@ -26,13 +26,6 @@ public class SpawnerScript : MonoBehaviour {
     DifficultyData difficultyData;
     int playerHealthLoss;
 
-    private void SetWaves()
-    {
-#if UNITY_EDITOR
-        waves = (Waves)Resources.Load("ScriptableObject/Waves/" + UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().name);
-#endif
-    }
-
     void Awake()
     {
         difficultyData = new DifficultyData();
@@ -41,7 +34,6 @@ public class SpawnerScript : MonoBehaviour {
             instance = this;
         playerStats = PlayerStatsScript.instance;
         poolScript = GameObject.FindGameObjectWithTag("Data").GetComponent<PoolObject>();
-        SetWaves();
         nextWaveTime = 10;
         numberOfWaves = waves.wavesArray.Length;
     }
@@ -49,7 +41,6 @@ public class SpawnerScript : MonoBehaviour {
 
     void Update()
     {
-        DebugInput();
         if (playerStats.IsGamePaused)
             return;
 

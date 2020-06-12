@@ -39,12 +39,45 @@ public class BuildToolbar : MonoBehaviour {
     {
         buildManager = BuildManagerScript.instance;
         InvokeRepeating("UpdatePriceText", 0f, 0.25f);
+        InitBuildLocationSprite();
     }
 
     private void Update()
     {
         ShowPreviewOnMouse();
         CancelBuildingIfRightClick();
+    }
+
+    private void InitBuildLocationSprite()
+    {
+        int i = 0;
+        buildLocations = new GameObject[buildManager.allNodes.Length];
+        Transform binTransform = GameObject.FindGameObjectWithTag("Bin").transform;
+        GameObject obj;
+        foreach (GameObject node in buildManager.allNodes)
+        {
+            if (node.GetComponent<Node>().turret)
+                continue;
+            obj = Instantiate(buildLocationPrefab, binTransform);
+            obj.transform.position = node.transform.position;
+            buildLocations[i] = obj;
+            i++;
+        }
+    }
+
+    void ShowPreviewOnMouse()
+    {
+        TurretBluePrint currentBlueprint = buildManager.GetTurretToBuild();
+        if (currentBlueprint == null)
+        {
+            DestroyPreview();
+            return;
+        }
+        LoadAndGetPreviewPoolObject(ref currentBlueprint);
+        float towerRange = currentBlueprint.GetComponent<TowerScript>().attackRange / 1.3f;
+        turretPreviewRange.transform.localScale = new Vector3(towerRange, towerRange, 0);
+        MoveTurretPreview(GetNodeCloseToMouse());
+        ShowAllBuildLocationAvailable();
     }
 
     void CancelBuildingIfRightClick()
@@ -73,21 +106,16 @@ public class BuildToolbar : MonoBehaviour {
         }
     }
 
-    public void ShowAllBuildLocation()
+    public void ShowAllBuildLocationAvailable()
     {
-        if (buildLocations != null && buildLocations[0].activeSelf)
-            return;
         PlayerStatsScript.instance.PauseGame(true);
         transparentSquare.SetActive(true);
         int i = 0;
-        buildLocations = new GameObject[buildManager.allNodes.Length];
         foreach (GameObject node in buildManager.allNodes)
         {
             if (node.GetComponent<Node>().turret)
                 continue;
-            GameObject obj = PoolObject.instance.GetPoolObject(buildLocationPrefab);
-            obj.transform.position = node.transform.position;
-            buildLocations[i] = obj;
+            buildLocations[i].SetActive(true);
             i++;
         }
     }
@@ -103,22 +131,6 @@ public class BuildToolbar : MonoBehaviour {
             if (item)
                 item.SetActive(false);
         }
-    }
-    void ShowPreviewOnMouse()
-    {
-        TurretBluePrint currentBlueprint = buildManager.GetTurretToBuild();
-        if (currentBlueprint == null)
-        {
-            DestroyPreview();
-            return;
-        }
-        LoadAndGetPreviewPoolObject(ref currentBlueprint);
-
-        float towerRange = currentBlueprint.GetComponent<TowerScript>().attackRange / 1.3f;
-        turretPreviewRange.transform.localScale = new Vector3(towerRange, towerRange, 0);
-
-        MoveTurretPreview(GetNodeCloseToMouse());
-        ShowAllBuildLocation();
     }
 
     private Vector2 GetNodeCloseToMouse()
