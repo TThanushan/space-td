@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 41ab43da5ff5a8245a2097e6275e0b4c
+timeCreated: 1505335746
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Dirtee Box
+  fontNames:
+  - Dirtee Box
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,198 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1040965137186538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4675001063979742}
+  - component: {fileID: 114505109671917772}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4675001063979742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040965137186538}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.6074667, y: -1.6154631, z: -0.18279809}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114505109671917772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040965137186538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9278e047531c16c48be5d98141e51c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Tower Shoot
+    clip: {fileID: 8300000, guid: 7a5c3a529a7d3654eb9543fc8c870876, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Punch
+    clip: {fileID: 8300000, guid: 19ad4869b965e7442be935d03ab92837, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Bir Poop Splash
+    clip: {fileID: 8300000, guid: f89056de6e03eab45a08f1ef1d788fed, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CoinsSlimeDeath
+    clip: {fileID: 8300000, guid: 25a4d1c474614834faa1b37379ec56ba, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Punch or Whack
+    clip: {fileID: 8300000, guid: 8bd98627096ac54419f436ac0b298524, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Brown Noise Ambient
+    clip: {fileID: 8300000, guid: d4887fe392713b94a84c78ad2b2de140, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: DeathSFX1
+    clip: {fileID: 8300000, guid: cf938dfde239fba4c94554c034b2f4e2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Upgrade
+    clip: {fileID: 8300000, guid: 63cc3177e12bcf340a4a01e485bcbd4f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Boom3
+    clip: {fileID: 8300000, guid: bf111085d7d38f44e9a32723faa150d5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SMS2
+    clip: {fileID: 8300000, guid: e6256f61d4e02b24896064b40b32556b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PowerActivation
+    clip: {fileID: 8300000, guid: 59bdfd06117d5ef40aefaf6d4e62b291, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Level Complete
+    clip: {fileID: 8300000, guid: 886a471dd3351c94392fcd591e50d5ec, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Usual Button
+    clip: {fileID: 8300000, guid: 5aa30309be8a21e4b9eaeaacdb7ea65d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Lose life
+    clip: {fileID: 8300000, guid: 1b6ffb699254488489c0ffea582a2842, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Wave Start
+    clip: {fileID: 8300000, guid: 3dc42e47f038dcf4db023ca904896a93, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Temporary Upgrade
+    clip: {fileID: 8300000, guid: 1b7e66265cffb0c4097de88eb3f64c87, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Turret Build
+    clip: {fileID: 8300000, guid: 1b7e66265cffb0c4097de88eb3f64c87, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Error
+    clip: {fileID: 8300000, guid: 41ddf903b0f399d46b5a7d0a6207f228, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Sell
+    clip: {fileID: 8300000, guid: e21a8b07273884d429b298b2c2439e5b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Woosh
+    clip: {fileID: 8300000, guid: 2361e9d9879cdf64db6a0c5a9c4c0827, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Click
+    clip: {fileID: 8300000, guid: 241cd1399cf60d74a8f89f0c262c3ea8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Erase
+    clip: {fileID: 8300000, guid: 2d4ad065f06525d4c8a85d47f87c9d97, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: "Children\u2019s game tone soft"
+    clip: {fileID: 8300000, guid: 886a471dd3351c94392fcd591e50d5ec, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Boom
+    clip: {fileID: 8300000, guid: 58ae792b9f2f3d046a64d3ec09a31d89, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LaserBeam
+    clip: {fileID: 8300000, guid: 2107d43dd1b7a5145b0533c24a180ebd, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  musicMuted: 0
+  SFXMuted: 0

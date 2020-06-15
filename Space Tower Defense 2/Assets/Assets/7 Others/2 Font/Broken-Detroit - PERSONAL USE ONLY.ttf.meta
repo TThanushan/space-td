@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 6792994552f54d74c97a489bea6ced36
+timeCreated: 1505335925
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Broken Detroit
+  fontNames:
+  - Broken Detroit
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

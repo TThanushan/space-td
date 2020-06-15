@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 4a63ace193a57e44c90cfae91e83c3c2
+timeCreated: 1505336207
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Defused
+  fontNames:
+  - Defused
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

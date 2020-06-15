@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 99642b3a72b400e4aa1d4d2ee8a3dc61
+timeCreated: 1505336384
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: CGF Off-Road
+  fontNames:
+  - CGF Off-Road
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
