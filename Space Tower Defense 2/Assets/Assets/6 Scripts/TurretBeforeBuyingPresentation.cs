@@ -87,6 +87,8 @@ public class TurretBeforeBuyingPresentation : MonoBehaviour
     {
         if (towerScript.bulletG && towerScript.bulletG.GetComponent<MissileBullet>())
             damageText.text = "Damage : " + towerScript.bulletG.GetComponent<MissileBullet>().ExplosionDamage.ToString();
+        else if (IsSlowTurret(towerScript))
+            damageText.text = "Slow : " + towerScript.slowAmount + '%';
         else
             damageText.text = "Damage : " + towerScript.attackDamage.ToString();
     }
